@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import Landing from './components/Landing/Landing';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -9,7 +10,7 @@ function App() {
   // use props to display username and profile pic when people are logged in
   return (
     <div>
-      <Container>
+      
         <Row className='navbarBg'>
           <Col className='col-7'>
             <img src={logo} />
@@ -36,15 +37,10 @@ function App() {
             )
           }
         </Row>
-      </Container>
+      
+        <Landing/>
     </div>
   );
-
-
-
-
-
-
 }
 
 export default App;
