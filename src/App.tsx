@@ -10,10 +10,8 @@ function App() {
   // use props to display username and profile pic when people are logged in
   return (
     <div>
-<<<<<<< HEAD
       <h1>navBar</h1>
       <TavernBoard />
-=======
         <Row className='navbarBg'>
           <Col className='col-7'>
             <img src={logo} />
@@ -40,7 +38,6 @@ function App() {
             )
           }
         </Row>
->>>>>>> a3348a7e5e9110a4640220da319c839a352c8c56
     </div>
   );
 
