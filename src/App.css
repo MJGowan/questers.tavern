@@ -28,6 +28,12 @@ body {
   object-fit: cover;
   filter: contrast(50%);
 }
+.title-container2{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+/* ------------------------------------------ */
 
 .text-overlay {
   position: absolute;
@@ -67,6 +73,34 @@ body {
    filter: contrast(55%)
 }
 
+/* ------------------------------------------ */
+
+@font-face {
+  font-family: 'Double', serif;
+  src: url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+}
+@font-face {
+  font-family: 'DW', serif;
+  src: url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+}
+.doubleFont{
+  font-family: 'Double', serif;
+}
+.dwFont{
+  font-family: 'DW', serif;
+}
+
+.navbarBg{
+  background-color:#f1f1f1;
+}
+.navMargin{
+  margin-left:-50px;
+}
+.navText{
+  color:#445435;
+  font-size: larger;
+  margin-top: 25%;
+}
 .logo-image1{
   width: 100%;
   height: 100%;
