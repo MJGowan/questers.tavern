@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+/* font-family: 'Heebo', sans-serif;
+font-family: 'IM Fell Double Pica SC', serif; 
+font-family: 'Heebo', sans-serif;
+font-family: 'IM Fell DW Pica', serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Hind Guntur', sans-serif;
+font-family: 'IM Fell DW Pica', serif; */
+body {
+  background-color: #4A423F !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-container {
+  position: relative;
+  width: 100%;
+  height: 116px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(50%);
 }
 
-.App-link {
-  color: #61dafb;
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translate(-60%, -40%);
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text {
+  font-family: 'IM Fell Double Pica SC', serif; 
+  font-size: 55px;
+  font-weight: bold;
+  color: #D9D9D9;
+  text-align: left;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  padding: 20px;
+}
+
+.button-container .button {
+  margin-left: 10px;
+}
+.button {
+  font-size: 17px; /* increase font size */
+  padding: 10px 20px; /* increase padding */
+  border: 2px solid rgb(66, 60, 60);
+  border-radius: 20% / 100%;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: bold;
+  background-color: #E0F4A6;
+   filter: contrast(55%)
+}
+
+.logo-image1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(100%);
+  border-radius: 10px;
+  padding: 10px 20px 10px 10px; /* added padding-right value */
+}
+.title-container2{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
