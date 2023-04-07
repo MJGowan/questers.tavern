@@ -1,3 +1,28 @@
-.heroImg{
-    
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+.heroImg {}
+
+.heroTxt {
+    margin-top: -300px;
+    font-family: 'IM Fell Double Pica SC', serif;
+    font-size: xx-large;
+}
+
+.tavernImg {
+    width: 555px;
+    margin-left: 6%;
+}
+
+.cardImg {
+    height: 200px;
+}
+
+.cardOne {
+    margin-right: -5px;
+}
+
+.cardTwo {
+    margin-right: 20px;
 }

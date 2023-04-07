@@ -8,10 +8,24 @@ import cardTwoImg from '../../Assets/Rectangle 7.png';
 
 export default function Landing() {
   return (
+    // Note to self: Fix the imports in App.css on all pages! Right now the fonts are not importing correctly
     <div>
       <Row>
       <img className='heroImg' src={heroImg} />
       </Row>
+      <p className='heroTxt text-center'>Enter The Dungeon United</p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <br/>
       <Row>
         <Col className='col-6'>
