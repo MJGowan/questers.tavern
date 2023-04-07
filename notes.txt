@@ -14,7 +14,8 @@ Hind Guntur
 background color 4A423F
 
 for tomorrow thursday
-add icon, 
+add icon, back button with icon
+this will have to wait
 work on buttons styles
 talk to team about how the buttons will work
 add nav bar
