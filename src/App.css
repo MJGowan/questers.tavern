@@ -65,3 +65,19 @@
   font-size: larger;
   margin-top: 25%;
 }
+
+.tavernImg{
+  width: 555px;
+  margin-left: 6%;
+}
+
+.cardImg{
+  height: 200px;
+}
+
+.cardOne{
+margin-right: -5px;
+}
+.cardTwo{
+margin-right: 20px;
+}
