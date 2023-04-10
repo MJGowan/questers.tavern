@@ -7,7 +7,14 @@
 .heroTxt {
     margin-top: -300px;
     font-family: 'IM Fell Double Pica SC', serif;
-    font-size: xx-large;
+}
+
+#heroTxt{
+	color:#cb8f16;
+	font-size: 40px;
+	text-shadow: -1px 1px 0 #4A423F,
+				  1px 1px 0 #4A423F,
+				 1px -1px 0 #4A423F;
 }
 
 .tavernImg {
