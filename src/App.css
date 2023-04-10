@@ -50,6 +50,10 @@
   font-family: 'IM Fell DW Pica', serif;
 }
 
+.bg{
+  background-color: #282c34;
+}
+
 .navbarBg{
   background-color:#f1f1f1;
 }

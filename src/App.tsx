@@ -9,7 +9,7 @@ function App() {
   let loggedIn = false;
   // use props to display username and profile pic when people are logged in
   return (
-    <div>
+    <div className='bg'>
         <Row className='navbarBg'>
           <Col className='col-7'>
             <img src={logo} />

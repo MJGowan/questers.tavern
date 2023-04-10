@@ -1,6 +1,6 @@
 import React from 'react'
 import './Landing.css';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import heroImg from '../../Assets/image 10.png';
 import tavernImg from '../../Assets/Lets get started.png';
 import cardOneImg from '../../Assets/Rectangle 6.png';
@@ -25,11 +25,21 @@ export default function Landing() {
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
       <Row>
         <Col className='col-6'>
           <img className='tavernImg' src={tavernImg} />
+          <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
+          <p className='tavernTitle doubleFont'>Resources for New Players</p>
+          <br/>
+          <Container>
+          <p>To get started, below is a helpful guide on navigating Quester's Tavern.</p>
+          <hr/>
+          <p> Frequently Asked Questions and a link to the official Dungeons & Dragons website can be found at the top of the page.</p>
+          </Container>
+          <hr/>
+          <br/>
+          <Button className='tavernBtn'>How to use Quester's Tavern</Button>
+          </Container>
         </Col>
 
         <Col>

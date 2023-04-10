@@ -22,6 +22,33 @@
     margin-left: 6%;
 }
 
+.tavernTxt{
+    margin-top: -350px;
+    color: white;
+    font-size: larger;
+
+}
+
+.tavernTitle{
+    font-size: xx-large;
+    color: #cb8f16;
+    border-color: white;
+    border-bottom: 3px;
+}
+
+#tavernTxt{
+	text-shadow: -1px 1px 0 #4A423F,
+				  1px 1px 0 #4A423F,
+				 1px -1px 0 #4A423F;
+}
+
+.tavernBtn{
+    background-color:#cb8f16;
+    border-color: #4A423F;
+    color:#4A423F;
+    font-size: large;
+}
+
 .cardImg {
     height: 200px;
 }
