@@ -32,11 +32,16 @@ export default function Landing() {
           <p className='tavernTitle doubleFont'>Resources for New Players</p>
           <br/>
           <Container>
+            <Row>
+              <Col className='col-1'></Col>
+              <Col>
           <p>To get started, below is a helpful guide on navigating Quester's Tavern.</p>
           <hr/>
           <p> Frequently Asked Questions and a link to the official Dungeons & Dragons website can be found at the top of the page.</p>
+              </Col>
+              <Col className='col-2'></Col>
+            </Row>
           </Container>
-          <hr/>
           <br/>
           <Button className='tavernBtn'>How to use Quester's Tavern</Button>
           </Container>
