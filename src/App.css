@@ -39,19 +39,15 @@
 
 /* ------------------------------------------ */
 
-@font-face {
-  font-family: 'Double', serif;
-  src: url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
-}
-@font-face {
-  font-family: 'DW', serif;
-  src: url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
 .doubleFont{
-  font-family: 'Double', serif;
+  font-family: 'IM Fell Double Pica SC', serif;
 }
 .dwFont{
-  font-family: 'DW', serif;
+  font-family: 'IM Fell DW Pica', serif;
 }
 
 .navbarBg{
