@@ -12,6 +12,7 @@
 .box{
     position: absolute;
     background-color: #4a423fb7;
+    color: white;
     height: 90%;
     width: 60%;
     margin-top: -57%;
@@ -23,5 +24,8 @@
     text-align: center;
 }
 .plus{
-    
+    width: 100px;
+    height: 100px;
+    margin-left: -50%;
+    margin-top: 35%;
 }

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './CreateAccount.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 export default function CreateAccount() {
     const bg = require('../../Assets/image 9.png');
     const parchment = require('../../Assets/image 7.png');
+    const plus = require('../../Assets/R (1) 1.png');
     return (
         <div className='doubleFont'>
             <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
@@ -28,22 +28,18 @@ export default function CreateAccount() {
                         </Row>
                         <br />
                         <Row>
-                            <Col>
                                 <p>Username:</p>
                                 <input></input>
-                            </Col>
                         </Row>
                         <br />
                         <Row>
-                            <Col>
                                 <p>Password:</p>
                                 <input></input>
-                            </Col>
                         </Row>
                         <br />
                         <Row>
                             <Col>
-                                <p>Already have an account? Sign in</p>
+                                <p>Already have an account? <span>Sign in</span></p>
                                 <Button>Create Account</Button>
                             </Col>
                         </Row>
@@ -56,7 +52,7 @@ export default function CreateAccount() {
                         <Row>
                             <Col className='d-flex justify-content-center'>
                                 <img src={parchment} />
-                                <AddCircleOutlineIcon className='plus' />
+                                <img src={plus} className='plus'/>
                             </Col>
                         </Row>
                     </Col>
