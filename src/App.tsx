@@ -3,6 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Landing from './components/Landing/Landing';
+import Character from './components/Character/Character';
+import Profile from './components/Profile/Profile';
+import CreateAccount from './components/CreateAccount/CreateAccount';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -36,7 +39,7 @@ function App() {
             )
           }
         </Row>
-        <Landing/>
+        <CreateAccount/>
     </div>
   );
 }
