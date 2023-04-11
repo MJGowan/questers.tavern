@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './CreateAccount.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+
 
 export default function CreateAccount() {
     const bg = require('../../Assets/image 9.png');
@@ -14,33 +15,40 @@ export default function CreateAccount() {
                 <Row>
                     <Col>
                         <Row>
-                            <p className='caTitle'>Sign Up</p>
+                            <p className='caTitle' id='caTitle'>SIGN UP</p>
                         </Row>
                         <Row>
                             <Col className='col-6'>
                                 <p>First Name:</p>
-                                <input></input>
+                                <input className='shortInput'></input>
                             </Col>
                             <Col className='col-6'>
                                 <p>Last Name:</p>
-                                <input></input>
+                                <input className='shortInput'></input>
                             </Col>
                         </Row>
                         <br />
                         <Row>
-                                <p>Username:</p>
-                                <input></input>
+                            <p>Username:</p>
+                            <input className='longInput'></input>
                         </Row>
                         <br />
                         <Row>
-                                <p>Password:</p>
-                                <input></input>
+                            <p>Password:</p>
+                            <input className='longInput'></input>
                         </Row>
+                        <br />
                         <br />
                         <Row>
                             <Col>
-                                <p>Already have an account? <span>Sign in</span></p>
-                                <Button>Create Account</Button>
+                                <Row>
+                                    <p className='text-center'>Already have an account? <span>Login</span></p>
+                                </Row>
+                                <Row>
+                                    <Col className='d-flex justify-content-center'>
+                                        <Button className='caBtn'>Create Account</Button>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Row>
                     </Col>
@@ -50,6 +58,7 @@ export default function CreateAccount() {
                         <br />
                         <br />
                         <Row>
+                            <p className='text-center ppTxt'>Profile Picture</p>
                             <Col className='d-flex justify-content-center'>
                                 <img src={parchment} />
                                 <img src={plus} className='plus'/>

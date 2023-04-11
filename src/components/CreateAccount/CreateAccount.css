@@ -2,30 +2,59 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
-.doubleFont{
+.doubleFont {
   font-family: 'IM Fell Double Pica SC', serif;
 }
-.dwFont{
+
+.dwFont {
   font-family: 'IM Fell DW Pica', serif;
 }
 
-.box{
-    position: absolute;
-    background-color: #4a423fb7;
-    color: white;
-    height: 90%;
-    width: 60%;
-    margin-top: -57%;
-    margin-left: 20%;
-    border-radius: 5px;
+.box {
+  position: absolute;
+  background-color: #4a423fb7;
+  color: white;
+  height: 90%;
+  width: 70%;
+  margin-top: -57%;
+  margin-left: 15%;
+  border-radius: 5px;
 }
-.caTitle{
-    font-size: 40px;
-    text-align: center;
+
+.caTitle {
+  font-size: 40px;
+  text-align: center;
+  color: #768e5f;
 }
-.plus{
-    width: 100px;
-    height: 100px;
-    margin-left: -50%;
-    margin-top: 35%;
+
+#caTitle {
+  text-shadow: -1px 1px 0 #141514,
+                1px 1px 0 #141514,
+                 1px -1px 0 #141514;
+}
+.shortInput{
+  border-radius: 5px;
+  height: 40px;
+}
+.longInput{
+  margin-left: 12px;
+  width: 445px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.caBtn {
+  background-color: #576946;
+  border-color: #141514;
+}
+
+.ppTxt{
+  margin-left: 50px;
+}
+
+.plus {
+  width: 100px;
+  height: 100px;
+  margin-left: -43%;
+  margin-top: 30%;
 }
