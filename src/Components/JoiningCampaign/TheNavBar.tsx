@@ -1,23 +1,12 @@
-import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import TavernBoard from './Components/TavernBoard';
-import { BrowserRouter , Routes, Route, Link} from 'react-router-dom'
-import JoinCampaign from './Components/JoiningCampaign/JoinCampaign';
-import TableTavern from './Components/TableTavern';
+import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  const logo = require('./Assets/logo.jpg');
+export default function TheNavBar() {
+  const logo = require("./Assets/logo.jpg");
   let loggedIn = false;
   // use props to display username and profile pic when people are logged in
-  
-  // <BrowserRouter>
-  //   <Routes>
-  //     <Route/>
-  //   </Routes>
-  // </BrowserRouter>
-
   return (
     <div>
       <Row className='navbarBg'>
@@ -44,16 +33,6 @@ function App() {
           </Col>
         )}
       </Row>
-      <TavernBoard />
     </div>
-   
   );
-
-
-
-
-
-
 }
-
-export default App;
