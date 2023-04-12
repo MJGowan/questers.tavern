@@ -6,6 +6,7 @@ import TavernBoard from './Components/TavernBoard';
 import { BrowserRouter , Routes, Route, Link} from 'react-router-dom'
 import JoinCampaign from './Components/JoiningCampaign/JoinCampaign';
 import TableTavern from './Components/TableTavern';
+import TBoardPost from './Components/TavernPost/TavernBoardPost';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -44,7 +45,9 @@ function App() {
           </Col>
         )}
       </Row>
-      <TavernBoard />
+      {/* <TavernBoard /> */}
+      {/* <JoinCampaign /> */}
+      <TBoardPost />
     </div>
    
   );
