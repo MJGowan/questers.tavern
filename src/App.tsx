@@ -7,6 +7,7 @@ import { BrowserRouter , Routes, Route, Link} from 'react-router-dom'
 import JoinCampaign from './Components/JoiningCampaign/JoinCampaign';
 import TableTavern from './Components/TableTavern';
 import TBoardPost from './Components/TavernPost/TavernBoardPost';
+import FavoritesList from './Components/Favorites/FavoritesList';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -47,7 +48,8 @@ function App() {
       </Row>
       {/* <TavernBoard /> */}
       {/* <JoinCampaign /> */}
-      <TBoardPost />
+      {/* <TBoardPost /> */}
+      <FavoritesList />
     </div>
    
   );

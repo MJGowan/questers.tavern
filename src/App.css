@@ -193,9 +193,21 @@ font-family: 'IM Fell DW Pica', serif;
     border: 2px solid #FFA825;
   }
 }
- 
+ /* ------------------------------------------ */
+
+
+/* -----------FAVORITES BELOW--------------------- */
+.text-overlay1{
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  transform: translate(-60%, -0%);
+  z-index: 1;
+}
+
 
 /* ------------------------------------------ */
+
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
 
