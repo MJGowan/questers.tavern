@@ -2,61 +2,279 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
-.heroImg {}
+@media screen and (min-width: 1440px ) {
+    
+    .heroTxt {
+        margin-top: -300px;
+        font-family: 'IM Fell Double Pica SC', serif;
+    }
 
-.heroTxt {
-    margin-top: -300px;
-    font-family: 'IM Fell Double Pica SC', serif;
+    #heroTxt{
+        color:#cb8f16;
+        font-size: 40px;
+        text-shadow: -1px 1px 0 #4A423F,
+                      1px 1px 0 #4A423F,
+                     1px -1px 0 #4A423F;
+    }
+    
+    .tavernImg {
+        width: 555px;
+        margin-left: 6%;
+    }
+    
+    .tavernTxt{
+        margin-top: -350px;
+        color: white;
+        font-size: larger;
+    
+    }
+    
+    .tavernTitle{
+        font-size: xx-large;
+        color: #cb8f16;
+        margin-left: -50px;
+    }
+    
+    .tavernBtn{
+        background-color:#cb8f16;
+        border-color: #4A423F;
+        color:#4A423F;
+        font-size: large;
+        margin-left: -50px;
+    }
+    
+    .cardImg {
+        height: 200px;
+    }
+    
+    .cardOne {
+        margin-right: -5px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+    }
+    
+    .cardTwo {
+        margin-right: 20px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+    }
 }
 
-#heroTxt{
-	color:#cb8f16;
-	font-size: 40px;
-	text-shadow: -1px 1px 0 #4A423F,
-				  1px 1px 0 #4A423F,
-				 1px -1px 0 #4A423F;
+/*  */
+/*  */
+
+@media screen and (max-width: 1439px) and (min-width: 770px ) {
+    .heroTxt {
+        margin-top: -250px;
+        font-family: 'IM Fell Double Pica SC', serif;
+    }
+    
+    #heroTxt{
+        color:#cb8f16;
+        font-size: 30px;
+        text-shadow: -1px 1px 0 #4A423F,
+                      1px 1px 0 #4A423F,
+                     1px -1px 0 #4A423F;
+    }
+    
+    .tavernImg {
+        width: 450px;
+        margin-left: 2.5%;
+    }
+    
+    .tavernTxt{
+        margin-top: -290px;
+        color: white;
+        font-size: medium;
+    }
+    
+    .tavernTitle{
+        font-size: large;
+        color: #cb8f16;
+    }
+    
+    .tavernBtn{
+        background-color:#cb8f16;
+        border-color: #4A423F;
+        color:#4A423F;
+        font-size: small;
+        
+    }
+    
+    .cardImg {
+        height: 150px;
+    }
+
+    .cardTitle{
+        font-size: medium;
+    }
+
+    .cardTxt{
+        font-size: small;
+    }
+    
+    .cardOne {
+        margin-left: 20px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 310px;
+    }
+    
+    .cardTwo {
+        margin-left: -10px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 310px;
+    }
 }
 
-.tavernImg {
-    width: 555px;
-    margin-left: 6%;
+/*  */
+/*  */
+
+@media screen and (max-width: 768px) and (min-width: 430px) {
+    .heroTxt {
+        margin-top: -180px;
+        font-family: 'IM Fell Double Pica SC', serif;
+    }
+    
+    #heroTxt{
+        color:#cb8f16;
+        font-size: 20px;
+        text-shadow: -1px 1px 0 #4A423F,
+                      1px 1px 0 #4A423F,
+                     1px -1px 0 #4A423F;
+    }
+    
+    .tavernImg {
+        width: 370px;
+        margin-left: 2.5%;
+    }
+    
+    .tavernTxt{
+        margin-top: -260px;
+        color: white;
+        font-size: small;
+    }
+    
+    .tavernTitle{
+        font-size: medium;
+        color: #cb8f16;
+    }
+    
+    .tavernBtn{
+        background-color:#cb8f16;
+        border-color: #4A423F;
+        color:#4A423F;
+        font-size: small;
+        
+    }
+    
+    .cardImg {
+        height: 150px;
+    }
+
+    .cardTitle{
+        font-size: medium;
+    }
+
+    .cardTxt{
+        font-size: small;
+    }
+    
+    .cardOne {
+        margin-left: 10px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 350px;
+    }
+    
+    .cardTwo {
+        margin-left: -10px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 350px;
+    }
 }
 
-.tavernTxt{
-    margin-top: -350px;
-    color: white;
-    font-size: larger;
+/*  */
+/*  */
 
+@media screen and (max-width: 426px) {
+    .heroTxt {
+        margin-top: -100px;
+        font-family: 'IM Fell Double Pica SC', serif;
+    }
+    
+    #heroTxt{
+        color:#cb8f16;
+        font-size: 20px;
+        text-shadow: -1px 1px 0 #4A423F,
+                      1px 1px 0 #4A423F,
+                     1px -1px 0 #4A423F;
+    }
+    
+    .tavernImg {
+        width: 400px;
+        margin-left: 2.5%;
+    }
+    
+    .tavernTxt{
+        margin-top: -260px;
+        color: white;
+        font-size: small;
+    }
+    
+    .tavernTitle{
+        font-size: medium;
+        color: #cb8f16;
+    }
+    
+    .tavernBtn{
+        background-color:#cb8f16;
+        border-color: #4A423F;
+        color:#4A423F;
+        font-size: small;
+        
+    }
+    
+    .cardImg {
+        height: 150px;
+    }
+
+    .cardTitle{
+        font-size: medium;
+    }
+
+    .cardTxt{
+        font-size: small;
+    }
+    
+    .cardOne {
+        margin-left: 10px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 350px;
+    }
+    
+    .cardTwo {
+        margin-left: -10px;
+        background-color:#302C2B;
+        color: white;
+        border-color: white;
+        height: 350px;
+    }
 }
 
-.tavernTitle{
-    font-size: xx-large;
-    color: #cb8f16;
-    border-color: white;
-    border-bottom: 3px;
-}
 
 #tavernTxt{
-	text-shadow: -1px 1px 0 #4A423F,
-				  1px 1px 0 #4A423F,
-				 1px -1px 0 #4A423F;
-}
-
-.tavernBtn{
-    background-color:#cb8f16;
-    border-color: #4A423F;
-    color:#4A423F;
-    font-size: large;
-}
-
-.cardImg {
-    height: 200px;
-}
-
-.cardOne {
-    margin-right: -5px;
-}
-
-.cardTwo {
-    margin-right: 20px;
+    text-shadow: -1px 1px 0 #4A423F,
+                  1px 1px 0 #4A423F,
+                 1px -1px 0 #4A423F;
 }
