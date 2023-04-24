@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Landing from './Components/Landing/Landing';
 import Character from './Components/Character/Character';
 import Profile from './Components/Profile/Profile';
-import CreateAccount from './components/CreateAccount/CreateAccount';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -22,7 +22,7 @@ function App() {
     <div className='bg'>
         <Row className='navbarBg'>
           <Col className='col-7'>
-            <img src={logo} />
+            <img src={logo}/>
           </Col>
           <Col className='navMargin'>
             <p className='doubleFont navText'>Map</p>
