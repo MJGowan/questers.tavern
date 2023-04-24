@@ -208,7 +208,6 @@ font-family: 'IM Fell DW Pica', serif;
 
 /* ------------------------------------------ */
 
-
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
@@ -218,6 +217,10 @@ font-family: 'IM Fell DW Pica', serif;
 }
 .dwFont{
   font-family: 'IM Fell DW Pica', serif;
+}
+
+.bg{
+  background-color: #4A423F;
 }
 
 .navbarBg{
@@ -245,3 +248,4 @@ font-family: 'IM Fell DW Pica', serif;
   height: 200px;
   overflow: hidden;
 }
+
