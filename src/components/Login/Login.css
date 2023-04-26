@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+.doubleFont{
+  font-family: 'IM Fell Double Pica SC', serif;
+}
+.dwFont{
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+.bgImg{
+    background-image: url('../../Assets/LoginBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadowBox{
+    background-color: #302c2bc8;
+}
+
+.white{
+    color: white;
+}
+
+.title{
+    font-size: xx-large;
+    text-align: center;
+}
