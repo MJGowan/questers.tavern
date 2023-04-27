@@ -10,13 +10,15 @@
 }
 
 .bgImg{
-    background-image: url('../../Assets/LoginBg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh
 }
 
 .shadowBox{
-    background-color: #302c2bc8;
+    background-color: #302c2bb6;
+    height: 70vh;
 }
 
 .white{
@@ -24,6 +26,39 @@
 }
 
 .title{
-    font-size: xx-large;
     text-align: center;
+}
+
+.input{
+    width: 600px;
+    height: 150%;
+    
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1025px) {
+    .title{
+        font-size: 50px;
+    }
+}
+
+/* LAPTOP */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .title{
+        font-size: 40px;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .title{
+        font-size: xx-large;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 425px) {
+    .title{
+        font-size: xx-large;
+    }
 }
