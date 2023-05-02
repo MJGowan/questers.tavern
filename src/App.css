@@ -1,41 +1,210 @@
-.App {
+/* font-family: 'Heebo', sans-serif;
+font-family: 'IM Fell Double Pica SC', serif; 
+font-family: 'Heebo', sans-serif;
+font-family: 'IM Fell DW Pica', serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Hind Guntur', sans-serif;
+font-family: 'IM Fell DW Pica', serif; */
+body {
+  background-color: #4A423F !important;
+}
+
+.title-container {
+  position: relative;
+  width: 100%;
+  height: 116px;
+  overflow: hidden;
+}
+
+.image-container1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(80%);
+}
+.title-containerDos{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+/* ------------------------------------------ */
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -40%);
+  z-index: 1;
+}
+
+.text {
+  font-family: 'IM Fell Double Pica SC', serif; 
+  font-size: 44px;
+  font-weight: bold;
+  color: #D9D9D9;
+  text-align: left;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  padding: 20px;
+}
+
+.button-container .button {
+  margin-left: 10px;
+}
+.button {
+  font-size: 17px; /* increase font size */
+  padding: 10px 20px; /* increase padding */
+  border: 2px solid rgb(66, 60, 60);
+  border-radius: 20% / 100%;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: bold;
+  background-color: #E0F4A6;
+   filter: contrast(55%)
+}
+@media only screen and (max-width: 576px) {
+  .text {
+    font-size: 35px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .text-overlay {
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .text-overlay {
+    left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .text-overlay {
+    left: 30%;
+  }
+}
+
+/* table */
+
+.my-table tr {
+  border: 1px solid gold;
+  color: #D6BA73;
+font-family: 'IM Fell DW Pica', serif;
+
+}
+
+.my-table td, .my-table th {
+  border: 1px solid gold;
+  color: #D6BA73;
+ /* or any other color you prefer */
+}
+.my-table td button {
+   display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #E0F4A6;
+  font-weight: bold;
+  filter: contrast(55%)
+
+}
+/* ------------------Join Campaign css-------------------- */
+
+.title-container1{
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  padding-inline-end: 40px;
+}
+.image-container1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 550px) {
+  .text-center {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* ------------------Join Campaign css-------------------- */
+
+/* ------------------Tavern Board Post css-------------------- */
+
+.button33 {
+  display: block;
+  margin: 0 auto;
+  font-size: 17px; /* increase font size */
+  padding: 10px 20px; /* increase padding */
+  border: 2px solid rgb(66, 60, 60);
+  border-radius: 20% / 100%;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: bold;
+  background-color: #E0F4A6;
+   filter: contrast(55%)
+}
+
+.card-description {
   text-align: center;
+  font-size: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-font-description{
+  text-align: center;
+  color:#D6BA73;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 500px) {
+  .card-container1 {
+    display: hide;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 500px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .card {
+    width: 100%;
+    height: 530px;
+    margin: 40px 0 0 0;
+    background-color: #4A423F;
+    border: 2px solid #FFA825;
   }
 }
+ /* ------------------------------------------ */
+
+
+/* -----------FAVORITES BELOW--------------------- */
+.text-overlay1{
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  transform: translate(-60%, -0%);
+  z-index: 1;
+}
+
 
 /* ------------------------------------------ */
 
@@ -47,7 +216,7 @@
   font-family: 'IM Fell Double Pica SC', serif;
 }
 .dwFont{
-  font-family: 'IM Fell DW Pica', serif;
+  font-family: 'DW', serif;
 }
 
 .navbarBg{
@@ -61,3 +230,18 @@
   font-size: larger;
   margin-top: 25%;
 }
+.logo-image1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(100%);
+  border-radius: 10px;
+  padding: 10px 20px 10px 10px; /* added padding-right value */
+}
+.title-container2{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+

@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import Landing from './Components/Landing/Landing';
+import Character from './Components/Character/Character';
+import Profile from './Components/Profile/Profile';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
   let loggedIn = false;
   // use props to display username and profile pic when people are logged in
+  
+  // <BrowserRouter>
+  //   <Routes>
+  //     <Route/>
+  //   </Routes>
+  // </BrowserRouter>
+
   return (
-    <div>
+    <div className='bg'>
         <Row className='navbarBg'>
           <Col className='col-7'>
-            <img src={logo} />
+            <img src={logo}/>
           </Col>
           <Col className='navMargin'>
             <p className='doubleFont navText'>Map</p>
@@ -35,14 +46,11 @@ function App() {
             )
           }
         </Row>
+        {/* <CreateAccount/> */}
+        <Landing/>
     </div>
+   
   );
-
-
-
-
-
-
 }
 
 export default App;
