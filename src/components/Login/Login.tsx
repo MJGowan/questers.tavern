@@ -5,24 +5,6 @@ import bg from '../../Assets/LoginBg.png';
 
 export default function Login() {
 
-// const [screen, setScreen] = useState('');
-// useEffect(() => {
-//   const handleChange = () => {
-//     if (window.innerWidth <= 1024 && window.innerWidth >= 769) {
-//       setScreen('laptop')
-//     } else if (window.innerWidth <= 768 && window.innerWidth >= 426) {
-//       setScreen('tablet')
-//     } else if (window.innerWidth <= 425) {
-//       setScreen('mobile')
-//     } else {
-//       setScreen('desktop')
-//     }
-//   }
-//   handleChange();
-//   window.addEventListener("resize", handleChange);
-//   return () => window.removeEventListener("resize", handleChange)
-// }, [])
-
   return (
     <div className='doubleFont white'>
       <img src={bg} className='bgImg'/>
@@ -54,6 +36,7 @@ export default function Login() {
               </Col>
             </Row>
             <br/>
+            <br/>
             <Row>
               <Col>
                 <Row>
@@ -69,8 +52,9 @@ export default function Login() {
               </Col>
             </Row>
             <br/>
+            <br/>
             <Row>
-              <Col className='d-flex justify-content-center text-align-center'>
+              <Col className='d-flex justify-content-center text-align-center accountTxt'>
                 <p>Don't have an account? <span>Register here</span></p>
               </Col>
             </Row>
