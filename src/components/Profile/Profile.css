@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+.doubleFont{
+    font-family: 'IM Fell Double Pica SC', serif;
+}
+.dwFont{
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+.profile{
+    background-color: #4A423F;
+    height: 100vh;
+    color: white;
+}
+.heroImg{
+    width: 100vw;
+}
+
+.profileBox{
+    background-color: #302C2B;
+}

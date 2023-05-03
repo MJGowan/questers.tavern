@@ -2,6 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
+
+.landingBg{
+    background-color: #4A423F;
+    height: 100vh;
+}
+
 /* DESKTOP */
 @media screen and (min-width: 1440px ) {
     
@@ -153,6 +159,7 @@
     .tavernImg {
         width: 500px;
         margin-left: 17%;
+        margin-top: 21%;
     }
     
     .tavernTxt{
@@ -200,6 +207,10 @@
         color: white;
         border-color: white;
         height: 350px;
+    }
+
+    .cardRow{
+        margin-top: 12%;
     }
 }
 

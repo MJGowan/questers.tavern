@@ -33,7 +33,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div>
+    <div className='landingBg'>
       <Row>
         <img className='heroImg' src={heroImg} />
       </Row>
@@ -44,15 +44,11 @@ export default function Landing() {
         screenSize === 'mobile' ?
           (
             <div>
-              <br />
-              <br />
-              <br />
-              <Row>
+              <Row className='mt-5'>
                 <Col>
-                  <img className='tavernImg' src={tavernImg} />
+                  <img className='tavernImg mt-5' src={tavernImg} />
                   <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
-                    <p className='tavernTitle doubleFont'>Resources for New Players</p>
-                    <br />
+                    <p className='tavernTitle doubleFont mb-4'>Resources for New Players</p>
                     <Container>
                       <Row>
                         <Col className='col-1'></Col>
@@ -68,9 +64,8 @@ export default function Landing() {
                   </Container>
                 </Col>
               </Row>
-              <br />
-              <br />
-              <Row className='d-flex justify-content-center'>
+
+              <Row className='d-flex justify-content-center mt-5'>
                 <Col>
                   <Card style={{ width: '12rem' }} className='cardOne'>
                     <Card.Img variant="top" src={cardOneImg} className='cardImg' />
@@ -101,19 +96,11 @@ export default function Landing() {
           screenSize === 'tablet' ?
             (
               <div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <Row>
                   <Col>
                     <img className='tavernImg' src={tavernImg} />
                     <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
                       <p className='tavernTitle doubleFont'>Resources for New Players</p>
-                      <br />
                       <Container>
                         <Row>
                           <Col className='col-3'></Col>
@@ -129,11 +116,8 @@ export default function Landing() {
                     </Container>
                   </Col>
                 </Row>
-                <br />
-                <br />
-                <br />
-                <br />
-                <Row>
+
+                <Row className='cardRow'>
                   <Col className='d-flex justify-content-center'>
                     <Card style={{ width: '15rem' }} className='cardOne'>
                       <Card.Img variant="top" src={cardOneImg} className='cardImg' />

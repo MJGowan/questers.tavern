@@ -66,5 +66,8 @@
     .accountTxt{
         font-size: small;
     }
+    .shadowBox{
+        height: 60vh;
+    }
 
 }

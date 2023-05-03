@@ -10,34 +10,30 @@ export default function Login() {
       <img src={bg} className='bgImg'/>
       <Row>
         <Col className='col-2'></Col>
-        <Col className='col-8'>
-          <br/>
-          <br/>
+        <Col className='col-8 mt-5'>
+          
           <Container className='shadowBox'>
-            <br/>
             <Row>
               <Col>
-                <p className='title'>Login</p>
+                <p className='title mt-4 mb-4'>Login</p>
               </Col>
             </Row>
-            <br/>
-            <Row>
+            <Row className='mb-4'>
               <Col>
                 <Row>
                   <p>Email:</p>
                 </Row>
                 <Row>
                   <Col></Col>
-                  <Col>
+                  <Col className='mb-1'>
                   <input type='email' className='input'></input>
                   </Col>
                   <Col></Col>
                 </Row>
               </Col>
             </Row>
-            <br/>
-            <br/>
-            <Row>
+            
+            <Row className='mb-5'>
               <Col>
                 <Row>
                   <p>Password:</p>
@@ -51,8 +47,6 @@ export default function Login() {
                 </Row>
               </Col>
             </Row>
-            <br/>
-            <br/>
             <Row>
               <Col className='d-flex justify-content-center text-align-center accountTxt'>
                 <p>Don't have an account? <span>Register here</span></p>

@@ -14,14 +14,9 @@ function App() {
   return (
     <div>
         <Navbar/>
-        <Login/>
+        <Profile/>
     </div>
   );
-
-
-
-
-
 
 }
 
