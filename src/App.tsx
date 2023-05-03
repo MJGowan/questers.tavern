@@ -46,7 +46,7 @@ function App() {
             )
           }
         </Row>
-        {/* <CreateAccount/> */}
+        { <CreateAccount/> }
         <Landing/>
     </div>
    
