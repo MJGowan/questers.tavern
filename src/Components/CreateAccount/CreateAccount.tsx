@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './CreateAccount.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
@@ -7,6 +7,36 @@ export default function CreateAccount() {
     const bg = require('../../Assets/image 9.png');
     const parchment = require('../../Assets/image 7.png');
     const plus = require('../../Assets/R (1) 1.png');
+
+    //const {Username, setUsername} = useState<string>('');
+    //const {Firstname, setFirstname} = useState<string>('');
+    //const {Lastname, setLastname} = useState<string>('');
+    //const {Datecreated, setDatecreated} = useState<string>('');
+    //const {Dndexperience, setDndexperience} = useState<string>('');
+    //const {Password, setPassword} = useState<string>('');
+
+    //const handleSubmit = async () => {
+        // if (!Username || !Firstname || !Lastname || !Datecreated || !Dndexperience || !Password) {
+            // alert("Could not create account, missing information.");
+            // } else {
+            // let userData: object = {
+            // Id: 0,
+            // Username,
+            //Firstname,
+            //Lastname,
+            //Datecreated,
+            //Dnexperience,
+            //Password
+            // }
+            // if (await CreateAccount(userData)) {
+            // console.log('Success');
+            //  navigate("/{ProfileComponent}");
+            // } else {
+            // alert("Could not create account, missing information.");
+            // }
+            // console.log(userData);
+            // }
+    //}
     return (
         <div className='doubleFont'>
             <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
@@ -30,6 +60,16 @@ export default function CreateAccount() {
                         <br />
                         <Row>
                             <p>Username:</p>
+                            <input className='longInput'></input>
+                        </Row>
+                        <br />
+                        <Row>
+                            <p>Todays Date:</p>
+                            <input className='longInput'></input>
+                        </Row>
+                        <br />
+                        <Row>
+                            <p>Dnd Experience:</p>
                             <input className='longInput'></input>
                         </Row>
                         <br />

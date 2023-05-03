@@ -25,7 +25,7 @@ function App() {
             <img src={logo}/>
           </Col>
           <Col className='navMargin'>
-            <p className='doubleFont navText'>Map</p>
+            <p className='doubleFont navText'>Campaigns</p>
           </Col>
           <Col className='navMargin'>
             <p className='doubleFont navText'>FAQs</p>
@@ -47,7 +47,7 @@ function App() {
           }
         </Row>
         { <CreateAccount/> }
-        <Landing/>
+        {/*<Landing/>*/}
     </div>
    
   );
