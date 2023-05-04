@@ -6,7 +6,6 @@ import { Container, Row, Col, Card, } from "react-bootstrap";
 
 export default function FAQs(){
   //declaring a new state variable 
-    const [showInformation, setShowInformation] = useState(false);
 
 
  const campaign = require("../JoiningCampaign/campaign.png");
