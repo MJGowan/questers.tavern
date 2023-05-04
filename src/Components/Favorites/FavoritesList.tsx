@@ -59,13 +59,30 @@ export default function FavoritesList() {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Card>
+        <Col className='card-container' style={{ marginLeft: "-30px" }}>
+          {" "}
+          {/* <Card>
             <Card.Header as='h5'>
               <input></input>
-              <button className='button33'>Join Message</button>
+              <button className='button33'>SEARCH</button>
             </Card.Header>
+            <Card.Body></Card.Body>
+          </Card> */}
+          <Card
+            className='card'
+            style={{
+              width: "39rem",
+              height: "570px",
+              marginTop: "40px",
+              marginLeft: "30px",
+              backgroundColor: "#4A423F",
+              border: "2px solid #FFA825",
+            }}
+          >
+            <Card.Header as='h5'>New Card</Card.Header>
             <Card.Body>
+              <Card.Title>New Card Title</Card.Title>
+              <Card.Text>New Card Text</Card.Text>
             </Card.Body>
           </Card>
         </Col>

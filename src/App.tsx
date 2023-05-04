@@ -7,8 +7,11 @@ import Character from './Components/Character/Character';
 import Profile from './Components/Profile/Profile';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
 import TavernBoard from './Components/TavernBoard';
-import JoinCampaign from './Components/JoiningCampaign/JoinCampaign';
+import JoinCampaign from './Components/JoiningCampaign/FAQs';
 import FavoritesList from './Components/Favorites/FavoritesList';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import FAQs from './Components/JoiningCampaign/FAQs';
+
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -52,9 +55,9 @@ function App() {
         {/* <CreateAccount/> */}
         {/* <Landing/> */}
         {/* < TavernBoard /> */}
-        {/* <JoinCampaign /> */}
+        <FAQs />
         {/* <FavoritesList /> */}
-        
+
     </div>
    
   );
