@@ -67,6 +67,10 @@
         color: white;
         border-color: white;
     }
+
+    .desktopRow{
+        margin-top: 20%;
+    }
 }
 
 /*  */
@@ -136,6 +140,10 @@
         color: white;
         border-color: white;
         height: 310px;
+    }
+
+    .laptopRow{
+        margin-top:23%;
     }
 }
 

@@ -148,16 +148,7 @@ export default function Landing() {
             screenSize === 'laptop' ?
               (
                 <div>
-                  <p>HI</p>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <Row>
+                  <Row className='laptopRow'>
                     <Col>
                       <img className='tavernImg' src={tavernImg} />
                       <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
@@ -206,18 +197,7 @@ export default function Landing() {
               // DESKTOP 
               (
                 <div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <Row>
+                  <Row className='desktopRow'>
                     <Col className='col-6'>
                       <img className='tavernImg' src={tavernImg} />
                       <Container className='tavernTxt text-center dwFont' id='tavernTxt'>

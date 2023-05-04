@@ -5,31 +5,39 @@ import { Container, Row, Col } from 'react-bootstrap';
 export default function Profile() {
   const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";
-  const mode = "DM or Adventurer";
+
   const profilePic = require('../../Assets/Pic.png');
   const creationDate = "0/0/0000";
   const location = "Tired, CA";
   const exp = "New";
   const numFriends = 0;
+  
 
+    // const [username, setUsername] = useState('');
+    // const [mode, setMode] = useState('');
+    // const [profilePic, setProfilePic] = useState('');
+    // const [creationDate, setCreationDate] = useState('');
+    // const [location, setLocation] = useState('');
+    // const [exp, setExp] = useState('');
+    // const [numFriends, setNumFriends] = useState('');
 
   return (
     <div className='profile'>
         <Row>
           <img src={heroImg} className='heroImg'></img>
-          <Col className='col-4'>
+          <Col className='col-4 greeting'>
           <p className='doubleFont'>Welcome to the tavern,</p>
           <p className='doubleFont'>{username}!</p>
           </Col>
           <Col className='col-4'>
-            <p className='doubleFont text-center'>{mode}</p>
+            <p className='doubleFont text-center mode'>Mode</p>
           </Col>
         </Row>
-        <Row>
+        <Row className='mt-3'>
           <Col className='col-3'>
             <div className='profileBox'>
               <div>
-                <img src={profilePic}></img>
+                <img src={profilePic} className='profilePic'></img>
               </div>
               <p>Username: {username}</p>
               <p>Account Created: {creationDate}</p>
@@ -40,6 +48,9 @@ export default function Profile() {
               <p>Edit Profile</p>
             </div>
           </Col>
+          {
+            
+          }
           <Col>
           <Row>
 

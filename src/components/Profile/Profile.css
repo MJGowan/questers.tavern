@@ -15,9 +15,25 @@
     color: white;
 }
 .heroImg{
-    width: 100vw;
+    width: 100%;
 }
 
 .profileBox{
     background-color: #302C2B;
+    margin-left: 5%;
+}
+
+.profilePic{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.greeting{
+    margin-top: -8%;
+    font-size: x-large;
+}
+
+.mode{
+    margin-top: -10%;
+    font-size: x-large;
 }
