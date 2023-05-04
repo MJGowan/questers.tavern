@@ -6,6 +6,9 @@ import Landing from './Components/Landing/Landing';
 import Character from './Components/Character/Character';
 import Profile from './Components/Profile/Profile';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
+import TavernBoard from './Components/TavernBoard';
+import JoinCampaign from './Components/JoiningCampaign/JoinCampaign';
+import FavoritesList from './Components/Favorites/FavoritesList';
 
 function App() {
   const logo = require('./Assets/logo.jpg');
@@ -47,7 +50,11 @@ function App() {
           }
         </Row>
         {/* <CreateAccount/> */}
-        <Landing/>
+        {/* <Landing/> */}
+        {/* < TavernBoard /> */}
+        {/* <JoinCampaign /> */}
+        {/* <FavoritesList /> */}
+        
     </div>
    
   );
