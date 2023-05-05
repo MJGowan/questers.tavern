@@ -6,6 +6,9 @@ import Landing from "./Components/Landing/Landing";
 import Character from "./Components/Character/Character";
 import Profile from "./Components/Profile/Profile";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
+import Login from "./Components/Login/Login";
+import JoinCampaign from "./Components/JoiningCampaign/JoinCampaign";
+import TavernBoard from "./Components/TavernBoard";
 
 function App() {
   const logo = require("./Assets/logo.jpg");
@@ -19,7 +22,6 @@ function App() {
   // </BrowserRouter>
 
   return (
-    
     <div className="bg">
       <Row className="navbarBg">
         <Col className="col-7">
@@ -44,20 +46,17 @@ function App() {
             <p className="doubleFont navText">Sign Up/Login</p>
           </Col>
         )}
-
       </Row>
-      {<CreateAccount />}
+
       {/*<Landing/>*/}
-      {/*<CreateAccount/>*/}
-      {/* <FavoritesList /> */}
-      {/*<JoiningCampaign/>*/}
+      {/*{<CreateAccount />*/}
       {/*<Login/>*/}
       {/*<Profile/>*/}
-      {/* < TavernBoard /> */}
-
+      {/* <FavoritesList /> */}
+      {/*<JoinCampaign/>*/}     
+      {/*< TavernBoard />*/}
     </div>
   );
-
 }
 
 export default App;

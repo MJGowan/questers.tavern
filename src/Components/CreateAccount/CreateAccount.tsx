@@ -65,12 +65,12 @@ export default function CreateAccount() {
                         <br />
                         <Row>
                             <p>Todays Date:</p>
-                            <input className='longInput'></input>
+                            <input className='longInput' placeholder='example: 05/05/2023'></input>
                         </Row>
                         <br />
                         <Row>
                             <p>Dnd Experience:</p>
-                            <input className='longInput'></input>
+                            <input className='longInput' placeholder='Example: 1 Year 4 Months'></input>
                         </Row>
                         <br />
                         <Row>
