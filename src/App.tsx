@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -54,8 +55,22 @@ function App() {
       {/*<Login/>*/}
       {/*<Profile/>*/}
       {/* < TavernBoard /> */}
+=======
+import React from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from './Components/Navbar/Navbar';
+
+function App() {
+
+  return (
+    <div>
+        <Navbar/>
+>>>>>>> c9b5b41527e4bf02df64c2f25b58885a445108f0
     </div>
   );
+
 }
 
 export default App;
