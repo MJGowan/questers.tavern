@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './Landing.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import heroImg from '../../Assets/image 10.png';
@@ -6,7 +6,9 @@ import tavernImg from '../../Assets/Lets get started (2).png';
 import cardOneImg from '../../Assets/Rectangle 6.png';
 import cardTwoImg from '../../Assets/Rectangle 7.png';
 
+
 export default function Landing() {
+
 
   const [screenSize, setScreenSize] = useState('');
   useEffect(() => {
@@ -37,7 +39,7 @@ export default function Landing() {
       <Row>
         <img className='heroImg' src={heroImg} />
       </Row>
-      <p className='heroTxt text-center' id="heroTxt">Enter The Dungeon United</p>
+      <p className='heroTxt' id="heroTxt">Enter The Dungeon United</p>
 
       {
         // MOBILE

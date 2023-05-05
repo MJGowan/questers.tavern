@@ -9,6 +9,9 @@ import CreateAccount from "./Components/CreateAccount/CreateAccount";
 import Login from "./Components/Login/Login";
 import JoinCampaign from "./Components/JoiningCampaign/JoinCampaign";
 import TavernBoard from "./Components/TavernBoard";
+import FavoritesList from "./Components/Favorites/FavoritesList";
+
+
 
 function App() {
   const logo = require("./Assets/logo.jpg");
@@ -52,9 +55,10 @@ function App() {
       {/*{<CreateAccount />*/}
       {/*<Login/>*/}
       {/*<Profile/>*/}
-      {/* <FavoritesList /> */}
+      {/*<FavoritesList />*/}
       {/*<JoinCampaign/>*/}     
       {/*< TavernBoard />*/}
+
     </div>
   );
 }
