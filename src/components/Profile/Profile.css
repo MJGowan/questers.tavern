@@ -21,6 +21,7 @@
 .profileBox{
     background-color: #302C2B;
     margin-left: 5%;
+    border-radius: 5px;
 }
 
 .profilePic{
@@ -29,11 +30,26 @@
 }
 
 .greeting{
-    margin-top: -8%;
+    margin-top: -6%;
+    margin-left: 1%;
     font-size: x-large;
 }
 
-.mode{
-    margin-top: -10%;
-    font-size: x-large;
+.darkTxt{
+    color:#302C2B;
+}
+
+.addNewImg{
+    margin-left: -22%;
+}
+.addNewTxt{
+    margin-top: -8%;
+    margin-left: 15%;
+}
+.partTxtOne{
+    margin-top: -18%;
+    margin-left: 5%;
+}
+.partTxtTwo{
+    margin-left: 3%;
 }

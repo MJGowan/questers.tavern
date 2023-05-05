@@ -9,7 +9,7 @@ export default function CreateAccount() {
     const plus = require('../../Assets/R (1) 1.png');
     return (
         <div className='doubleFont'>
-            <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
+            <img src={bg} style={{ backgroundSize: '100vh' }} />
             <Container className='box'>
                 <br />
                 <Row>
