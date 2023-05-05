@@ -172,10 +172,10 @@ export default function FAQs(){
            <Card.Body>
              <Card.Title
                style={{ color: "#D6BA73", textAlign: "center" }}
-               onClick={() => {
-                 console.log("Card.Title clicked");
-                 setShowInformation(true);
-               }}
+              //  onClick={() => {
+              //    console.log("Card.Title clicked");
+              //    setShowInformation(true);
+              //  }}
              >
                When Joining the campaign, reflect on your experience and
                register accordingly.{" "}
