@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Landing from './Components/Landing/Landing';
-import Character from './Components/Character/Character';
+
 import Profile from './Components/Profile/Profile';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
 import Login from './Components/Login/Login';
