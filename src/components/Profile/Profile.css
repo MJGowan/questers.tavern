@@ -48,8 +48,11 @@
 }
 .partTxtOne{
     margin-top: -18%;
-    margin-left: 5%;
+    margin-left: 6%;
 }
 .partTxtTwo{
-    margin-left: 3%;
+    margin-left: 4%;
+}
+.editBtn{
+    text-align: right;
 }
