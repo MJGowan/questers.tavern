@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
+import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
 
 export default function Profile() {
   const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";
   const profilePic = require('../../Assets/Pic.png');
-  const creationDate = "0/0/0000";
+  const creationDate = "X/XX/XXXX";
   const location = "Tired, CA";
   const exp = "New";
   const numFriends = 0;
@@ -26,12 +27,40 @@ export default function Profile() {
   // const [exp, setExp] = useState('');
   // const [numFriends, setNumFriends] = useState('');
 
+  const [myCampaigns, setMyCampaigns] = useState('');
+  const [playing, setPlaying] = useState('');
+  // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
+
+  // const [mode, setMode] = useState('');
+  // setMode('Adventurer');
+ let mode = 'Adventurer';
+  // const changeMode = () => {
+  //   if (mode === "Adventurer"){
+  //     setMode('Dungeon Master');
+  //   } else if (mode === "Dungeon Master"){
+  //     setMode('Adventurer');
+  //   }
+  // }
+
+
+
   return (
     <div className='profile'>
       <Row>
         <img src={heroImg} className='heroImg'></img>
         <Col className='col-4 greeting'>
           <p className='doubleFont'>Welcome to the tavern, {username}!</p>
+        </Col>
+        <Col>
+          {
+            mode === 'Adventurer' ? (
+              <div></div>
+            ) : (
+              <div></div>
+            )
+            
+          }
+          
         </Col>
       </Row>
       <Row className='mt-3'>
@@ -61,14 +90,12 @@ export default function Profile() {
               </Row>
               <hr />
               <Row>
-                <p className='editBtn' onClick={handleShow}>Edit Profile</p>
+                <p className='editBtn' onClick={() => handleShow}>Edit Profile</p>
               </Row>
             </Container>
           </div>
         </Col>
-        {
-
-        }
+     
         <Col>
           <Row>
             <Container className='mb-5'>
@@ -79,13 +106,13 @@ export default function Profile() {
               </Row>
               <Row>
                 <Col>
-                {
+                
                   <div>
                     <img src={parchment}/>
                     <img src={addNew} className='addNewImg'/>
                     <p className='darkTxt addNewTxt'>Add New</p>
                   </div>
-                }
+                
                 </Col>
               </Row>
             </Container>
@@ -99,13 +126,13 @@ export default function Profile() {
               </Row>
               <Row>
                 <Col className='dwFont'>
-                {
+                
                   <div>
                     <img src={parchment}/>
                     <p className='darkTxt partTxtOne'>Not participating in a campaign yet?</p>
                     <p className='darkTxt partTxtTwo'> Maybe you can check the Campaigns page!</p>
                   </div>
-                }
+                
                 </Col>
               </Row>
             </Container>
@@ -140,14 +167,22 @@ export default function Profile() {
       </Form.Group>
     </Form>
 
+    <Form.Group className="mb-3">
+        <Form.Label>D&D Experience:</Form.Label>
+        <Form.Select>
+          <option>Has Not Played</option>
+          <option>New</option>
+          <option>Experienced</option>
+          <option>Grand Master</option>
+        </Form.Select>
+      </Form.Group>
+
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary">Submit</Button>
         </Modal.Footer>
       </Modal>
     </div>
   )
-}
+              }
+            
