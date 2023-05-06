@@ -5,6 +5,7 @@ import heroImg from '../../Assets/image 10.png';
 import tavernImg from '../../Assets/Lets get started (2).png';
 import cardOneImg from '../../Assets/Rectangle 6.png';
 import cardTwoImg from '../../Assets/Rectangle 7.png';
+import Navbar from '../Navbar/Navbar';
 
 
 export default function Landing() {
@@ -36,6 +37,7 @@ export default function Landing() {
 
   return (
     <div>
+      <Navbar/>
       <Row>
         <img className='heroImg' src={heroImg} />
       </Row>

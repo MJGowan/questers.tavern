@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col } from "react-bootstrap";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
 import Character from "./Components/Character/Character";
 import Profile from "./Components/Profile/Profile";
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="bg">
-      <Row className="navbarBg">
+     {/* <Row className="navbarBg">
         <Col className="col-7">
           <img src={logo} />
         </Col>
@@ -41,7 +42,7 @@ function App() {
         </Col>
         {loggedIn ? (
           <Col>
-            {/* props.username to display the active user */}
+            {/* props.username to display the active user }
             <p className="doubleFont navText"></p>
           </Col>
         ) : (
@@ -49,15 +50,19 @@ function App() {
             <p className="doubleFont navText">Sign Up/Login</p>
           </Col>
         )}
-      </Row>
+        </Row>*/}
 
-      {/*<Landing/>*/}
-      {/*{<CreateAccount />*/}
-      {/*<Login/>*/}
+ <BrowserRouter>
+     <Routes>
+      {/*<Route path ='/' element={<Landing/>}/>*/}
+      <Route path ='/CreateAccount' element = {<CreateAccount/>} />
+      {/*<Route path = './Login' element = {<Login/>} />*/}
       {/*<Profile/>*/}
       {/*<FavoritesList />*/}
       {/*<JoinCampaign/>*/}     
       {/*< TavernBoard />*/}
+         </Routes>
+   </BrowserRouter>
 
     </div>
   );
