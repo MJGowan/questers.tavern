@@ -30,7 +30,7 @@
 }
 
 .greeting{
-    margin-top: -6%;
+    margin-top: -7%;
     margin-left: 1%;
     font-size: x-large;
 }
@@ -40,11 +40,11 @@
 }
 
 .addNewImg{
-    margin-left: -22%;
+    margin-left: -23%;
 }
 .addNewTxt{
     margin-top: -8%;
-    margin-left: 15%;
+    margin-left: 14%;
 }
 .partTxtOne{
     margin-top: -18%;
@@ -55,4 +55,12 @@
 }
 .editBtn{
     text-align: right;
+}
+.userTxt{
+    margin-top: -4%;
+}
+.mode{
+    font-size: x-large;
+    margin-top: -6%;
+    margin-bottom: 4%;
 }
