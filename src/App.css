@@ -46,10 +46,17 @@ body {
 
 .text {
   font-family: 'IM Fell Double Pica SC', serif; 
-  font-size: 44px;
+  font-size: 30px;
   font-weight: bold;
   color: #D9D9D9;
   text-align: left;
+}
+.text1 {
+  font-family: 'IM Fell Double Pica SC', serif; 
+  font-size: 20px;
+  font-weight: bold;
+  color: #D9D9D9;
+  text-align:end;
 }
 
 .button-container {
@@ -204,6 +211,12 @@ font-family: 'IM Fell DW Pica', serif;
   transform: translate(-60%, -0%);
   z-index: 1;
 }
+
+.userfonts{
+  font-size: 25px;
+  font-weight:bold
+}
+
 
 
 /* ------------------------------------------ */

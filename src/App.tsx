@@ -13,9 +13,12 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import FAQs from './Components/JoiningCampaign/FAQs';
 
 
-function App() {
 
-  return (
+function App() {
+const logo = require("./Assets/logo.jpg");
+
+
+return (
     <div className='bg'>
         <Row className='navbarBg'>
           <Col className='col-7'>
@@ -31,23 +34,23 @@ function App() {
             <p className='doubleFont navText'>D&D Website</p>
           </Col>
           {
-            loggedIn ? (
-              <Col>
-                {/* props.username to display the active user */}
-                <p className='doubleFont navText'></p>
-              </Col>
-            ) : (
-              <Col>
-                <p className='doubleFont navText'>Sign Up/Login</p>
-              </Col>
-            )
+            // loggedIn ? (
+            //   <Col>
+            //     {/* props.username to display the active user */}
+            //     <p className='doubleFont navText'></p>
+            //   </Col>
+            // ) : (
+            //   <Col>
+            //     <p className='doubleFont navText'>Sign Up/Login</p>
+            //   </Col>
+            // )
           }
         </Row>
         {/* <CreateAccount/> */}
         {/* <Landing/> */}
         {/* < TavernBoard /> */}
         {/* <FAQs /> */}
-        {/* <FavoritesList /> */}
+        <FavoritesList />
 
     </div>
   );

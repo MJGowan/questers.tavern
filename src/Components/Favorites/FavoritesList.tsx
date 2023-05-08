@@ -13,9 +13,10 @@ export default function FavoritesList() {
             <div className='image-container1'>
               <img src={tavernmen} alt='logo' className='logo-image' />
               <div className='text-overlay1'>
-                <h1 className='text text-right'>
+                <h3 className='text text-right'>
                   Welcome To The Tavern, Freedy!
-                </h1>
+                </h3>
+                <h4 className='text1'>Favorite List</h4>
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
@@ -50,10 +51,10 @@ export default function FavoritesList() {
                 }}
               >
                 The Haunted School House
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li> <li></li>
+                <ul className='userfonts'>
+                  <li>EDIT PROFILE</li>
+                  <li>MY MESSAGES</li>
+                  <li>MY TAVERN BOARD</li>
                 </ul>
               </Card.Text>
             </Card.Body>
@@ -79,7 +80,25 @@ export default function FavoritesList() {
               border: "2px solid #FFA825",
             }}
           >
-            <Card.Header as='h5'>New Card</Card.Header>
+            <Card.Header>
+              <input
+                style={{ width: "50%", borderRadius: "10px", height: "50px" }}
+                value='Search By UserName'
+              ></input>
+              <button
+                style={{
+                  width: "40%",
+                  marginLeft: "10px",
+                  borderRadius: "10px",
+                  height: "50px",
+                  padding: "10px 20px",
+                  backgroundColor: "#4A423F",
+                  color: "white",
+                }}
+              >
+                Search
+              </button>
+            </Card.Header>
             <Card.Body>
               <Card.Title>New Card Title</Card.Title>
               <Card.Text>New Card Text</Card.Text>
