@@ -46,7 +46,7 @@ function App() {
         {/* <CreateAccount/> */}
         {/* <Landing/> */}
         {/* < TavernBoard /> */}
-        <FAQs />
+        {/* <FAQs /> */}
         {/* <FavoritesList /> */}
 
     </div>
