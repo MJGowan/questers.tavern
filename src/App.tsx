@@ -9,7 +9,7 @@ import Profile from "./Components/Profile/Profile";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
 import Login from "./Components/Login/Login";
 import JoinCampaign from "./Components/JoiningCampaign/JoinCampaign";
-import TavernBoard from "./Components/TavernBoard";
+import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import FavoritesList from "./Components/Favorites/FavoritesList";
 
 
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="bg">
-      
+
      {/* <Row className="navbarBg">
         <Col className="col-7">
           <img src={logo} />
