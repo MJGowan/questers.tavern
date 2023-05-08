@@ -62,31 +62,31 @@ export default function CreateAccount() {
                             </Col>
                         </Row>
                         <br />
-                        <Row>
+                        <Row className='mb-4'>
                             <p>Username:</p>
                             <input className='longInput' onChange={({ target: {value} }) => setUsername(value)}></input>
                         </Row>
-                        <br />
-                        <Row>
+                        
+                        <Row className='mb-4'>
                             <p>Todays Date:</p>
                             <input className='longInput'  onChange={({ target: {value} }) => setDatecreated(value)} placeholder='example: 05/05/2023'></input>
                         </Row>
-                        <br />
-                        <Row className='mb-5'>
+                        
+                        <Row className='mb-4'>
                             <p>Dnd Experience:</p>
                             <input className='longInput'  onChange={({ target: {value} }) => setDndexperience(value)} placeholder='Example: 1 Year 4 Months'></input>
                         </Row>
-                        <br />
+                    
                         <Row>
                             <p>Password:</p>
-                            <input className='longInput'  onChange={({ target: {value} }) => setPassword(value)}></input>
+                            <input className='longInput2'  onChange={({ target: {value} }) => setPassword(value)}></input>
                         </Row>
-                        <br />
+                       
                         <br />
                         <Row>
                             <Col>
                                 <Row>
-                                    <p className='text-center'>Already have an account? <span>Login</span></p>
+                                    <p onClick={() => navigate('/')}  className='text-center'>Already have an account? <span>Login</span></p>
                                 </Row>
                                 <Row>
                                     <Col className='d-flex justify-content-center'>
@@ -102,11 +102,15 @@ export default function CreateAccount() {
                         <br />
                         <br />
                         <Row>
+
                             <p className='text-center ppTxt'>Profile Picture</p>
                             <Col className='d-flex justify-content-center'>
                                 <img src={parchment} />
                                 <img src={plus} className='plus'/>
                             </Col>
+
+                            <Button className='imageBtn'>Upload Profile Picture</Button>
+
                         </Row>
                     </Col>
                 </Row>

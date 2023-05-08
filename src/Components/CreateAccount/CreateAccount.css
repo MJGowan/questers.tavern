@@ -43,6 +43,13 @@
   border-radius: 5px;
 }
 
+.longInput2{
+  margin-left: 12px;
+  width: 503px;
+  height: 40px;
+  border-radius: 5px;
+}
+
 .caBtn {
   background-color: #576946;
   border-color: #141514;
@@ -57,4 +64,14 @@
   height: 100px;
   margin-left: -43%;
   margin-top: 30%;
+}
+
+.imageBtn{
+  position: absolute;
+  margin-top: 45%;
+  margin-left: 20.5%;
+  width: 200px;
+  height: 70px;
+  background-color: #768e5f;
+  border-color: #141514;
 }

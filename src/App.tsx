@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="bg">
+      
      {/* <Row className="navbarBg">
         <Col className="col-7">
           <img src={logo} />
