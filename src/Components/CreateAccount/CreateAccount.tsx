@@ -1,9 +1,9 @@
-// import React, { useState } from 'react';
 import './CreateAccount.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import { CreateAccountBe } from '../../Services/DataService';
 
 
 export default function CreateAccount() {

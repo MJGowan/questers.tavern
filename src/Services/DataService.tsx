@@ -1,6 +1,6 @@
 // Backend API Fetches
 
-async function CreateAccount(createdUser: object) {
+async function CreateAccountBe(createdUser: object) {
   const result = await fetch('https://localhost:7276/User/AddUser', {
       method: "POST",
       headers: {
@@ -74,4 +74,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccount, Login, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, Login, CreateCharacter, CreateCampaign}
