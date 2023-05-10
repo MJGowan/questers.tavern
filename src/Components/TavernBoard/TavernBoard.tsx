@@ -5,15 +5,15 @@ import TableTavern from "./TableTavern";
 
 export default function TavernBoard () {
 
-const logo = require('../Assets/tavernmen.jpg');
-const logo1 = require('../Assets/tavernbackground.webp');
+//const logo = require('../Assets/tavernmen.jpg');
+//const logo1 = require('../Assets/tavernbackground.webp');
  return (
    <Container fluid className='bg-brown'>
      <Row>
        <Col>
          <div className='title-container'>
            <div className='image-container'>
-             <img src={logo} alt='logo' className='logo-image' />
+             {/*<img src={logo} alt='logo' className='logo-image' />*/}
              <div className='text-overlay'>
                <h1 className='text text-center'>The Tavern Board</h1>
              </div>
@@ -30,7 +30,7 @@ const logo1 = require('../Assets/tavernbackground.webp');
      </Row>
      <Row>
        <div className='title-containerDos'>
-         <img src={logo1} alt='logo1' className='logo-image1' />
+        {/*} <img src={logo1} alt='logo1' className='logo-image1' />*/}
        </div>
      </Row>
      <Row>

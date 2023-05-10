@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import './Landing.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import heroImg from '../../Assets/image 10.png';
@@ -129,7 +130,7 @@ export default function Landing() {
                           <Col className='col-3'></Col>
                         </Row>
                       </Container>
-                      <Button className='tavernBtn'>How to use Quester's Tavern</Button>
+                      <Link to='/Login' className='tavernBtn' >How to use Quester's Tavern</Link>
                     </Container>
                   </Col>
                 </Row>

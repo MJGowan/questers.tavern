@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 
@@ -10,7 +11,8 @@ export default function Login() {
   
   return (
     <div>
-      L <div className='doubleFont'>
+        <Navbar/>
+       <div className='doubleFont'>
             <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
             <Container className='box'>
                 <br />
