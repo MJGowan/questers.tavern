@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+.doubleFont {
+  font-family: 'IM Fell Double Pica SC', serif;
+}
+
+.dwFont {
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+.bg{
+    color: white;
+    background-color:#46413F;
+    height: 110vh;
+}
+
+.title{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: -12%;
+    padding-bottom: 8%;
+}
+.darkBox{
+    background-color: #302C2B;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.input{
+    border-radius: 5px;
+    border-color: transparent;
+    width: 100%;
+    height: 35px;
+}
+
+.btn{
+    background-color: #46413F;
+    border-color: #46413F;
+}
+
+.desc{
+ height: 100px;
+}
