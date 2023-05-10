@@ -100,8 +100,13 @@ export default function FavoritesList() {
               </button>
             </Card.Header>
             <Card.Body>
-              <Card.Title>New Card Title</Card.Title>
-              <Card.Text>New Card Text</Card.Text>
+              <Card style={{ width: "300px", height: "470px" }}>
+                <Card.Body>
+                  <Card.Title>Name</Card.Title>
+                  <Card.Text>Another Card Text</Card.Text>
+                </Card.Body>
+
+              </Card>
             </Card.Body>
           </Card>
         </Col>
