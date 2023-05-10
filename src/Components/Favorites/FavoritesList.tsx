@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 export default function FavoritesList() {
   const tavernmen = require("./tavernmen.jpg");
   const profilepic = require("./profilepic.png")
+  const naruto = require("./naruto.png")
 
 
   return (
@@ -102,10 +103,12 @@ export default function FavoritesList() {
             <Card.Body>
               <Card style={{ width: "300px", height: "470px" }}>
                 <Card.Body>
+                  <div className="parent">
+                    <img src={naruto} alt='' className='logo-image1' />
+                  </div>
                   <Card.Title>Name</Card.Title>
                   <Card.Text>Another Card Text</Card.Text>
                 </Card.Body>
-
               </Card>
             </Card.Body>
           </Card>

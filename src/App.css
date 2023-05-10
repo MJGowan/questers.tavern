@@ -216,7 +216,21 @@ font-family: 'IM Fell DW Pica', serif;
   font-size: 25px;
   font-weight:bold
 }
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+
+
+.logo-image1{
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  filter: contrast(80%);
+  border-radius: 60%
+}
 
 
 /* ------------------------------------------ */
