@@ -5,6 +5,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Navbar() {
   const logo = require('../../Assets/logo.jpg');
   let loggedIn = false;
+  const [username, setUsername] = useState('');
+  const [login, setLoggedIn] = useState('');
 
   const [isHamburger, setIsHamburger] = useState('');
   useEffect(() => {
