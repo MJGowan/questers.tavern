@@ -40,7 +40,6 @@ function App() {
       <Route path='/Favorites' element={<FavoritesList/>}/>
       <Route path='/JoinCampaign' element={<JoinCampaign/>}/>     
       <Route path='/TavernBoard' element={<TavernBoard/>}/>
-      <Route path='/Character' element={<Character/>}/>
           </Routes>
    </BrowserRouter>
 
