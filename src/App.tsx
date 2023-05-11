@@ -2,14 +2,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing/Landing";
-import Character from "./Components/Character/Character";
 import Profile from "./Components/Profile/Profile";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
 import Login from "./Components/Login/Login";
 import JoinCampaign from "./Components/JoiningCampaign/JoinCampaign";
 import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import FavoritesList from "./Components/Favorites/FavoritesList";
-
+import Character from "./Components/Character/Character";
 
 
 function App() {
@@ -43,6 +42,7 @@ function App() {
 
     </div>
   );
+
 }
 
 export default App;
