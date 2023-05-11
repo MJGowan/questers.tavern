@@ -103,7 +103,7 @@ export default function Navbar() {
               <Nav.Link className='doubleFont navText'><span onClick={() => <TableTavern/>}>FAQs</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
-              <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>D&D Website</span></Nav.Link>
+              <Nav.Link className='doubleFont navText'><a href="https://dnd.wizards.com/">D&D Website</a></Nav.Link>
               </Col>
              {
                 loggedIn ? (
