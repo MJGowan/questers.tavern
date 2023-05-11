@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import './CreateAccount.css';
+import React from 'react'
+import Navbar from '../Navbar/Navbar';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 
-export default function CreateAccount() {
-    const bg = require('../../Assets/image 9.png');
-    const parchment = require('../../Assets/image 7.png');
-    const plus = require('../../Assets/R (1) 1.png');
-    return (
-        <div className='doubleFont'>
+
+export default function Login() {
+  const bg = require('../../Assets/image 9.png');
+  const parchment = require('../../Assets/image 7.png');
+  const plus = require('../../Assets/R (1) 1.png');
+  
+  return (
+    <div>
+        <Navbar/>
+       <div className='doubleFont'>
             <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
             <Container className='box'>
                 <br />
@@ -31,6 +35,16 @@ export default function CreateAccount() {
                         <Row>
                             <p>Username:</p>
                             <input className='longInput'></input>
+                        </Row>
+                        <br />
+                        <Row>
+                            <p>Todays Date:</p>
+                            <input className='longInput' placeholder='example: 05/05/2023'></input>
+                        </Row>
+                        <br />
+                        <Row>
+                            <p>Dnd Experience:</p>
+                            <input className='longInput' placeholder='Example: 1 Year 4 Months'></input>
                         </Row>
                         <br />
                         <Row>
@@ -68,5 +82,6 @@ export default function CreateAccount() {
                 </Row>
             </Container>
         </div>
-    )
+    </div>
+  )
 }

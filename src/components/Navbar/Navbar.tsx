@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col, Nav } from 'react-bootstrap';
 import MenuIcon from '@mui/icons-material/Menu';
+import Login from '../Login/Login';
+import TavernBoard from '../TavernBoard/TavernBoard';
+import TableTavern from '../TavernBoard/TableTavern';
+
 
 export default function Navbar() {
   const logo = require('../../Assets/logo.jpg');
@@ -42,21 +46,21 @@ export default function Navbar() {
                 }
               
               </Col>
-              {
-                // loggedIn ? (
-                //   <Col>
-                //     {/* props.username to display the active user */}
-                //     <p className='doubleFont navText'></p>
-                //   </Col>
-                // ) : (
-                //   <Col>
-                //     <p className='doubleFont navText'>Sign Up/Login</p>
-                //   </Col>
-                // )
-              }
-            </Row >
-          </div>
-        ) : isHamburger === 'hamburger2' ? (
+             {
+                 loggedIn ? (
+                   <Col>
+                    {/* props.username to display the active user */}
+                    <p className='doubleFont navText'></p>
+                   </Col>
+                 ) : (
+                   <Col>
+                     <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
+                   </Col>
+                 )
+                 }
+           </Row>
+         </div>
+       ) : isHamburger === 'hamburger2' ? (
           <div>
             <Row className='navbarBg'>
               <Col className='col-7'>
@@ -71,18 +75,18 @@ export default function Navbar() {
                   )
                 }
               
-              </Col>
-              {
-                // loggedIn ? (
-                //   <Col>
-                //     {/* props.username to display the active user */}
-                //     <p className='doubleFont navText'></p>
-                //   </Col>
-                // ) : (
-                //   <Col>
-                //     <p className='doubleFont navText'>Sign Up/Login</p>
-                //   </Col>
-                // )
+             </Col>
+             {
+                loggedIn ? (
+                  <Col>
+                    {/* props.username to display the active user */}
+                    <p className='doubleFont navText'></p>
+                  </Col>
+                ) : (
+                  <Col>
+                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
+                  </Col>
+                )
               }
             </Row >
           </div >
@@ -93,31 +97,31 @@ export default function Navbar() {
                 <img src={logo} />
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>Campaigns</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <TavernBoard/>}>Campaigns</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>FAQs</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <TableTavern/>}>FAQs</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>D&D Website</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>D&D Website</span></Nav.Link>
               </Col>
-              {
-                // loggedIn ? (
-                //   <Col>
-                //     {/* props.username to display the active user */}
-                //     <p className='doubleFont navText'></p>
-                //   </Col>
-                // ) : (
-                //   <Col>
-                //     <p className='doubleFont navText'>Sign Up/Login</p>
-                //   </Col>
-                // )
+             {
+                loggedIn ? (
+                  <Col>
+                    {/* props.username to display the active user */}
+                    <p className='doubleFont navText'></p>
+                  </Col>
+                ) : (
+                  <Col>
+                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
+                   </Col>
+                 )
               }
-            </Row >
+             </Row >
           </div >
-        )
-      }
+         )
+       }
 
     </div >
-  )
-}
+   )
+ }

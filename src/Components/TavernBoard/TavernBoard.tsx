@@ -13,7 +13,7 @@ const logo1 = require('../Assets/doubledragon.png');
        <Col>
          <div className='title-container'>
            <div className='image-container'>
-             <img src={logo} alt='logo' className='logo-image' />
+             {/*<img src={logo} alt='logo' className='logo-image' />*/}
              <div className='text-overlay'>
                <h1 className='text text-center'>The Tavern Board</h1>
              </div>
@@ -30,7 +30,7 @@ const logo1 = require('../Assets/doubledragon.png');
      </Row>
      <Row>
        <div className='title-containerDos'>
-         <img src={logo1} alt='logo1' className='logo-image1' />
+        {/*} <img src={logo1} alt='logo1' className='logo-image1' />*/}
        </div>
      </Row>
      <Row>

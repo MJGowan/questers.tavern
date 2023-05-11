@@ -12,19 +12,20 @@
 
     #heroTxt{
         color:#cb8f16;
-        font-size: 40px;
+        font-size: 80px;
         text-shadow: -1px 1px 0 #4A423F,
                       1px 1px 0 #4A423F,
                      1px -1px 0 #4A423F;
     }
     
     .tavernImg {
-        width: 555px;
-        margin-left: 6%;
+        width: 620px;
+        margin-left:15%;
     }
     
     .tavernTxt{
-        margin-top: -350px;
+        margin-top: -400px;
+        margin-right: 30px;
         color: white;
         font-size: larger;
     
