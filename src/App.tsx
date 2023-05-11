@@ -1,15 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Container, Row, Col } from 'react-bootstrap';
 import Landing from "./Components/Landing/Landing";
-import Character from "./Components/Character/Character";
 import Profile from "./Components/Profile/Profile";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
 import Login from "./Components/Login/Login";
+import CreateCharacter from './Components/CreateCharacter/CreateCharacter';
 import JoinCampaign from "./Components/JoiningCampaign/JoinCampaign";
 import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import FavoritesList from "./Components/Favorites/FavoritesList";
 
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
@@ -43,6 +46,7 @@ function App() {
 
     </div>
   );
+
 }
 
 export default App;
