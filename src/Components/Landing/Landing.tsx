@@ -38,12 +38,7 @@ export default function Landing() {
   }, []);
 
   return (
-<<<<<<< HEAD:src/Components/Landing/Landing.tsx
-    <div>
-      <Navbar/>
-=======
     <div className='landingBg'>
->>>>>>> 3f0e479202baf34c4e225b0fb4ef7dc12ed0d204:src/components/Landing/Landing.tsx
       <Row>
         <img className='heroImg' src={heroImg} />
       </Row>
