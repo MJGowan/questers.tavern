@@ -1,0 +1,29 @@
+// create these pages, 
+
+Make the FAQ's page 
+//upload the image so that i kno what it looks like in my assets
+
+1.Make the FAQ's page 
+2.Edit Campaign page // this one is coming down the pipeline, still missing this one
+3.Campaign Display
+4.Tavern Board Page
+//installed bootstrap
+//install fonts 
+IM FELL Double Pica SC
+Hind Guntur
+background color 4A423F
+
+for tomorrow thursday
+add icon, back button with icon
+this will have to wait
+work on buttons styles
+talk to team about how the buttons will work
+add nav bar
+
+//grab all the correct photos to include on pages
+//figure out the Nav bar and make sure that bootstrap is really working 
+
+
+how many components do i want to add? for how many pages? I need 4 pages, right now, Create a component for each page? or create files with components, however many components, I like? related to each one page?
+
+will start with Tavern Board and move my way down
