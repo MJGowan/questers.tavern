@@ -97,13 +97,13 @@ export default function Navbar() {
                 <img src={logo} />
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>Campaigns</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <TavernBoard/>}>Campaigns</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>FAQs</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <TableTavern/>}>FAQs</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
-                <p className='doubleFont navText'>D&D Website</p>
+              <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>D&D Website</span></Nav.Link>
               </Col>
              {
                 loggedIn ? (

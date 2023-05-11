@@ -34,7 +34,7 @@ function App() {
       <Route path = '/Login' element={<Login/>}/>
       <Route path='/Profile' element={<Profile/>}/>
       <Route path='/Favorites' element={<FavoritesList/>}/>
-      <Route path='/JoinCampaign' element={<JoinCampaign/>}/>     
+      <Route path='/JoinCampaign' element={<JoinCampaign/>}/>   
       <Route path='/TavernBoard' element={<TavernBoard/>}/>
       <Route path='/Character' element={<Character/>}/>
           </Routes>
