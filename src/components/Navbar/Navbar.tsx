@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col, Nav } from 'react-bootstrap';
 import MenuIcon from '@mui/icons-material/Menu';
 import Login from '../Login/Login';
+import TavernBoard from '../TavernBoard/TavernBoard';
+import TableTavern from '../TavernBoard/TableTavern';
 
 
 export default function Navbar() {
