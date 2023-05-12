@@ -36,8 +36,8 @@ export default function FavoritesList() {
             style={{
               width: "18rem",
               height: "530px",
-              marginTop: "40px",
-              marginLeft: "90px",
+              marginTop: "30px",
+              marginLeft: "40px",
               backgroundColor: "#4A423F",
               border: "2px solid #FFA825",
             }}
@@ -74,7 +74,7 @@ export default function FavoritesList() {
           <Card
             className='card'
             style={{
-              width: "49rem",
+              width: "39rem",
               height: "570px",
               marginTop: "30px",
               marginRight: "50px",
@@ -135,7 +135,7 @@ export default function FavoritesList() {
                       color: "white",
                     }}
                   >
-                    Message
+                    Add to Favorites
                   </button>
                   <button
                     className='cardButton'
@@ -162,4 +162,3 @@ export default function FavoritesList() {
     </Container>
   );
 }
-
