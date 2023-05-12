@@ -11,8 +11,6 @@ import Login from '../Login/Login';
 
 
 export default function Landing() {
-
-
   const [screenSize, setScreenSize] = useState('');
   useEffect(() => {
     const handleChange = () => {
