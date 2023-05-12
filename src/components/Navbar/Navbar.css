@@ -32,5 +32,9 @@
 }
 
 .navItems{
-    padding-left: 5%;
+    color: rgb(51, 64, 42);
+    font-size: x-large;
+    padding-right: 3%;
+    
+    margin-top: -4.5%;
 }

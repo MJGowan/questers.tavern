@@ -97,11 +97,13 @@ export default function Navbar() {
         ) : (
           <div>
             <Row className='navbarBg'>
-              <Col className='col-8 text-align-right'>
+              <Col>
 
-                <Link to="/" className='navItems'>
+                <Link to="/">
                   <img src={logo} />
                 </Link>
+                
+                  <div className='d-flex justify-content-end doubleFont'>
 
                 <Link to='/TavernBoard' className='navItems'>
                   Campaigns
@@ -125,6 +127,7 @@ export default function Navbar() {
 
                   )
                 }
+                  </div>
               </Col>
             </Row >
           </div >
