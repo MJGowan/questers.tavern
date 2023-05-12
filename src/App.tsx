@@ -27,9 +27,10 @@ function App() {
   return (
     <div className="bg">
       <Navbar />
+      <FavoritesList/>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Landing />} />
+          {/* <Route path='/' element={<Landing />} /> */}
           <Route path='/CreateAccount' element={<CreateAccount />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Profile' element={<Profile />} />

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import './Favorites.css'
 
@@ -6,6 +7,17 @@ export default function FavoritesList() {
   const profilepic = require("./profilepic.png")
   const naruto = require("./naruto.png")
 
+  const heroImg = require('../../Assets/Rectangle 33.png');
+  const username = "Username";
+  const profilePic = require('../../Assets/Pic.png');
+  const creationDate = "X/XX/XXXX";
+  const location = "Tired, CA";
+  const exp = "New";
+  const numFriends = 0;
+
+  const [showProfile, setShowProfile] = useState(false);
+  const closeProfile = () => setShowProfile(false);
+  const editProfile = () => setShowProfile(true);
 
   return (
     <Container fluid mx-0>
@@ -16,13 +28,13 @@ export default function FavoritesList() {
               <img src={tavernmen} alt='logo' className='logo-image' />
               <div className='text-overlay1'>
                 <h3 className='text text-right'>
-                  Welcome To The Tavern, Freedy!
+                  Welcome To The Tavern, {username}!
                 </h3>
                 <h4 className='text1'>Favorite List</h4>
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
-                  <button className='button'>BackButton</button>
+                  <button className='button'>Back</button>
                 </div>
               </div>
             </div>
@@ -30,37 +42,36 @@ export default function FavoritesList() {
         </Col>
       </Row>
       <Row>
-        <Col className='card-container'>
-          <Card
-            className='card'
-            style={{
-              width: "18rem",
-              height: "530px",
-              marginTop: "30px",
-              marginLeft: "40px",
-              backgroundColor: "#4A423F",
-              border: "2px solid #FFA825",
-            }}
-          >
-            <img src={profilepic} alt='logo' className='logo-image' />
-            <Card.Body>
-              <Card.Title>Username:</Card.Title>
-              <Card.Text
-                style={{
-                  fontSize: "20px",
-                  color: "#D6BA73",
-                  textAlign: "center",
-                }}
-              >
-                The Haunted School House
-                <ul className='userfonts'>
-                  <li>EDIT PROFILE</li>
-                  <li>MY MESSAGES</li>
-                  <li>MY TAVERN BOARD</li>
-                </ul>
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <Col className='col-3'>
+        <div className='profileBox doubleFont'>
+            <div>
+              <img src={profilePic} className='profilePic'></img>
+            </div>
+            <Container>
+              <Row>
+                <p>Username: {username}</p>
+              </Row>
+              <Row>
+                <p>Account Created: </p>
+                <p>{creationDate}</p>
+              </Row>
+              <Row>
+                <p>Located in: </p>
+                <p>{location}</p>
+              </Row>
+              <Row>
+                <p>D&D Experience: </p>
+                <p>{exp}</p>
+              </Row>
+              <Row>
+                <p>Friends List: {numFriends}</p>
+              </Row>
+              <hr />
+              <Row>
+                <p className='editBtn' onClick={editProfile}>Edit Profile</p>
+              </Row>
+            </Container>
+          </div>
         </Col>
         <Col className='card-container' style={{ marginLeft: "-30px" }}>
           {" "}
@@ -116,7 +127,7 @@ export default function FavoritesList() {
                     <img src={naruto} alt='' className='logo-image1' />
                   </div>
                   <Card.Title className='profile'>
-                    Name: Naruto 45
+                    Name: Naruto45
                     <Card.Text>Full Name:</Card.Text>
                     <Card.Text>Location:</Card.Text>
                     <Card.Text>Campaigns:</Card.Text>
