@@ -108,6 +108,16 @@ export default function Navbar() {
                   Campaigns
                 </Link>
               </li>
+              <li>
+                <Link to='/FAQs'>
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link to="https://dnd.wizards.com/">
+                D&D Website
+                </Link>
+              </li>
               </Col>
               {/* <Col className='navMargin'>
               <Nav.Link className='doubleFont navText'><span onClick={() => <TavernBoard/>}>Campaigns</span></Nav.Link>
