@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Login from '../Login/Login';
 import TavernBoard from '../TavernBoard/TavernBoard';
 import TableTavern from '../TavernBoard/TableTavern';
+import CreateAccount from '../CreateAccount/CreateAccount';
 
 
 export default function Navbar() {
@@ -96,9 +98,18 @@ export default function Navbar() {
           <div>
             <Row className='navbarBg'>
               <Col className='col-7'>
+              <li>
+                <Link to="/">
                 <img src={logo} />
+                </Link>
+              </li>
+              <li>
+                <Link to='/TavernBoard'>
+                  Campaigns
+                </Link>
+              </li>
               </Col>
-              <Col className='navMargin'>
+              {/* <Col className='navMargin'>
               <Nav.Link className='doubleFont navText'><span onClick={() => <TavernBoard/>}>Campaigns</span></Nav.Link>
               </Col>
               <Col className='navMargin'>
@@ -106,7 +117,7 @@ export default function Navbar() {
               </Col>
               <Col className='navMargin'>
               <Nav.Link className='doubleFont navText'><a href="https://dnd.wizards.com/">D&D Website</a></Nav.Link>
-              </Col>
+              </Col> */}
              {
                 loggedIn ? (
                   <Col>
