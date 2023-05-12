@@ -30,8 +30,13 @@
 }
 
 .input{
-    height: 150%;
-    width: 60vw;
+    height: 150% !important;
+    width: 60vw !important;
+}
+
+.logo{
+    width: 40%;
+    padding-left: 40px;
 }
 
 /* DESKTOP */

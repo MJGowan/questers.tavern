@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import bg from '../../Assets/LoginBg.png';
 
 export default function Login() {
-
+  const logo = require('../../Assets/unnamed-removebg-preview.png');
   return (
     <div className='doubleFont white'>
       <img src={bg} className='bgImg'/>
@@ -15,7 +15,13 @@ export default function Login() {
           <Container className='shadowBox'>
             <Row>
               <Col>
-                <p className='title mt-4 mb-4'>Login</p>
+                <div className='d-flex justify-content-center'>
+{/* Put logo outside of shadowBox and make shadowBox smaller, make input bars smaller, change width of shadowBox */}
+              <img src={logo} className='logo'></img>
+                </div>
+                <div className='d-flex justify-content-center'>
+                <p className='title mt-1'>Login</p>
+                </div>
               </Col>
             </Row>
             <Row className='mb-4'>
