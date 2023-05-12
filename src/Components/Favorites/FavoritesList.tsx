@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import './Favorites.css'
 
 export default function FavoritesList() {
   const tavernmen = require("./tavernmen.jpg");
@@ -36,7 +37,7 @@ export default function FavoritesList() {
               width: "18rem",
               height: "530px",
               marginTop: "40px",
-              marginLeft: "30px",
+              marginLeft: "90px",
               backgroundColor: "#4A423F",
               border: "2px solid #FFA825",
             }}
@@ -73,9 +74,10 @@ export default function FavoritesList() {
           <Card
             className='card'
             style={{
-              width: "39rem",
+              width: "49rem",
               height: "570px",
-              marginTop: "40px",
+              marginTop: "30px",
+              marginRight: "50px",
               marginLeft: "30px",
               backgroundColor: "#4A423F",
               border: "2px solid #FFA825",
@@ -100,20 +102,63 @@ export default function FavoritesList() {
                 Search
               </button>
             </Card.Header>
+  
             <Card.Body>
-              <Card style={{ width: "300px", height: "470px" }}>
-                <Card.Body>
-                  <div className="parent">
+              <Card
+                style={{
+                  width: "300px",
+                  height: "470px",
+                  border: "2px solid #FFA825",
+                }}
+              >
+                <Card.Body style={{ backgroundColor: "#4A423F" }}>
+                  <div className='parent'>
                     <img src={naruto} alt='' className='logo-image1' />
                   </div>
-                  <Card.Title>Name</Card.Title>
-                  <Card.Text>Another Card Text</Card.Text>
+                  <Card.Title className='profile'>
+                    Name: Naruto 45
+                    <Card.Text>Full Name:</Card.Text>
+                    <Card.Text>Location:</Card.Text>
+                    <Card.Text>Campaigns:</Card.Text>
+                  </Card.Title>
+                  
+  
+                  <button
+                    className='cardButton'
+                    style={{
+                      width: "100%",
+                      margin: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                    }}
+                  >
+                    Message
+                  </button>
+                  <button
+                    className='cardButton'
+                    style={{
+                      width: "100%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                    }}
+                  >
+                    Remove
+                  </button>
                 </Card.Body>
               </Card>
             </Card.Body>
           </Card>
         </Col>
       </Row>
+      
     </Container>
   );
 }
