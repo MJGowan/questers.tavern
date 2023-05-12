@@ -1,3 +1,5 @@
+/* Maddie's Profile Box Code */
+
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
@@ -20,6 +22,8 @@
     width: 100%;
     margin-bottom: 10px;
 }
+
+/* Maddie's Profile Box Code */
 
 .profile {
  color: white;
