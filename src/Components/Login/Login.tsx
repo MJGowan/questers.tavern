@@ -8,7 +8,7 @@ import bg from '../../Assets/LoginBg.png';
 export default function Login() {
   const logo = require('../../Assets/unnamed-removebg-preview.png');
   const navigate = useNavigate()
-  
+
   return (
     <div className='doubleFont white'>
       <img src={bg} className='bgImg'/>
@@ -24,7 +24,6 @@ export default function Login() {
                 <p className='title mt-2'>Login</p>
                 </div>
               <div className='d-flex justify-content-center'>
-{/* Put logo outside of shadowBox and make shadowBox smaller, make input bars smaller, change width of shadowBox */}
               <img src={logo} className='logo'></img>
                 </div>
               </Col>
@@ -60,14 +59,12 @@ export default function Login() {
             </Row>
             <Row>
               <Col className='d-flex justify-content-center text-align-center accountTxt mt-2'>
-                
                 <p onClick={() => navigate('/CreateAccount')}>Don't have an account? <span>Register here</span></p>
-                
               </Col>
             </Row>
             <Row>
               <Col className='d-flex justify-content-center text-align-center'>
-                <Button>Sign In</Button>
+                <Button onClick={() => navigate('/Profile')}>Sign In</Button>
               </Col>
             </Row>
           </Container>

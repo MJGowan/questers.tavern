@@ -9,6 +9,7 @@ export default function CreateAccount() {
     const bg = require('../../Assets/image 9.png');
     const parchment = require('../../Assets/image 7.png');
     const plus = require('../../Assets/R (1) 1.png');
+    const logo = require('../../Assets/unnamed-removebg-preview.png');
     const navigate = useNavigate()
 
     const [Username, setUsername] = useState<string>('');
