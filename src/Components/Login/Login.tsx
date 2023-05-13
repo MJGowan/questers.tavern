@@ -9,6 +9,17 @@ export default function Login() {
   const logo = require('../../Assets/unnamed-removebg-preview.png');
   const navigate = useNavigate()
 
+  const [Username, setUsername] = useState('');
+  const [Password, setPassword] = useState('');
+
+  const handleSubmit = () => {
+    let userData = {
+      Username,
+      Password
+    }
+    console.log(userData)
+  }
+
   return (
     <div className='doubleFont white'>
       <img src={bg} className='bgImg'/>
@@ -36,7 +47,7 @@ export default function Login() {
                 <Row>
                   <Col></Col>
                   <Col className='mb-1'>
-                  <input type='username' className='input'></input>
+                  <input type='username' className='input' onChange={({target: {value}}) => setUsername(value)}></input>
                   </Col>
                   <Col></Col>
                 </Row>
@@ -51,7 +62,7 @@ export default function Login() {
                 <Row>
                   <Col></Col>
                 <Col className='d-flex justify-content-center'>
-                  <input type='password' className='input'></input>
+                  <input type='password' className='input' onChange={({target: {value}}) => setPassword(value)}></input>
                   </Col>
                   <Col></Col>
                 </Row>
@@ -64,7 +75,7 @@ export default function Login() {
             </Row>
             <Row>
               <Col className='d-flex justify-content-center text-align-center'>
-                <Button className='btn' onClick={() => navigate('/Profile')}>Sign In</Button>
+                <Button className='btn' onClick={handleSubmit}>Sign In</Button>
               </Col>
             </Row>
           </Container>
