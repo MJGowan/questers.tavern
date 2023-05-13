@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Row, Col, } from "react-bootstrap"
 import TableTavern from "./TableTavern";
 import './Tavern.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function TavernBoard () {
-
+let navigate = useNavigate();
 // const logo = require('../Assets/tavernmen.jpg');
 // const logo1 = require('../Assets/doubledragon.png');
  return (
@@ -21,7 +22,7 @@ export default function TavernBoard () {
                <div className='d-flex ml-auto'>
                  <button className='button'>MY LOCATION</button>
                  <button className='button'>FILTER</button>
-                 <button className='button'>BackButton</button>
+                 <button className='button' onClick={() => navigate(-1)}>BACK</button>
                </div>
              </div>
            </div>

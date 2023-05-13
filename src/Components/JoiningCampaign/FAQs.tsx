@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import TheNavBar from "./TheNavBar"
+import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Card, } from "react-bootstrap";
 import './FAQs.css';
 
@@ -7,7 +7,7 @@ import './FAQs.css';
 export default function FAQs(){
   //declaring a new state variable 
 
-
+let navigate = useNavigate();
  const campaign = require("../../Assets/campaign.png");
   
 
@@ -23,7 +23,7 @@ export default function FAQs(){
              </div>
              <div className='button-container d-none d-md-block'>
                <div className='d-flex ml-auto'>
-                 <button className='button'>BackButton</button>
+                 <button className='button' onClick={() => navigate(-1)}>BACK</button>
                </div>
              </div>
            </div>

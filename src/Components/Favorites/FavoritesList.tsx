@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import './Favorites.css'
 
 export default function FavoritesList() {
+  let navigate = useNavigate();
+
   const tavernmen = require("../../Assets/tavernmen.jpg");
   const profilepic = require("../../Assets/profilepic.png")
   const naruto = require("../../Assets/naruto.png")
 
-  const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";
   const profilePic = require('../../Assets/Pic.png');
   const creationDate = "X/XX/XXXX";
@@ -34,7 +36,7 @@ export default function FavoritesList() {
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
-                  <button className='button'>Back</button>
+                  <button className='button' onClick={() => navigate(-1)}>BACK</button>
                 </div>
               </div>
             </div>
@@ -43,7 +45,7 @@ export default function FavoritesList() {
       </Row>
       <Row>
         <Col className='col-3'>
-        <div className='profileBox doubleFont'>
+          <div className='profileBox doubleFont'>
             <div>
               <img src={profilePic} className='profilePic'></img>
             </div>
@@ -64,7 +66,7 @@ export default function FavoritesList() {
                 <p>{exp}</p>
               </Row>
               <Row>
-                <p>Friends List: {numFriends}</p>
+                <p onClick={() => navigate('/FavoritesList')}>Friends List: {numFriends}</p>
               </Row>
               <hr />
               <Row>
@@ -113,7 +115,7 @@ export default function FavoritesList() {
                 Search
               </button>
             </Card.Header>
-  
+
             <Card.Body>
               <Card
                 style={{
@@ -132,8 +134,8 @@ export default function FavoritesList() {
                     <Card.Text>Location:</Card.Text>
                     <Card.Text>Campaigns:</Card.Text>
                   </Card.Title>
-                  
-  
+
+
                   <button
                     className='cardButton'
                     style={{
@@ -169,7 +171,7 @@ export default function FavoritesList() {
           </Card>
         </Col>
       </Row>
-      
+
     </Container>
   );
 }
