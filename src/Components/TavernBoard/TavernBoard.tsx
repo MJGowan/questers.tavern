@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, } from "react-bootstrap"
 import TableTavern from "./TableTavern";
-
+import './Tavern.css';
 
 export default function TavernBoard () {
 

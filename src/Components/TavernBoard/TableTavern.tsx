@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-
+import './Tavern.css';
 
 export default function TableTavern() {
   return (

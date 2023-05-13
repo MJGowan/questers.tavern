@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import './TavernBoardPost.css';
 
 export default function TavernBoardPost() {
   const logo1 = require("./tavernmen.jpg");

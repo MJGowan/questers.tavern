@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import TheNavBar from "./TheNavBar"
 import { Container, Row, Col, Card, } from "react-bootstrap";
-
+import './FAQs.css';
 
 
 export default function FAQs(){
