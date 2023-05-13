@@ -246,8 +246,20 @@ font-family: 'IM Fell DW Pica', serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 147px
 }
 
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* adjust the font size as needed */
+  text-align: center;
+  /* letter-spacing: '-1px'; */
+  color: white;
+
+}
 
 
 .logo-image1{
