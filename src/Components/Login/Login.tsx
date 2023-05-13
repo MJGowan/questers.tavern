@@ -31,12 +31,12 @@ export default function Login() {
             <Row className='mb-5'>
               <Col>
                 <Row>
-                  <p className='inputTxt'>Email:</p>
+                  <p className='inputTxt'>Username:</p>
                 </Row>
                 <Row>
                   <Col></Col>
                   <Col className='mb-1'>
-                  <input type='email' className='input'></input>
+                  <input type='username' className='input'></input>
                   </Col>
                   <Col></Col>
                 </Row>
