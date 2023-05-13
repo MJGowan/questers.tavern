@@ -1,0 +1,31 @@
+/* Maddie's Profile Box Code */
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+.doubleFont{
+    font-family: 'IM Fell Double Pica SC', serif;
+}
+.dwFont{
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+.profileBox{
+    background-color: #302C2B;
+    color: white;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
+.profilePic{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Maddie's Profile Box Code */
+
+.profile {
+ color: white;
+ padding-top: 10px;
+}

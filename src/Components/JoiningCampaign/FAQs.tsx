@@ -1,13 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import TheNavBar from "./TheNavBar"
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, } from "react-bootstrap";
 
 
 
-export default function JoinCampaign(){
+export default function FAQs(){
+  //declaring a new state variable 
+
 
  const campaign = require("../JoiningCampaign/campaign.png");
-
+  
 
  return (
    <Container fluid mx-0>
@@ -92,6 +94,9 @@ export default function JoinCampaign(){
                  textAlign: "center",
                  padding: "10px",
                }}
+               onClick={() => {
+                 console.log("Card.Title clicked");
+               }}
              >
                HOW TO PLAY
              </Card.Title>
@@ -102,6 +107,9 @@ export default function JoinCampaign(){
                  border: "2px solid #FFA825",
                  textAlign: "center",
                  padding: "10px",
+               }}
+               onClick={() => {
+                 console.log("Card.title Clicked");
                }}
              >
                CREATING A CHARACTER
@@ -114,6 +122,9 @@ export default function JoinCampaign(){
                  textAlign: "center",
                  padding: "10px",
                }}
+               onClick={() => {
+                 console.log("Card.title Clicked");
+               }}
              >
                JOINING A CAMPAIGN
              </Card.Title>
@@ -125,6 +136,9 @@ export default function JoinCampaign(){
                  textAlign: "center",
                  padding: "10px",
                }}
+               onClick={() => {
+                 console.log("card.title Clicked");
+               }}
              >
                REQUIREMENTS TO PLAY
              </Card.Title>
@@ -135,6 +149,9 @@ export default function JoinCampaign(){
                  border: "2px solid #FFA825",
                  textAlign: "center",
                  padding: "10px",
+               }}
+               onClick={() => {
+                 console.log("card.title Clicked");
                }}
              >
                FURTHER QUESTIONS
@@ -153,10 +170,17 @@ export default function JoinCampaign(){
            }}
          >
            <Card.Body>
-             <Card.Title style={{ color: "#D6BA73", textAlign: "center" }}>
+             <Card.Title
+               style={{ color: "#D6BA73", textAlign: "center" }}
+              //  onClick={() => {
+              //    console.log("Card.Title clicked");
+              //    setShowInformation(true);
+              //  }}
+             >
                When Joining the campaign, reflect on your experience and
                register accordingly.{" "}
              </Card.Title>
+             
              <Card.Text style={{ color: "#D6BA73", textAlign: "center" }}>
                Beginner’s Campaign Level 1-5 Campaign Level 5-10 Campaign Level
                10-15 Campaign Level 15-20 Campaign As you gain experience and

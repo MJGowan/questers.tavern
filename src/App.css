@@ -1,10 +1,4 @@
-/* font-family: 'Heebo', sans-serif;
-font-family: 'IM Fell Double Pica SC', serif; 
-font-family: 'Heebo', sans-serif;
-font-family: 'IM Fell DW Pica', serif;
-font-family: 'Heebo', sans-serif;
-font-family: 'Hind Guntur', sans-serif;
-font-family: 'IM Fell DW Pica', serif; */
+
 body {
   background-color: #4A423F !important;
 }
@@ -46,10 +40,17 @@ body {
 
 .text {
   font-family: 'IM Fell Double Pica SC', serif; 
-  font-size: 44px;
+  font-size: 30px;
   font-weight: bold;
   color: #D9D9D9;
   text-align: left;
+}
+.text1 {
+  font-family: 'IM Fell Double Pica SC', serif; 
+  font-size: 20px;
+  font-weight: bold;
+  color: #D9D9D9;
+  text-align:end;
 }
 
 .button-container {
@@ -205,12 +206,28 @@ font-family: 'IM Fell DW Pica', serif;
   z-index: 1;
 }
 
+.userfonts{
+  font-size: 25px;
+  font-weight:bold
+}
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.logo-image1{
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  filter: contrast(80%);
+  border-radius: 60%
+}
+
 
 /* ------------------------------------------ */
-
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
 

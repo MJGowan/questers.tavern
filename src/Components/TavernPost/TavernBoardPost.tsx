@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
-export default function TBoardPost() {
+export default function TavernBoardPost() {
   const logo1 = require("./tavernmen.jpg");
   const logo2 = require("./hauntedHouse.png");
   const logo3 = require("./image 7.png");

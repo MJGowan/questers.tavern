@@ -5,8 +5,8 @@ import TableTavern from "./TableTavern";
 
 export default function TavernBoard () {
 
-//const logo = require('../Assets/tavernmen.jpg');
-//const logo1 = require('../Assets/tavernbackground.webp');
+// const logo = require('../Assets/tavernmen.jpg');
+// const logo1 = require('../Assets/doubledragon.png');
  return (
    <Container fluid className='bg-brown'>
      <Row>

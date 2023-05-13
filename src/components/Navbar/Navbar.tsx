@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import './Navbar.css';
 import { Row, Col, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Login from '../Login/Login';
 import TavernBoard from '../TavernBoard/TavernBoard';
 import TableTavern from '../TavernBoard/TableTavern';
-
+import CreateAccount from '../CreateAccount/CreateAccount';
 
 export default function Navbar() {
   const logo = require('../../Assets/logo.jpg');
@@ -41,44 +43,14 @@ export default function Navbar() {
               <Col className='d-flex justify-content-end'>
                 {
                   window.innerWidth <= 700 ? (
-                    <MenuIcon fontSize="large" style={{marginTop: '17%', marginRight: '5%', color: 'rgb(57, 86, 57)'}}/>
+                    <MenuIcon fontSize="large" style={{ marginTop: '17%', marginRight: '5%', color: 'rgb(57, 86, 57)' }} />
                   ) : (
-                    <MenuIcon fontSize="large" style={{marginTop: '7%', marginRight: '5%', color: 'rgb(57, 86, 57)'}}/>
+                    <MenuIcon fontSize="large" style={{ marginTop: '7%', marginRight: '5%', color: 'rgb(57, 86, 57)' }} />
                   )
                 }
-              
+
               </Col>
-             {
-                 loggedIn ? (
-                   <Col>
-                    {/* props.username to display the active user */}
-                    <p className='doubleFont navText'></p>
-                   </Col>
-                 ) : (
-                   <Col>
-                     <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
-                   </Col>
-                 )
-                 }
-           </Row>
-         </div>
-       ) : isHamburger === 'hamburger2' ? (
-          <div>
-            <Row className='navbarBg'>
-              <Col className='col-7'>
-                <img src={logo} className='logo'/>
-              </Col>
-              <Col className='d-flex justify-content-end'>
-                {
-                  window.innerWidth <= 700 ? (
-                    <MenuIcon fontSize="large" style={{marginTop: '17%', marginRight: '5%', color: 'rgb(57, 86, 57)'}}/>
-                  ) : (
-                    <MenuIcon fontSize="large" style={{marginTop: '7%', marginRight: '5%', color: 'rgb(57, 86, 57)'}}/>
-                  )
-                }
-              
-             </Col>
-             {
+              {
                 loggedIn ? (
                   <Col>
                     {/* props.username to display the active user */}
@@ -86,7 +58,37 @@ export default function Navbar() {
                   </Col>
                 ) : (
                   <Col>
-                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
+                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login />}>Sign Up/Login</span></Nav.Link>
+                  </Col>
+                )
+              }
+            </Row>
+          </div>
+        ) : isHamburger === 'hamburger2' ? (
+          <div>
+            <Row className='navbarBg'>
+              <Col className='col-7'>
+                <img src={logo} className='logo' />
+              </Col>
+              <Col className='d-flex justify-content-end'>
+                {
+                  window.innerWidth <= 700 ? (
+                    <MenuIcon fontSize="large" style={{ marginTop: '17%', marginRight: '5%', color: 'rgb(57, 86, 57)' }} />
+                  ) : (
+                    <MenuIcon fontSize="large" style={{ marginTop: '7%', marginRight: '5%', color: 'rgb(57, 86, 57)' }} />
+                  )
+                }
+
+              </Col>
+              {
+                loggedIn ? (
+                  <Col>
+                    {/* props.username to display the active user */}
+                    <p className='doubleFont navText'></p>
+                  </Col>
+                ) : (
+                  <Col>
+                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login />}>Sign Up/Login</span></Nav.Link>
                   </Col>
                 )
               }
@@ -95,35 +97,43 @@ export default function Navbar() {
         ) : (
           <div>
             <Row className='navbarBg'>
-              <Col className='col-7'>
-                <img src={logo} />
+              <Col>
+
+                <Link to="/">
+                  <img src={logo} />
+                </Link>
+                
+                  <div className='d-flex justify-content-end doubleFont'>
+
+                <Link to='/TavernBoard' className='navItems'>
+                  Campaigns
+                </Link>
+
+                <Link to='/FAQs' className='navItems'>
+                  FAQs
+                </Link>
+
+                <Link to="https://dnd.wizards.com/" className='navItems'>
+                  D&D Website
+                </Link>
+
+                {
+                  loggedIn ? (
+                    <Link to='/Profile' className='navItems'>{username}</Link>
+
+                  ) : (
+
+                    <Link to='/Login' className='navItems'>Sign Up/Login</Link>
+
+                  )
+                }
+                  </div>
               </Col>
-              <Col className='navMargin'>
-                <p className='doubleFont navText'>Campaigns</p>
-              </Col>
-              <Col className='navMargin'>
-                <p className='doubleFont navText'>FAQs</p>
-              </Col>
-              <Col className='navMargin'>
-                <p className='doubleFont navText'>D&D Website</p>
-              </Col>
-             {
-                loggedIn ? (
-                  <Col>
-                    {/* props.username to display the active user */}
-                    <p className='doubleFont navText'></p>
-                  </Col>
-                ) : (
-                  <Col>
-                    <Nav.Link className='doubleFont navText'><span onClick={() => <Login/>}>Sign Up/Login</span></Nav.Link>
-                   </Col>
-                 )
-              }
-             </Row >
+            </Row >
           </div >
-         )
-       }
+        )
+      }
 
     </div >
-   )
- }
+  )
+}

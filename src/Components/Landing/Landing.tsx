@@ -11,8 +11,6 @@ import Login from '../Login/Login';
 
 
 export default function Landing() {
-
-
   const [screenSize, setScreenSize] = useState('');
   useEffect(() => {
     const handleChange = () => {
@@ -38,8 +36,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div>
-      <Navbar/>
+    <div className='landingBg'>
       <Row>
         <img className='heroImg' src={heroImg} />
       </Row>
