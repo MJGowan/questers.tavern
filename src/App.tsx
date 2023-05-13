@@ -1,7 +1,6 @@
 import "./App.css";
-import { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Character from "./Components/Character/Character";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
