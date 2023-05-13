@@ -41,7 +41,7 @@ export default function FavoritesList() {
                   <button
                     className='cardbutton'
                     style={{
-                      width: "90%",
+                      width: "95%",
                       marginLeft: "10px",
                       marginRight: "10px",
                       borderRadius: "10px",
