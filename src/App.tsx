@@ -2,7 +2,6 @@ import "./App.css";
 import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Character from "./Components/Character/Character";
 import CreateAccount from "./Components/CreateAccount/CreateAccount";
 import CreateCharacter from "./Components/CreateCharacter/CreateCharacter";
 import FavoritesList from "./Components/Favorites/FavoritesList";
@@ -30,7 +29,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing />} />
 
-          <Route path='/Character' element={<Character />} />
           <Route path='/CreateAccount' element={<CreateAccount />}/>
           <Route path='/CreateCharacter' element={<CreateCharacter/>}/>
           <Route path='/FAQs' element={<FAQs/>}/>

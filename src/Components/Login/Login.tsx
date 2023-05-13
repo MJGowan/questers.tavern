@@ -9,16 +9,17 @@ export default function Login() {
     <div className='doubleFont white'>
       <img src={bg} className='bgImg'/>
       <Row>
+      <div className='d-flex justify-content-center'>
+{/* Put logo outside of shadowBox and make shadowBox smaller, make input bars smaller, change width of shadowBox */}
+              <img src={logo} className='logo'></img>
+                </div>
         <Col className='col-2'></Col>
         <Col className='col-8 mt-5'>
           
           <Container className='shadowBox'>
             <Row>
               <Col>
-                <div className='d-flex justify-content-center'>
-{/* Put logo outside of shadowBox and make shadowBox smaller, make input bars smaller, change width of shadowBox */}
-              <img src={logo} className='logo'></img>
-                </div>
+                
                 <div className='d-flex justify-content-center'>
                 <p className='title mt-1'>Login</p>
                 </div>

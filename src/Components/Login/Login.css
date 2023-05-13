@@ -10,7 +10,7 @@
 }
 
 .bgImg{
-    position: absolute;
+    position: fixed;
     z-index: -2;
     width: 100vw;
     height: 100vh
@@ -35,7 +35,7 @@
 }
 
 .logo{
-    width: 40%;
+    width: 30%;
     padding-left: 40px;
 }
 
