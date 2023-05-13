@@ -3,9 +3,9 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import './Favorites.css'
 
 export default function FavoritesList() {
-  const tavernmen = require("./tavernmen.jpg");
-  const profilepic = require("./profilepic.png")
-  const naruto = require("./naruto.png")
+  const tavernmen = require("../../Assets/tavernmen.jpg");
+  const profilepic = require("../../Assets/profilepic.png")
+  const naruto = require("../../Assets/naruto.png")
 
   const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";

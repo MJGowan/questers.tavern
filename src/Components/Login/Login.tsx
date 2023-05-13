@@ -64,7 +64,7 @@ export default function Login() {
             </Row>
             <Row>
               <Col className='d-flex justify-content-center text-align-center'>
-                <Button onClick={() => navigate('/Profile')}>Sign In</Button>
+                <Button className='btn' onClick={() => navigate('/Profile')}>Sign In</Button>
               </Col>
             </Row>
           </Container>

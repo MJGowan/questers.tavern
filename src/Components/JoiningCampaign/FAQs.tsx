@@ -8,7 +8,7 @@ export default function FAQs(){
   //declaring a new state variable 
 
 
- const campaign = require("../JoiningCampaign/campaign.png");
+ const campaign = require("../../Assets/campaign.png");
   
 
  return (

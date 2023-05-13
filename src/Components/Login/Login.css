@@ -46,6 +46,11 @@
     margin-top: -10%;
 }
 
+.btn{
+    height: 45px;
+    margin-top: 1%;
+}
+
 /* DESKTOP */
 @media screen and (min-width: 1025px) {
     .title{
