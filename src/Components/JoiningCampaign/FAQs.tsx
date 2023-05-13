@@ -124,6 +124,11 @@ let navigate = useNavigate();
                  setInfo(
                    "When joining a campaign, reflect on your experience and register accordingly. if you are new, perhaps you'd join the beginner's campaigns. If you've got some experience under your belt you might go for the level 1-5, or 5-10 campaigns. Ther are ordered as follow:"
                  );
+                 // set other states to empty
+                 setCharacter("");
+                 setJoin("");
+                 setPlays("");
+                 setFqs("");
                }}
              >
                HOW TO PLAY
@@ -139,6 +144,10 @@ let navigate = useNavigate();
                }}
                onClick={() => {
                  setCharacter("CREATE CHARACTER");
+                 setInfo("");
+                 setJoin("");
+                 setPlays("");
+                 setFqs("");
                }}
              >
                CREATING A CHARACTER
@@ -161,6 +170,7 @@ let navigate = useNavigate();
           <li>10-15 Campaign Level 15-20</li>
           <li>Level 15-20</li>
         </ul>`);
+         
                }}
              >
                JOINING A CAMPAIGN
@@ -178,6 +188,7 @@ let navigate = useNavigate();
                  setPlays(
                    "Interested in playing? We've pulled together resources to get you started, create a D&D Beyond account to begin! Dungeons & Dragons takes you and your friends on epic journeys. Become characters you create, battle deadly foes, uncover secrets, find treasure, and make memories that last a lifetime."
                  );
+          
                }}
              >
                REQUIREMENTS TO PLAY
