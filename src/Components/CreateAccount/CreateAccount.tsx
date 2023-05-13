@@ -1,8 +1,7 @@
 import './CreateAccount.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
 import { CreateAccountBe } from '../../Services/DataService';
 
 
@@ -42,8 +41,7 @@ export default function CreateAccount() {
     }
     return (
         <div className='doubleFont'>
-            <Navbar/>
-            <img src={bg} style={{ backgroundSize: '100vh, 100vw' }} />
+            <img src={bg} style={{ backgroundSize: '100vh' }} />
             <Container className='box'>
                 <br />
                 <Row>
@@ -69,12 +67,12 @@ export default function CreateAccount() {
                         
                         <Row className='mb-4'>
                             <p>Todays Date:</p>
-                            <input className='longInput'  onChange={({ target: {value} }) => setDatecreated(value)} placeholder='example: 05/05/2023'></input>
+                            <input className='longInput'  onChange={({ target: {value} }) => setDatecreated(value)} placeholder='ex: 05/05/2023'></input>
                         </Row>
                         
                         <Row className='mb-4'>
                             <p>Dnd Experience:</p>
-                            <input className='longInput'  onChange={({ target: {value} }) => setDndexperience(value)} placeholder='Example: 1 Year 4 Months'></input>
+                            <input className='longInput'  onChange={({ target: {value} }) => setDndexperience(value)} placeholder='ex: 1 Year 4 Months'></input>
                         </Row>
                     
                         <Row>
@@ -86,7 +84,7 @@ export default function CreateAccount() {
                         <Row>
                             <Col>
                                 <Row>
-                                    <p onClick={() => navigate('/')}  className='text-center'>Already have an account? <span>Login</span></p>
+                                    <p onClick={() => navigate('/Login')}  className='text-center'>Already have an account? <span>Login</span></p>
                                 </Row>
                                 <Row>
                                     <Col className='d-flex justify-content-center'>
@@ -103,14 +101,19 @@ export default function CreateAccount() {
                         <br />
                         <Row>
 
-                            <p className='text-center ppTxt'>Profile Picture</p>
+                            {/* <p className='text-center ppTxt'>Profile Picture</p>
                             <Col className='d-flex justify-content-center'>
                                 <img src={parchment} />
                                 <img src={plus} className='plus'/>
                             </Col>
 
-                            <Button className='imageBtn'>Upload Profile Picture</Button>
-
+                            <Button className='imageBtn'>Upload Profile Picture</Button> */}
+                                <p className='ppTxt'>Profile Picture:</p>
+                                <Col className='d-flex justify-content-center'>
+                                <Form.Group controlId="formFile" className="mb-3">
+                <Form.Control type="file" />
+              </Form.Group>
+                                </Col>
                         </Row>
                     </Col>
                 </Row>

@@ -17,8 +17,9 @@
 }
 
 .shadowBox{
-    background-color: #302c2bb6;
-    height: 70vh;
+    background-color: #272424d0;
+    height: 60vh;
+    width: 45vw;
 }
 
 .white{
@@ -27,16 +28,22 @@
 
 .title{
     text-align: center;
+    padding-top: 5%;
 }
 
 .input{
     height: 150% !important;
-    width: 60vw !important;
+    width: 30vw !important;
+}
+
+.inputTxt{
+    padding-left: 16%;
 }
 
 .logo{
-    width: 30%;
-    padding-left: 40px;
+    width: 25%;
+    padding-left: 30px;
+    margin-top: -10%;
 }
 
 /* DESKTOP */

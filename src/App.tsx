@@ -22,7 +22,7 @@ function App() {
 
 
   return (
-    <div className="bg">
+    <div>
       <BrowserRouter>
       <Navbar/>
       
