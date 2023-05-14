@@ -21,7 +21,7 @@ async function CreateAccountBe(createdUser: object) {
   return data;
 }
 
-async function Login(loginUser: object) {
+async function LoginBe(loginUser: object) {
   const result = await fetch('questerstavernbackend.database.windows.net/User/Login', {
       method: "POST",
       headers: {
@@ -76,4 +76,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccountBe, Login, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, LoginBe, CreateCharacter, CreateCampaign}

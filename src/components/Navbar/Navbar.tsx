@@ -4,9 +4,6 @@ import { Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Login from '../Login/Login';
-import TavernBoard from '../TavernBoard/TavernBoard';
-import TableTavern from '../TavernBoard/TableTavern';
-import CreateAccount from '../CreateAccount/CreateAccount';
 
 export default function Navbar() {
   const logo = require('../../Assets/logo.jpg');

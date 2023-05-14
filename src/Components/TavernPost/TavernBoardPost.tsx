@@ -1,12 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import './TavernBoardPost.css';
+import { useNavigate } from "react-router-dom";
 
 export default function TavernBoardPost() {
   const logo1 = require("../../Assets/tavernmen.jpg");
   const logo2 = require("../../Assets/hauntedHouse.png");
   const logo3 = require("../../Assets/image 7.png");
   const logo4 = require("../../Assets/image 17.png");
+
+  let navigate = useNavigate();
 
   return (
     <Container fluid mx-0>
@@ -20,7 +23,7 @@ export default function TavernBoardPost() {
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
-                  <button className='button'>BackButton</button>
+                  <button className='button' onClick={() => navigate(-1)}>BACK</button>
                 </div>
               </div>
             </div>
@@ -56,7 +59,7 @@ export default function TavernBoardPost() {
                   <li></li> <li></li>
                 </ul>
               </Card.Text>
-              <button className='button33'>Join Message</button>
+              <button className='button33'>Join</button>
             </Card.Body>
           </Card>
         </Col>
