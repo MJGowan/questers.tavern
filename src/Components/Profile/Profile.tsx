@@ -92,7 +92,7 @@ export default function Profile() {
                 <p>{exp}</p>
               </Row>
               <Row>
-                <p>Friends List: {numFriends}</p>
+                <p onClick={() => navigate('/FavoritesList')}>Friends List: {numFriends}</p>
               </Row>
               <hr />
               <Row>
