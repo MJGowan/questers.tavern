@@ -24,7 +24,7 @@ export default function CreateCharacter() {
         </Row>
       </div>
       <Container className='darkBox'>
-        <Row>
+        
           <Row>
             <Col className='col-3'>
               <p>Character Image:</p>
@@ -34,9 +34,8 @@ export default function CreateCharacter() {
             </Col>
             <Col className='col-3'>
               <p>Name:</p>
-              <input className='nameInput input mb-3' placeholder='Name'></input>
-              <p>Level:</p>
-              <input className='lvlInput input' placeholder='Level 1-20'></input>
+              <input className='nameInput input mb-3'></input>
+              
             </Col>
             <Col>
             <p>Race:</p>
@@ -58,10 +57,16 @@ export default function CreateCharacter() {
             </Col>
           </Row>
           <Row className='mt-5'>
-            <Col className='col-6'>
+            
+            <Col className='col-3'>
               <p>Character Description:</p>
               <input className='desc input'></input>
             </Col>
+            <Col className='col-3'>
+            <p>Level:</p>
+              <input className='lvlInput input' placeholder='1-20'></input>
+            </Col>
+           
             <Col>
             <p>Background:</p>
               <Form.Select aria-label="Default select example">
@@ -81,7 +86,7 @@ export default function CreateCharacter() {
               </Form.Select>
             </Col>
           </Row>
-          <Row className='mt-5'>
+          <Row>
             <Col className='col-9'></Col>
             <Col>
               <Button className='contBtn btn'>Continue</Button>
@@ -90,7 +95,7 @@ export default function CreateCharacter() {
               <Button className='backBtn btn'>Back</Button>
             </Col>
           </Row>
-        </Row>
+        
       </Container>
     </div>
   )

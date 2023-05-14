@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Landing.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import heroImg from '../../Assets/image 10.png';
@@ -12,6 +12,8 @@ import Login from '../Login/Login';
 
 export default function Landing() {
   const [screenSize, setScreenSize] = useState('');
+  const navigate = useNavigate();
+
   useEffect(() => {
     const handleChange = () => {
       if (window.innerWidth <= 768) {
@@ -63,7 +65,7 @@ export default function Landing() {
                         <Col className='col-1'></Col>
                       </Row>
                     </Container>
-                    <Button className='tavernBtn'>How to use Quester's Tavern</Button>
+                    <Button className='tavernBtn' onClick={() => navigate('/FAQs')}>How to use Quester's Tavern</Button>
                   </Container>
                 </Col>
               </Row>
@@ -115,7 +117,7 @@ export default function Landing() {
                           <Col className='col-3'></Col>
                         </Row>
                       </Container>
-                      <Link to='/Login' className='tavernBtn' >How to use Quester's Tavern</Link>
+                      <Button className='tavernBtn' onClick={() => navigate('/FAQs')}>How to use Quester's Tavern</Button>
                     </Container>
                   </Col>
                 </Row>
@@ -168,7 +170,7 @@ export default function Landing() {
                             <Col className='col-1'></Col>
                           </Row>
                         </Container>
-                        <Button className='tavernBtn'>How to use Quester's Tavern</Button>
+                        <Button className='tavernBtn' onClick={() => navigate('/FAQs')}>How to use Quester's Tavern</Button>
                       </Container>
                     </Col>
                     <Col>
@@ -217,7 +219,7 @@ export default function Landing() {
                             <Col className='col-2'></Col>
                           </Row>
                         </Container>
-                        <Button className='tavernBtn'>How to use Quester's Tavern</Button>
+                        <Button className='tavernBtn' onClick={() => navigate('/FAQs')}>How to use Quester's Tavern</Button>
                       </Container>
                     </Col>
 

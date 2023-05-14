@@ -22,7 +22,7 @@ function App() {
 
 
   return (
-    <div className="bg">
+    <div>
       <BrowserRouter>
       <Navbar/>
       
@@ -31,6 +31,7 @@ function App() {
 
           <Route path='/CreateAccount' element={<CreateAccount />}/>
           <Route path='/CreateCharacter' element={<CreateCharacter/>}/>
+          <Route path='/FavoritesList' element={<FavoritesList/>}/>
           <Route path='/FAQs' element={<FAQs/>}/>
           <Route path='/Login' element={<Login />} />
           <Route path='/Profile' element={<Profile />} />

@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import './TavernBoardPost.css';
 
 export default function TavernBoardPost() {
-  const logo1 = require("./tavernmen.jpg");
-  const logo2 = require("./hauntedHouse.png");
-  const logo3 = require("./image 7.png");
-  const logo4 = require("./image 17.png");
+  const logo1 = require("../../Assets/tavernmen.jpg");
+  const logo2 = require("../../Assets/hauntedHouse.png");
+  const logo3 = require("../../Assets/image 7.png");
+  const logo4 = require("../../Assets/image 17.png");
 
   return (
     <Container fluid mx-0>

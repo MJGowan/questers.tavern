@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
   const addNew = require('../../Assets/R (1) 1.png');
+
+  const navigate = useNavigate()
 
   const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";
@@ -14,14 +17,6 @@ export default function Profile() {
   const location = "Tired, CA";
   const exp = "New";
   const numFriends = 0;
-
-  const [showProfile, setShowProfile] = useState(false);
-  const closeProfile = () => setShowProfile(false);
-  const editProfile = () => setShowProfile(true);
-
-  const [showCampaignCreator, setShowCampaignCreator] = useState(false);
-  const closeCampaignCreator = () => setShowCampaignCreator(false);
-  const campaignCreator = () => setShowCampaignCreator(true);
 
   // const [username, setUsername] = useState('');
   // const [profilePic, setProfilePic] = useState('');
@@ -33,6 +28,15 @@ export default function Profile() {
   // const [myCampaigns, setMyCampaigns] = useState('');
   // const [playing, setPlaying] = useState('');
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
+
+  const [showProfile, setShowProfile] = useState(false);
+  const closeProfile = () => setShowProfile(false);
+  const editProfile = () => setShowProfile(true);
+
+  const [showCampaignCreator, setShowCampaignCreator] = useState(false);
+  const closeCampaignCreator = () => setShowCampaignCreator(false);
+  const campaignCreator = () => setShowCampaignCreator(true);
+
 
   const [mode, setMode] = useState('');
   const changeMode = () => {
@@ -88,7 +92,7 @@ export default function Profile() {
                 <p>{exp}</p>
               </Row>
               <Row>
-                <p>Friends List: {numFriends}</p>
+                <p onClick={() => navigate('/FavoritesList')}>Friends List: {numFriends}</p>
               </Row>
               <hr />
               <Row>
@@ -111,7 +115,7 @@ export default function Profile() {
                     </Row>
                     <Row>
                       <Col>
-                        <div>
+                        <div onClick={() => navigate('/CreateCharacter')}>
                           <img src={parchment} />
                           <img src={addNew} className='addNewImg' />
                           <p className='darkTxt addNewTxt'>Add New</p>
@@ -151,7 +155,7 @@ export default function Profile() {
               <Row>
                 <Col className='dwFont'>
 
-                  <div>
+                  <div onClick={() => navigate('/TavernBoard')}>
                     <img src={parchment} />
                     <p className='darkTxt partTxtOne'>Not participating in a campaign yet?</p>
                     <p className='darkTxt partTxtTwo'> Maybe you can check the Campaigns page!</p>
@@ -250,7 +254,7 @@ export default function Profile() {
 
             {/* Add ability to see image later */}
             <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Default file input example</Form.Label>
+              <Form.Label>Campaign Image:</Form.Label>
               <Form.Control type="file" />
             </Form.Group>
           </Form>
