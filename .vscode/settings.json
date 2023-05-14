@@ -1,3 +1,8 @@
 {
-  "cSpell.words": ["tavernbackground", "tavernmen", "webp"]
+  "cSpell.words": [
+    "tavernbackground",
+    "tavernmen",
+    "webp"
+  ],
+  "appService.defaultWebAppToDeploy": "None"
 }

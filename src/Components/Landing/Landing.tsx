@@ -18,16 +18,12 @@ export default function Landing() {
     const handleChange = () => {
       if (window.innerWidth <= 768) {
         setScreenSize('mobile');
-        console.log("mobile");
       } else if (window.innerWidth <= 1024 && window.innerWidth >= 769) {
         setScreenSize('tablet');
-        console.log("tablet")
       } else if (window.innerWidth <= 1440 && window.innerWidth >= 1025) {
         setScreenSize('laptop')
-        console.log("laptop")
       } else if (window.innerWidth >= 1440) {
         setScreenSize('desktop')
-        console.log("desktop")
       }
     };
 

@@ -32,7 +32,7 @@ let navigate = useNavigate();
                      backgroundColor: "#4A423F",
                      color: "white",
                    }}
-                   onClick={() => navigate(-1)}
+                   
                  >
                    LOCATION
                  </button>{" "}
@@ -48,7 +48,7 @@ let navigate = useNavigate();
                      backgroundColor: "#4A423F",
                      color: "white",
                    }}
-                   onClick={() => navigate(-1)}
+                  
                  >
                    FILTER
                  </button>{" "}
