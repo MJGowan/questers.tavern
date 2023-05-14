@@ -3,7 +3,7 @@
 let userData = {};
 
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch('https://questerstavern.azurewebsites.net/User/AddUser', {
+  const result = await fetch('questerstavernbackend.database.windows.net/User/AddUser', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -22,7 +22,7 @@ async function CreateAccountBe(createdUser: object) {
 }
 
 async function Login(loginUser: object) {
-  const result = await fetch('https://localhost:7276/User/Login', {
+  const result = await fetch('questerstavernbackend.database.windows.net/User/Login', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
