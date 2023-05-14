@@ -5,6 +5,7 @@ import './Tavern.css';
 
 
 
+
 export default function TableTavern() {
 const topBanner = require("../../Assets/image 10.png")
 
