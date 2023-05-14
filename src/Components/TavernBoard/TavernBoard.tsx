@@ -22,7 +22,9 @@ let navigate = useNavigate();
                <div className='d-flex ml-auto'>
                  <button className='button'>MY LOCATION</button>
                  <button className='button'>FILTER</button>
-                 <button className='button' onClick={() => navigate(-1)}>BACK</button>
+                 <button className='button' onClick={() => navigate(-1)}>
+                   BACK
+                 </button>
                </div>
              </div>
            </div>
@@ -31,10 +33,10 @@ let navigate = useNavigate();
      </Row>
      <Row>
        <div className='title-containerDos'>
-        {/*} <img src={logo1} alt='logo1' className='logo-image1' />*/}
+         {/*} <img src={logo1} alt='logo1' className='logo-image1' />*/}
        </div>
      </Row>
-     <Row>
+     <Row className='mt-md-5'>
        <Col xs={12} md={10} className='mx-auto'>
          <TableTavern />
        </Col>
