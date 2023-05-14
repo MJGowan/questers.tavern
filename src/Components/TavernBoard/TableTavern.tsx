@@ -2,8 +2,15 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import './Tavern.css';
 
+
+
+
 export default function TableTavern() {
 const topBanner = require("../../Assets/image 10.png")
+
+const handleButtonClick = () => {
+  window.location.href = "about:blank"; // or any other URL
+};
 
   return (
     <div className='table-container'>
@@ -32,7 +39,22 @@ const topBanner = require("../../Assets/image 10.png")
                 2721 Transworld Dr Stockton CA 95026
               </td>
               <td>
-                <button>More Info</button>
+                <button
+                  className='cardbutton'
+                  style={{
+                    width: "95%",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    borderRadius: "10px",
+                    height: "50px",
+                    padding: "10px 20px",
+                    backgroundColor: "#4A423F",
+                    color: "white",
+                  }}
+                  onClick={handleButtonClick}
+                >
+                  More Info
+                </button>
               </td>
             </tr>
             <tr>
@@ -42,7 +64,21 @@ const topBanner = require("../../Assets/image 10.png")
               <td>Character Level 1-5</td>
               <td>2721 Transworld Dr Stockton CA 95026</td>
               <td>
-                <button>More Info</button>
+                <button
+                  style={{
+                    width: "95%",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    borderRadius: "10px",
+                    height: "50px",
+                    padding: "10px 20px",
+                    backgroundColor: "#4A423F",
+                    color: "white",
+                  }}
+                  onClick={handleButtonClick}
+                >
+                  More Info
+                </button>
               </td>
             </tr>
             <tr>
@@ -54,7 +90,21 @@ const topBanner = require("../../Assets/image 10.png")
                 2721 Transworld Dr Stockton CA 95026
               </td>
               <td>
-                <button>More Info</button>
+                <button
+                  style={{
+                    width: "95%",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    borderRadius: "10px",
+                    height: "50px",
+                    padding: "10px 20px",
+                    backgroundColor: "#4A423F",
+                    color: "white",
+                  }}
+                  onClick={handleButtonClick}
+                >
+                  More Info
+                </button>
               </td>
             </tr>
             <tr>
@@ -64,7 +114,21 @@ const topBanner = require("../../Assets/image 10.png")
               <td>Beginners Campaign</td>
               <td>2721 Transworld Dr Stockton CA 95026</td>
               <td>
-                <button>More Info</button>
+                <button
+                  style={{
+                    width: "95%",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    borderRadius: "10px",
+                    height: "50px",
+                    padding: "10px 20px",
+                    backgroundColor: "#4A423F",
+                    color: "white",
+                  }}
+                  onClick={handleButtonClick}
+                >
+                  More Info
+                </button>
               </td>
             </tr>
             <tr>
@@ -74,7 +138,21 @@ const topBanner = require("../../Assets/image 10.png")
               <td style={{ color: "#D6BA73" }}>@fat</td>
               <td style={{ color: "#D6BA73" }}>Otto</td>
               <td>
-                <button>More Info</button>
+                <button
+                  style={{
+                    width: "95%",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    borderRadius: "10px",
+                    height: "50px",
+                    padding: "10px 20px",
+                    backgroundColor: "#4A423F",
+                    color: "white",
+                  }}
+                  onClick={handleButtonClick}
+                >
+                  More Info
+                </button>
               </td>
             </tr>
           </tbody>

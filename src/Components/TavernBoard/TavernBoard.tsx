@@ -20,9 +20,52 @@ let navigate = useNavigate();
              </div>
              <div className='button-container d-none d-md-block'>
                <div className='d-flex ml-auto'>
-                 <button className='button'>MY LOCATION</button>
-                 <button className='button'>FILTER</button>
-                 <button className='button' onClick={() => navigate(-1)}>
+                 <button
+                   className='cardbutton'
+                   style={{
+                     width: "95%",
+                     marginLeft: "10px",
+                     marginRight: "10px",
+                     borderRadius: "10px",
+                     height: "50px",
+                     padding: "10px 20px",
+                     backgroundColor: "#4A423F",
+                     color: "white",
+                   }}
+                   onClick={() => navigate(-1)}
+                 >
+                   LOCATION
+                 </button>{" "}
+                 <button
+                   className='cardbutton'
+                   style={{
+                     width: "95%",
+                     marginLeft: "10px",
+                     marginRight: "10px",
+                     borderRadius: "10px",
+                     height: "50px",
+                     padding: "10px 20px",
+                     backgroundColor: "#4A423F",
+                     color: "white",
+                   }}
+                   onClick={() => navigate(-1)}
+                 >
+                   FILTER
+                 </button>{" "}
+                 <button
+                   className='cardbutton'
+                   style={{
+                     width: "95%",
+                     marginLeft: "10px",
+                     marginRight: "10px",
+                     borderRadius: "10px",
+                     height: "50px",
+                     padding: "10px 20px",
+                     backgroundColor: "#4A423F",
+                     color: "white",
+                   }}
+                   onClick={() => navigate(-1)}
+                 >
                    BACK
                  </button>
                </div>
