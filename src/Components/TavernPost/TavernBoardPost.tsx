@@ -109,6 +109,8 @@ export default function TavernBoardPost() {
             <li>RIng Bear</li>
             <li>Lord of the Swords</li>
             <li>Tremble at My Presence</li>
+            <li>Tremble at My Presence</li>
+            <li>Tremble at My Presence</li>
           </ul>
         </Col>
         <Col style={{ paddingTop: "40px" }}>
