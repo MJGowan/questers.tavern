@@ -1,8 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import './Tavern.css';
-
-
+import { Link } from "react-router-dom";
 
 
 
@@ -10,8 +9,10 @@ export default function TableTavern() {
 const topBanner = require("../../Assets/image 10.png")
 
 const handleButtonClick = () => {
-  window.location.href = "about:blank"; // or any other URL
+  // window.location.href = ""; // or any other URL
 };
+
+
 
   return (
     <div className='table-container'>
@@ -54,7 +55,7 @@ const handleButtonClick = () => {
                   }}
                   onClick={handleButtonClick}
                 >
-                  More Info
+                  <Link to='/TavernBoardPost'>More Info</Link>{" "}
                 </button>
               </td>
             </tr>
@@ -78,7 +79,7 @@ const handleButtonClick = () => {
                   }}
                   onClick={handleButtonClick}
                 >
-                  More Info
+                  <Link to='/TavernBoardPost'>More Info</Link>
                 </button>
               </td>
             </tr>
@@ -104,7 +105,7 @@ const handleButtonClick = () => {
                   }}
                   onClick={handleButtonClick}
                 >
-                  More Info
+                  <Link to='/TavernBoardPost'>More Info</Link>
                 </button>
               </td>
             </tr>
@@ -128,7 +129,7 @@ const handleButtonClick = () => {
                   }}
                   onClick={handleButtonClick}
                 >
-                  More Info
+                  <Link to='/TavernBoardPost'>More Info</Link>
                 </button>
               </td>
             </tr>
@@ -152,7 +153,7 @@ const handleButtonClick = () => {
                   }}
                   onClick={handleButtonClick}
                 >
-                  More Info
+                  <Link to='/TavernBoardPost'>More Info</Link>
                 </button>
               </td>
             </tr>
