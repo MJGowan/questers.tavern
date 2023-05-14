@@ -1,5 +1,7 @@
 // Backend API Fetches
 
+let userData = {};
+
 async function CreateAccountBe(createdUser: object) {
   const result = await fetch('https://localhost:7276/User/AddUser', {
       method: "POST",
