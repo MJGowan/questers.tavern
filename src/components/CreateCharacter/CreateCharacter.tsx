@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CreateCharacter.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -12,6 +13,8 @@ export default function CreateCharacter() {
   const [charClass, setCharClass] = useState('');
   const [background, setBackground] = useState('');
   const [alignment, setAlignment] = useState('');
+
+  let navigate = useNavigate();
 
   return (
     <div className='bg'>
@@ -34,7 +37,7 @@ export default function CreateCharacter() {
             </Col>
             <Col className='col-3'>
               <p>Name:</p>
-              <input className='nameInput input mb-3'></input>
+              <input className='nameInput inputs mb-3'></input>
               
             </Col>
             <Col>
@@ -60,11 +63,11 @@ export default function CreateCharacter() {
             
             <Col className='col-3'>
               <p>Character Description:</p>
-              <input className='desc input'></input>
+              <input className='desc inputs'></input>
             </Col>
             <Col className='col-3'>
             <p>Level:</p>
-              <input className='lvlInput input' placeholder='1-20'></input>
+              <input className='lvlInput inputs' placeholder='1-20'></input>
             </Col>
            
             <Col>
@@ -89,10 +92,10 @@ export default function CreateCharacter() {
           <Row>
             <Col className='col-9'></Col>
             <Col>
-              <Button className='contBtn btn'>Continue</Button>
+              <Button className='contBtn btn'>Save</Button>
             </Col>
             <Col>
-              <Button className='backBtn btn'>Back</Button>
+              <Button className='backBtn btn' onClick={() => navigate(-1)}>Back</Button>
             </Col>
           </Row>
         

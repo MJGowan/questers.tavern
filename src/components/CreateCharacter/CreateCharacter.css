@@ -30,10 +30,11 @@
     margin-top: 2%;
 }
 
-.input{
+.inputs{
     border-radius: 5px;
     border-color: transparent;
     width: 100% !important;
+    height: 37px !important;
 }
 
 .nameInput{
