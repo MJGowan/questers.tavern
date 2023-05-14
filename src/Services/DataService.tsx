@@ -1,7 +1,9 @@
 // Backend API Fetches
 
+let userData = {};
+
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch('https://localhost:7276/User/AddUser', {
+  const result = await fetch('https://questerstavern.azurewebsites.net/User/AddUser', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"

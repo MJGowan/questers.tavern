@@ -17,10 +17,11 @@ export default function CreateAccount() {
     const [Lastname, setLastname] = useState<string>('');
     const [Datecreated, setDatecreated] = useState<string>('');
     const [Dndexperience, setDndexperience] = useState<string>('');
+    const [UserImage, setUserImage] = useState<string>('');
     const [Password, setPassword] = useState<string>('');
 
     const handleSubmit = async () => {
-        if (!Username || !Firstname || !Lastname || !Datecreated || !Dndexperience || !Password) {
+        if (!Username || !Firstname || !Lastname || !Datecreated || !Dndexperience || !UserImage || !Password) {
             alert("Could not create account, missing information.");
             } else {
             let userData: Object = {
@@ -30,6 +31,7 @@ export default function CreateAccount() {
             Lastname,
             Datecreated,
             Dndexperience,
+            UserImage,
             Password
             };
             if (await CreateAccountBe(Object)) {
@@ -38,6 +40,7 @@ export default function CreateAccount() {
             alert("Could not create account, missing information.");
             }
             console.log(userData);
+            CreateAccountBe(userData);
             }
     }
     return (
@@ -112,7 +115,7 @@ export default function CreateAccount() {
                                 <p className='ppTxt'>Profile Picture:</p>
                                 <Col className='d-flex justify-content-center'>
                                 <Form.Group controlId="formFile" className="mb-3">
-                <Form.Control type="file" />
+                <Form.Control type="file" onChange={({ target: {value} }) => setUserImage(value)} />
               </Form.Group>
                                 </Col>
                         </Row>
