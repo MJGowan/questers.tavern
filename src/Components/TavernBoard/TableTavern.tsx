@@ -20,6 +20,7 @@ const handleButtonClick = () => {
         <img src={topBanner} alt='' />
       </div>
       <div className='table-responsive'>
+        <br />
         <Table className='my-table' striped bordered hover>
           <thead>
             <tr>

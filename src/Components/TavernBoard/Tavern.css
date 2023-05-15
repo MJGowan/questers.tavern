@@ -147,7 +147,7 @@ body {
   .image-container1{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 150%;
   }
   @media only screen and (max-width: 550px) {
     .text-center {
@@ -257,13 +257,13 @@ body {
 }
 
 .image-banner img {
-
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 40%; /* adjust as needed */
-  width: 106%;
+  height: 47%; /* adjust as needed */
+  width: 100%;
   overflow: hidden;
   margin-top: 190px; /* adjust as needed */
 }
