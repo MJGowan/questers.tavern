@@ -15,6 +15,7 @@
 
 .navbarBg {
     background-color: #f1f1f1;
+    height: 10vh;
 }
 
 .navMargin {
@@ -35,6 +36,16 @@
     color: rgb(51, 64, 42);
     font-size: x-large;
     padding-right: 3%;
-    
-    margin-top: -4.5%;
+    margin-top: -6vh;
+}
+
+.menuIcon{
+    color:rgb(51, 64, 42);
+    margin-right: 5%;
+    margin-top: 3vh;
+}
+
+.logoImg{
+    margin-left: -5vw;
+    max-width: 60vw !important;
 }
