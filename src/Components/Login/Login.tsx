@@ -8,7 +8,7 @@ import { GetLoggedInUserData, LoginBe } from '../../Services/DataService';
 
 export default function Login() {
   const logo = require('../../Assets/unnamed-removebg-preview.png');
-  const navigate = useNavigate()
+  let navigate = useNavigate();
 
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
@@ -18,16 +18,14 @@ export default function Login() {
       Username,
       Password
     }
-    // const response = await LoginBe(userData)
-    // console.log(response)
+    console.log(userData);
     let token = await LoginBe(userData);
-    if(token.token != null){
+    if(token.token !=null){
       localStorage.setItem("Token", token.token);
-    await GetLoggedInUserData(Username);
-    navigate('/Profile');
+      GetLoggedInUserData(Username);
+      navigate("/Profile");
     }
-    // await GetLoggedInUserData(Username);
-    // navigate('/Profile');
+   
   }
 
   return (
