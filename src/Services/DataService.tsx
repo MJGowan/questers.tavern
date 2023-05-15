@@ -21,7 +21,7 @@ async function CreateAccountBe(createdUser: object) {
   return data;
 }
 
-async function Login(loginUser: object) {
+async function LoginBe(loginUser: object) {
   const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
       method: "POST",
       headers: {
@@ -83,4 +83,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccountBe, Login, GetLoggedInUserData, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, LoginBe, GetLoggedInUserData, CreateCharacter, CreateCampaign}
