@@ -40,7 +40,7 @@ async function Login(loginUser: object) {
 }
 
 async function CreateCharacter(newCharacter: object) {
-  const result = await fetch('https://localhost:7276/Character/CreateCharacter/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -58,7 +58,7 @@ async function CreateCharacter(newCharacter: object) {
 }
 
 async function CreateCampaign(newCampaign: object) {
-  const result = await fetch('https://localhost:7276/Character/CreateCharacter/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
