@@ -3,7 +3,7 @@
 let userData = {};
 
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/User/AddUser', {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -21,8 +21,8 @@ async function CreateAccountBe(createdUser: object) {
   return data;
 }
 
-async function Login(loginUser: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/User/Login', {
+async function LoginBe(loginUser: object) {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -37,6 +37,13 @@ async function Login(loginUser: object) {
   let data = await result.json();
   console.log(data);
   return data;
+}
+
+async function GetLoggedInUserData(Username: string){
+    let result = await fetch(`https://questerstavernbackend.azurewebsites.net/GetUserByUsername/${Username}`);
+    let data = await result.json();
+    userData = data;
+    console.log(userData);
 }
 
 async function CreateCharacter(newCharacter: object) {
@@ -76,4 +83,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccountBe, Login, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, LoginBe, GetLoggedInUserData, CreateCharacter, CreateCampaign}
