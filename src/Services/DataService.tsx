@@ -3,7 +3,7 @@
 let userData = {};
 
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch('questerstavernbackend.database.windows.net/User/AddUser', {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -21,8 +21,8 @@ async function CreateAccountBe(createdUser: object) {
   return data;
 }
 
-async function LoginBe(loginUser: object) {
-  const result = await fetch('questerstavernbackend.database.windows.net/User/Login', {
+async function Login(loginUser: object) {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -39,8 +39,15 @@ async function LoginBe(loginUser: object) {
   return data;
 }
 
+async function GetLoggedInUserData(Username: string){
+    let res = await fetch(`https://questerstavernbackend.azurewebsites.net/GetUserByUsername/${Username}`);
+    let data = await res.json();
+    userData = data;
+    console.log(userData);
+}
+
 async function CreateCharacter(newCharacter: object) {
-  const result = await fetch('https://localhost:7276/Character/CreateCharacter/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -58,7 +65,7 @@ async function CreateCharacter(newCharacter: object) {
 }
 
 async function CreateCampaign(newCampaign: object) {
-  const result = await fetch('https://localhost:7276/Character/CreateCharacter/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -76,4 +83,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccountBe, LoginBe, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, Login, GetLoggedInUserData, CreateCharacter, CreateCampaign}
