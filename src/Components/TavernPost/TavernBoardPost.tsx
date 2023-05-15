@@ -23,7 +23,22 @@ export default function TavernBoardPost() {
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
-                  <button className='button' onClick={() => navigate(-1)}>BACK</button>
+                  <button
+                    className='cardbutton'
+                    style={{
+                      width: "95%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                    }}
+                    onClick={() => navigate(-1)}
+                  >
+                    BACK
+                  </button>{" "}
                 </div>
               </div>
             </div>
@@ -31,8 +46,9 @@ export default function TavernBoardPost() {
         </Col>
       </Row>
       <Row>
-        <Col className="card-container">
-          <Card className="card"
+        <Col className='card-container'>
+          <Card
+            className='card'
             style={{
               width: "18rem",
               height: "530px",
@@ -44,30 +60,42 @@ export default function TavernBoardPost() {
           >
             <img src={logo2} alt='logo' className='logo-image' />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title></Card.Title>
               <Card.Text
                 style={{
-                  fontSize: "20px",
+                  fontSize: "23px",
                   color: "#D6BA73",
                   textAlign: "center",
                 }}
               >
                 The Haunted School House
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li> <li></li>
-                </ul>
               </Card.Text>
-              <button className='button33'>Join</button>
+              <button
+                className='cardbutton'
+                style={{
+                  width: "75%",
+                  marginLeft: "40px",
+                  marginRight: "10px",
+                  borderRadius: "10px",
+                  height: "50px",
+                  padding: "10px 20px",
+                  backgroundColor: "#4A423F",
+                  color: "white",
+                }}
+              >
+                Campaigns
+              </button>{" "}
             </Card.Body>
           </Card>
         </Col>
-        <Col style={{ paddingTop: "40px", whiteSpace: "nowrap" }} className='card-container1'>
+        <Col
+          style={{ paddingTop: "40px", whiteSpace: "nowrap" }}
+          className='card-container1'
+        >
           <Card>
             <Card.Body className='card-description'>DESCRIPTION</Card.Body>
           </Card>
-          <h3 className='card-font-description'>DESCRIPTION</h3>
+          <h3 className='card-font-description'></h3>
           <Card>
             <Card.Body className='card-description'>DIFFICULTY</Card.Body>
           </Card>
@@ -83,30 +111,33 @@ export default function TavernBoardPost() {
           </Card>
           <ul className='card-font-description'>
             <li>RIng Bear</li>
-            <li>RIng Bear</li>
-            <li>RIng Bear</li>
+            <li>Lord of the Swords</li>
+            <li>Tremble at My Presence</li>
+            <li>Tremble at My Presence</li>
+            <li>Tremble at My Presence</li>
           </ul>
         </Col>
         <Col style={{ paddingTop: "40px" }}>
-          <div>
+          <div style={{ position: "relative" }}>
             <img
               src={logo3}
               alt='logo'
               className='logo-image'
               style={{ width: "90%", height: "auto" }}
             />
-            {/* <img
+            <img
               src={logo4}
-              alt='second image'
+              alt='logo'
+              className='logo-image'
               style={{
+                width: "50%",
+                height: "auto",
                 position: "absolute",
-                top: "110%",
-                left: "81%",
+                top: "40%",
+                left: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "20%",
-                height: "50%",
               }}
-            /> */}
+            />
           </div>
         </Col>
       </Row>
