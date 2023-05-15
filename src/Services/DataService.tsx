@@ -22,7 +22,7 @@ async function CreateAccountBe(createdUser: object) {
 }
 
 async function LoginBe(loginUser: object) {
-  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login/`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"

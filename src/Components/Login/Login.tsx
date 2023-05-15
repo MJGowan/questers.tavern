@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import bg from '../../Assets/LoginBg.png';
-import { LoginBe } from '../../Services/DataService';
+import { GetLoggedInUserData, LoginBe } from '../../Services/DataService';
 
 export default function Login() {
   const logo = require('../../Assets/unnamed-removebg-preview.png');
@@ -18,8 +18,16 @@ export default function Login() {
       Username,
       Password
     }
-    const response = await LoginBe(userData)
-    console.log(response)
+    // const response = await LoginBe(userData)
+    // console.log(response)
+    let token = await LoginBe(userData);
+    if(token.token != null){
+      localStorage.setItem("Token", token.token);
+    await GetLoggedInUserData(Username);
+    navigate('/Profile');
+    }
+    // await GetLoggedInUserData(Username);
+    // navigate('/Profile');
   }
 
   return (
