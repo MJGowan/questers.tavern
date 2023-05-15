@@ -19,6 +19,9 @@ body {
   .card-description {
     text-align: center;
     font-size: 20px;
+    background-color: #4A423F;
+    border: 2px solid #FFA825;
+    color: white;
   }
   .card-font-description{
     text-align: center;
