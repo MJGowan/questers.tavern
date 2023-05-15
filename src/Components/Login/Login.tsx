@@ -18,16 +18,12 @@ export default function Login() {
       Username,
       Password
     }
-    // const response = await LoginBe(userData)
-    // console.log(response)
     let token = await LoginBe(userData);
     if(token.token != null){
       localStorage.setItem("Token", token.token);
     await GetLoggedInUserData(Username);
     navigate('/Profile');
     }
-    // await GetLoggedInUserData(Username);
-    // navigate('/Profile');
   }
 
   return (
