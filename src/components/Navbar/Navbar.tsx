@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -24,13 +24,20 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleChange);
   }, [])
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   // use props to display username and profile pic when people are logged in
   return (
     <Container fluid>
+      <Row className='navbarBg'>
+
       {
         isHamburger === 'hamburger' ? (
           <div>
-            <Row className='navbarBg'>
+            
               <Col className='col-6'>
                 <img src={logo} className='logoImg'/>
               </Col>
@@ -38,19 +45,15 @@ export default function Navbar() {
               <MenuIcon fontSize="large" className='menuIcon' />
 
               </Col>
-            </Row>
+            
           </div>
         ) : (
           <div>
-            <Row className='navbarBg'>
               <Col>
-
                 <Link to="/">
                   <img src={logo} />
                 </Link>
-                
                   <div className='d-flex justify-content-end doubleFont'>
-
                 <Link to='/TavernBoard' className='navItems'>
                   Campaigns
                 </Link>
@@ -69,11 +72,24 @@ export default function Navbar() {
                 }
                   </div>
               </Col>
-            </Row >
           </div >
         )
       }
-
+      </Row>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container >
   )
 }

@@ -36,7 +36,7 @@ export default function Landing() {
   return (
     <div className='landingBg'>
       <Row>
-        <img className='heroImg' src={heroImg} />
+        <img src={heroImg} />
       </Row>
       <p className='heroTxt' id="heroTxt">Enter The Dungeon United</p>
 
@@ -99,7 +99,9 @@ export default function Landing() {
               <div>
                 <Row>
                   <Col>
+                  <Container fluid>
                     <img className='tavernImg' src={tavernImg} />
+                  </Container>
                     <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
                       <p className='tavernTitle doubleFont'>Resources for New Players</p>
                       <Container>
@@ -120,7 +122,7 @@ export default function Landing() {
 
                 <Row className='cardRow'>
                   <Col className='d-flex justify-content-center'>
-                    <Card style={{ width: '15rem' }} className='cardOne'>
+                    <Card style={{ width: '35vw' }} className='cardOne'>
                       <Card.Img variant="top" src={cardOneImg} className='cardImg' />
                       <Card.Body>
                         <Card.Title className='cardTitle'>An easy way to connect locally with your fellow adventurers</Card.Title>
@@ -132,7 +134,7 @@ export default function Landing() {
                   </Col>
 
                   <Col className='d-flex justify-content-center'>
-                    <Card style={{ width: '15rem' }} className='cardTwo'>
+                    <Card style={{ width: '35vw' }} className='cardTwo'>
                       <Card.Img variant="top" src={cardTwoImg} className='cardImg' />
                       <Card.Body>
                         <Card.Title className='cardTitle'>Create the ultimate campaign and let the heroes find you!</Card.Title>
@@ -197,7 +199,7 @@ export default function Landing() {
               ) :
               // DESKTOP 
               (
-                <div>
+                <Container>
                   <Row className='desktopRow'>
                     <Col className='col-6'>
                       <img className='tavernImg' src={tavernImg} />
@@ -243,7 +245,7 @@ export default function Landing() {
                       </Card>
                     </Col>
                   </Row>
-                </div>
+                </Container>
               )
       }
     </div>
