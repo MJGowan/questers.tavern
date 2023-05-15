@@ -249,23 +249,15 @@ body {
 }
 
 .image-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
 }
 
 .image-banner img {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40%; /* adjust as needed */
-  width: 106%;
+  width: 127.5%;
+  margin-left: -15%;
   overflow: hidden;
-  margin-top: 190px; /* adjust as needed */
+  margin-top: -21%;
+  padding-bottom: 5%;
 }
 
 

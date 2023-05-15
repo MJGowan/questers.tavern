@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import bg from '../../Assets/LoginBg.png';
@@ -28,20 +28,20 @@ export default function Login() {
 
   return (
     <div className='doubleFont white'>
-      <img src={bg} className='bgImg'/>
+      <img src={bg} className='bgImg' />
       <Row>
-      
+
         <Col className='col-2'></Col>
         <Col className='col-8 mt-5'>
-          
+
           <Container className='shadowBox'>
             <Row>
               <Col>
                 <div className='d-flex justify-content-center'>
-                <p className='title mt-2'>Login</p>
+                  <p className='title mt-2'>Login</p>
                 </div>
-              <div className='d-flex justify-content-center'>
-              <img src={logo} className='logo'></img>
+                <div className='d-flex justify-content-center'>
+                  <img src={logo} className='logo'></img>
                 </div>
               </Col>
             </Row>
@@ -53,13 +53,13 @@ export default function Login() {
                 <Row>
                   <Col></Col>
                   <Col className='mb-1'>
-                  <input type='username' className='input' onChange={({target: {value}}) => setUsername(value)}></input>
+                    <input type='username' className='input' onChange={({ target: { value } }) => setUsername(value)}></input>
                   </Col>
                   <Col></Col>
                 </Row>
               </Col>
             </Row>
-            
+
             <Row className='mb-5'>
               <Col>
                 <Row>
@@ -67,8 +67,18 @@ export default function Login() {
                 </Row>
                 <Row>
                   <Col></Col>
-                <Col className='d-flex justify-content-center'>
-                  <input type='password' className='input' onChange={({target: {value}}) => setPassword(value)}></input>
+                  <Col className='d-flex justify-content-center'>
+                    {/* <input type='password' className='input' ></input> */}
+                    <>
+                    <Form.Label htmlFor="inputPassword5"></Form.Label>
+                    <Form.Control
+                    className='input'
+                      type="password"
+                      id="inputPassword5"
+                      aria-describedby="passwordHelpBlock"
+                      onChange={({ target: { value } }) => setPassword(value)}
+                    />
+                    </>
                   </Col>
                   <Col></Col>
                 </Row>
