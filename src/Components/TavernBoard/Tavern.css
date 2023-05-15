@@ -36,9 +36,20 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-60%, -40%);
-    z-index: 1;
+    transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.title-text {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+  .title-text {
+    font-size: 2rem;
   }
+}
   
   .text {
     font-family: 'IM Fell Double Pica SC', serif; 

@@ -15,7 +15,10 @@ const handleButtonClick = () => {
 
 
   return (
-    <div className='table-container'>
+    <div
+      className='table-container'
+      style={{ paddingTop: "10px", paddingBottom: "10px" }}
+    >
       <div className='image-banner'>
         <img src={topBanner} alt='' />
       </div>
