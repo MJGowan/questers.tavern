@@ -22,7 +22,8 @@ export default function Login() {
     let token = await LoginBe(userData);
     if(token.token !=null){
       localStorage.setItem("Token", token.token);
-      GetLoggedInUserData(Username);
+      let userData = await GetLoggedInUserData(Username);
+      sessionStorage.setItem('userData', JSON.stringify(userData));
       navigate("/Profile");
     }
    

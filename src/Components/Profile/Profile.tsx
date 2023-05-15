@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
+import { checkToken, loggedInData, GetLoggedInUserData } from '../../Services/DataService';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
   const addNew = require('../../Assets/R (1) 1.png');
 
-  const navigate = useNavigate()
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    
+    if(!checkToken){
+      navigate('/Login')
+    }else{
+      // Get users data
+      let userData = loggedInData();
+      console.log(userData);
+
+    }
+  }, [])
 
   const heroImg = require('../../Assets/Rectangle 33.png');
   const username = "Username";
@@ -25,8 +38,8 @@ export default function Profile() {
   // const [exp, setExp] = useState('');
   // const [numFriends, setNumFriends] = useState('');
 
-  // const [myCampaigns, setMyCampaigns] = useState('');
-  // const [playing, setPlaying] = useState('');
+  // const [myCampaigns, setMyCampaigns] = useState([]);
+  // const [playing, setPlaying] = useState(0);
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
 
   const [showProfile, setShowProfile] = useState(false);
@@ -43,6 +56,14 @@ export default function Profile() {
     setMode(prevMode => prevMode === "Adventurer" ? "Dungeon Master" : "Adventurer");
   }
 
+  // const handleImage = (event) => {
+  //   let file = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.onloadend = () => {
+  //     console.log(reader.result);
+  //     setProfilePic(reader.result);
+  //   }
+  // }
 
 
   return (
