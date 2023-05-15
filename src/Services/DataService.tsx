@@ -40,8 +40,8 @@ async function LoginBe(loginUser: object) {
 }
 
 async function GetLoggedInUserData(Username: string){
-    let res = await fetch(`https://questerstavernbackend.azurewebsites.net/GetUserByUsername/${Username}`);
-    let data = await res.json();
+    let result = await fetch(`https://questerstavernbackend.azurewebsites.net/GetUserByUsername/${Username}`);
+    let data = await result.json();
     userData = data;
     console.log(userData);
 }
