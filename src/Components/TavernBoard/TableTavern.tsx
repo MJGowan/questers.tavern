@@ -160,10 +160,16 @@ const handleButtonClick = () => {
             </tr>
             <tr>
               <td style={{ color: "white" }}>4</td>
-              <td>Who Killed the Bard</td>
-              <td>Full</td>
-              <td>Beginners Campaign</td>
-              <td>2721 Transworld Dr Stockton CA 95026</td>
+              <td className='col-sm-3' style={{ color: "#D6BA73" }}>
+                Who Killed the Bard
+              </td>
+              <td className='col-sm-3' style={{ color: "#D6BA73" }}>
+                Full
+              </td>
+              <td style={{ color: "#D6BA73" }}>Beginners Campaign</td>
+              <td style={{ color: "#D6BA73" }}>
+                2721 Transworld Dr Stockton CA 95026
+              </td>
               <td>
                 {isButtonVisible && (
                   <button
