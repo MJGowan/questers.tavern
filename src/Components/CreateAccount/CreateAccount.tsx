@@ -24,7 +24,7 @@ export default function CreateAccount() {
         if (!Username || !Firstname || !Lastname || !Datecreated || !Dndexperience || !UserImage || !Password) {
             alert("Could not create account, missing information.");
         } else {
-            let userData: Object = {
+            let userData: object = {
                 Id: 0,
                 Username,
                 Firstname,
@@ -34,13 +34,17 @@ export default function CreateAccount() {
                 UserImage,
                 Password
             };
-            if (await CreateAccountBe(Object)) {
-                sessionStorage.setItem('userData', JSON.stringify(CreateAccount()));
+
+            let isAccountCreated = await CreateAccountBe(userData);
+
+            if (isAccountCreated) {
+                
+                alert("Account was successfully created.");
             } else {
                 alert("Could not create account, missing information.");
             }
             console.log(userData);
-            CreateAccountBe(userData);
+            
         }
     }
     return (
