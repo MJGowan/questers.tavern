@@ -13,6 +13,7 @@ export default function Profile() {
   const [Username, setUsername] = useState<string>('');
   const [DateCreated, setDateCreated] = useState<string>('');
   const [Dndexperience, setDndexperience] = useState<string>('');
+  const [UserImage, setUserImage] = useState<string>('');
   let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
   useEffect(() => {
     
@@ -27,6 +28,7 @@ export default function Profile() {
         setUsername(userData.username!)
         setDateCreated(userData.datecreated!)
         setDndexperience(userData.dndexperience!)
+        setUserImage(userData.userImage!)
       }
      getUserData();
     }
@@ -41,7 +43,7 @@ export default function Profile() {
   const numFriends = 0;
 
 
-  const [UserImage, setUserImage] = useState('');
+
   
   //const [location, setLocation] = useState('');
   
