@@ -10,33 +10,42 @@ export default function Profile() {
   const addNew = require('../../Assets/R (1) 1.png');
 
   let navigate = useNavigate();
-
+  const [Username, setUsername] = useState<string>('');
+  const [DateCreated, setDateCreated] = useState<string>('');
+  const [Dndexperience, setDndexperience] = useState<string>('');
+  let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
   useEffect(() => {
     
     if(!checkToken){
       navigate('/Login')
     }else{
       // Get users data
-      let userData = loggedInData();
-      console.log(userData);
 
+      const getUserData = async () => {
+        userData = JSON.parse(sessionStorage.userData);
+        console.log(userData);
+        setUsername(userData.username!)
+        setDateCreated(userData.datecreated!)
+        setDndexperience(userData.dndexperience!)
+      }
+     getUserData();
     }
   }, [])
 
   const heroImg = require('../../Assets/Rectangle 33.png');
-  const username = "Username";
-  const profilePic = require('../../Assets/Pic.png');
-  const creationDate = "X/XX/XXXX";
-  const location = "Tired, CA";
-  const exp = "New";
+  // const username = "Username";
+  // const profilePic = require('../../Assets/Pic.png');
+  // const creationDate = "X/XX/XXXX";
+  const location = "Stockton, CA";
+  // const exp = "New";
   const numFriends = 0;
 
-  // const [username, setUsername] = useState('');
-  // const [profilePic, setProfilePic] = useState('');
-  // const [creationDate, setCreationDate] = useState('');
-  // const [location, setLocation] = useState('');
-  // const [exp, setExp] = useState('');
-  // const [numFriends, setNumFriends] = useState('');
+
+  const [UserImage, setUserImage] = useState('');
+  
+  //const [location, setLocation] = useState('');
+  
+  //const [numFriends, setNumFriends] = useState('');
 
   // const [myCampaigns, setMyCampaigns] = useState([]);
   // const [playing, setPlaying] = useState(0);
@@ -72,7 +81,7 @@ export default function Profile() {
         <img src={heroImg} className='heroImg'></img>
         <Col className='col-4 greeting'>
           <p className='doubleFont'>Welcome to the tavern,</p>
-          <p className='doubleFont userTxt'>{username}!</p>
+          <p className='doubleFont userTxt'>{Username}!</p>
         </Col>
         <Col>
           {
@@ -94,15 +103,15 @@ export default function Profile() {
         <Col className='col-3'>
           <div className='profileBox doubleFont'>
             <div>
-              <img src={profilePic} className='profilePic'></img>
+              <img src={UserImage} className='profilePic'></img>
             </div>
             <Container>
               <Row>
-                <p>Username: {username}</p>
+                <p>Username: {Username}</p>
               </Row>
               <Row>
                 <p>Account Created: </p>
-                <p>{creationDate}</p>
+                <p>{DateCreated}</p>
               </Row>
               <Row>
                 <p>Located in: </p>
@@ -110,7 +119,7 @@ export default function Profile() {
               </Row>
               <Row>
                 <p>D&D Experience: </p>
-                <p>{exp}</p>
+                <p>{Dndexperience}</p>
               </Row>
               <Row>
                 <p onClick={() => navigate('/FavoritesList')}>Friends List: {numFriends}</p>
