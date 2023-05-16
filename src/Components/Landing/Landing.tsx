@@ -150,7 +150,7 @@ export default function Landing() {
             // LAPTOP
             screenSize === 'laptop' ?
               (
-                <div>
+                <Container>
                   <Row className='laptopRow'>
                     <Col>
                       <img className='tavernImg' src={tavernImg} />
@@ -195,7 +195,7 @@ export default function Landing() {
                       </Card>
                     </Col>
                   </Row>
-                </div>
+                </Container>
               ) :
               // DESKTOP 
               (
