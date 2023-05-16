@@ -101,7 +101,7 @@
     }
     
     .tavernTitle{
-        font-size: large;
+        font-size: x-large;
         color: #cb8f16;
     }
     
@@ -113,9 +113,7 @@
         
     }
     
-    .cardImg {
-        height: 150px;
-    }
+
 
     .cardTitle{
         font-size: medium;
