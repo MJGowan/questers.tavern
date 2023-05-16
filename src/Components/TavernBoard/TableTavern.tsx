@@ -2,14 +2,30 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import './Tavern.css';
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 
 export default function TableTavern() {
 const topBanner = require("../../Assets/image 10.png")
 
+const [isButtonVisible, setIsButtonVisible] = useState(true);
+
+useEffect(() => {
+  function handleWindowResize() {
+    setIsButtonVisible(window.innerWidth > 600);
+  }
+
+  window.addEventListener("resize", handleWindowResize);
+  handleWindowResize(); // Call the function initially
+
+  return () => {
+    window.removeEventListener("resize", handleWindowResize);
+  };
+}, []);
+
 const handleButtonClick = () => {
-  // window.location.href = ""; // or any other URL
+  // Button click logic
 };
 
 
@@ -63,37 +79,39 @@ const handleButtonClick = () => {
                 2721 Transworld Dr Stockton CA 95026
               </td>
               <td className='col-sm-12'>
-                <button
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onClick={handleButtonClick}
-                >
-                  <Link
-                    to='/TavernBoardPost'
+                {isButtonVisible && (
+                  <button
                     style={{
-                      display: "inline-block",
-                      maxWidth: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      textDecoration: "none",
-                      color: "inherit",
+                      width: "95%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
+                    onClick={handleButtonClick}
                   >
-                    More Info
-                  </Link>
-                </button>
+                    <Link
+                      to='/TavernBoardPost'
+                      style={{
+                        display: "inline-block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textDecoration: "none",
+                        color: "#D6BA73",
+                      }}
+                    >
+                      More Info
+                    </Link>
+                  </button>
+                )}
               </td>
             </tr>
             <tr>
@@ -104,80 +122,40 @@ const handleButtonClick = () => {
               <td className='col-sm-2'>New</td>
               <td className='col-sm-2'>Character Level 1-5</td>
               <td className='col-sm-4'>2721 Transworld Dr Stockton CA 95026</td>
-              <td>
-                <button
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onClick={handleButtonClick}
-                >
-                  <Link
-                    to='/TavernBoardPost'
+              <td className='col-sm-12'>
+                {isButtonVisible && (
+                  <button
                     style={{
-                      display: "inline-block",
-                      maxWidth: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      textDecoration: "none",
-                      color: "inherit",
+                      width: "95%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
+                    onClick={handleButtonClick}
                   >
-                    More Info
-                  </Link>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style={{ color: "white" }}>3</td>
-              <td style={{ color: "#D6BA73" }}>The Order of Sol</td>
-              <td style={{ color: "#D6BA73" }}>Full</td>
-              <td style={{ color: "#D6BA73" }}>Characters Level 10-15</td>
-              <td style={{ color: "#D6BA73" }}>
-                2721 Transworld Dr Stockton CA 95026
-              </td>
-              <td>
-                <button
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onClick={handleButtonClick}
-                >
-                  <Link
-                    to='/TavernBoardPost'
-                    style={{
-                      display: "inline-block",
-                      maxWidth: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      textDecoration: "none",
-                      color: "inherit",
-                    }}
-                  >
-                    More Info
-                  </Link>
-                </button>
+                    <Link
+                      to='/TavernBoardPost'
+                      style={{
+                        display: "inline-block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textDecoration: "none",
+                        color: "#D6BA73",
+                      }}
+                    >
+                      More Info
+                    </Link>
+                  </button>
+                )}
               </td>
             </tr>
             <tr>
@@ -187,37 +165,39 @@ const handleButtonClick = () => {
               <td>Beginners Campaign</td>
               <td>2721 Transworld Dr Stockton CA 95026</td>
               <td>
-                <button
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onClick={handleButtonClick}
-                >
-                  <Link
-                    to='/TavernBoardPost'
+                {isButtonVisible && (
+                  <button
                     style={{
-                      display: "inline-block",
-                      maxWidth: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      textDecoration: "none",
-                      color: "inherit",
+                      width: "95%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
+                    onClick={handleButtonClick}
                   >
-                    More Info
-                  </Link>
-                </button>
+                    <Link
+                      to='/TavernBoardPost'
+                      style={{
+                        display: "inline-block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textDecoration: "none",
+                        color: "#D6BA73",
+                      }}
+                    >
+                      More Info
+                    </Link>
+                  </button>
+                )}
               </td>
             </tr>
             <tr>
@@ -227,37 +207,39 @@ const handleButtonClick = () => {
               <td style={{ color: "#D6BA73" }}>@fat</td>
               <td style={{ color: "#D6BA73" }}>Otto</td>
               <td>
-                <button
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  onClick={handleButtonClick}
-                >
-                  <Link
-                    to='/TavernBoardPost'
+                {isButtonVisible && (
+                  <button
                     style={{
-                      display: "inline-block",
-                      maxWidth: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      textDecoration: "none",
-                      color: "inherit",
+                      width: "95%",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      borderRadius: "10px",
+                      height: "50px",
+                      padding: "10px 20px",
+                      backgroundColor: "#4A423F",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
+                    onClick={handleButtonClick}
                   >
-                    More Info
-                  </Link>
-                </button>
+                    <Link
+                      to='/TavernBoardPost'
+                      style={{
+                        display: "inline-block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textDecoration: "none",
+                        color: "#D6BA73",
+                      }}
+                    >
+                      More Info
+                    </Link>
+                  </button>
+                )}
               </td>
             </tr>
           </tbody>
