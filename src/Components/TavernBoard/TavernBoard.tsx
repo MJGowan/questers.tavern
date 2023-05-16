@@ -16,10 +16,12 @@ let navigate = useNavigate();
            <div className='image-container'>
              {/*<img src={logo} alt='logo' className='logo-image' />*/}
              <div className='text-overlay'>
-               <h1 className='text text-center'>The Tavern Board</h1>
+               <h1 className='text text-center'>
+                 <span className='title-text'>The Tavern Board</span>
+               </h1>
              </div>
              <div className='button-container d-none d-md-block'>
-               <div className='d-flex ml-auto'>
+               <div className='d-flex flex-column flex-md-row ml-auto'>
                  <button
                    className='cardbutton'
                    style={{

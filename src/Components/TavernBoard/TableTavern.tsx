@@ -15,34 +15,55 @@ const handleButtonClick = () => {
 
 
   return (
-    <div className='table-container'>
+    <div
+      className='table-container'
+      style={{ paddingTop: "10px", paddingBottom: "10px" }}
+    >
       <div className='image-banner'>
         <img src={topBanner} alt='' />
       </div>
       <div className='table-responsive'>
+        <br />
         <Table className='my-table' striped bordered hover>
           <thead>
             <tr>
-              <th style={{ color: "white" }}>#</th>
-              <th style={{ color: "white" }}>Campaign</th>
-              <th style={{ color: "white" }}>Status</th>
-              <th style={{ color: "white" }}>Level</th>
-              <th style={{ color: "white" }}>Location</th>
-              <th></th>
+              <th style={{ color: "white" }} className='col-sm-1'>
+                #
+              </th>
+              <th style={{ color: "white" }} className='col-sm-3'>
+                Campaign
+              </th>
+              <th style={{ color: "white" }} className='col-sm-2'>
+                Status
+              </th>
+              <th style={{ color: "white" }} className='col-sm-2'>
+                Level
+              </th>
+              <th style={{ color: "white" }} className='col-sm-4'>
+                Location
+              </th>
+              <th className='col-sm-12'></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style={{ color: "white" }}>1</td>
-              <td style={{ color: "#D6BA73" }}>The Haunted SchoolHouse</td>
-              <td style={{ color: "#D6BA73" }}>Awaiting Group</td>
-              <td style={{ color: "#D6BA73" }}>Beginners Campaign</td>
-              <td style={{ color: "#D6BA73" }}>
+              <td style={{ color: "white" }} className='col-sm-1'>
+                1
+              </td>
+              <td style={{ color: "#D6BA73" }} className='col-sm-3'>
+                The Haunted SchoolHouse
+              </td>
+              <td style={{ color: "#D6BA73" }} className='col-sm-2'>
+                Awaiting Group
+              </td>
+              <td style={{ color: "#D6BA73" }} className='col-sm-2'>
+                Beginners Campaign
+              </td>
+              <td style={{ color: "#D6BA73" }} className='col-sm-4'>
                 2721 Transworld Dr Stockton CA 95026
               </td>
-              <td>
+              <td className='col-sm-12'>
                 <button
-                  className='cardbutton'
                   style={{
                     width: "95%",
                     marginLeft: "10px",
@@ -52,19 +73,37 @@ const handleButtonClick = () => {
                     padding: "10px 20px",
                     backgroundColor: "#4A423F",
                     color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   onClick={handleButtonClick}
                 >
-                  <Link to='/TavernBoardPost'>More Info</Link>{" "}
+                  <Link
+                    to='/TavernBoardPost'
+                    style={{
+                      display: "inline-block",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    More Info
+                  </Link>
                 </button>
               </td>
             </tr>
             <tr>
-              <td style={{ color: "white" }}>2</td>
-              <td>The Chamber of Rumors</td>
-              <td>New</td>
-              <td>Character Level 1-5</td>
-              <td>2721 Transworld Dr Stockton CA 95026</td>
+              <td style={{ color: "white" }} className='col-sm-1'>
+                2
+              </td>
+              <td className='col-sm-3'>The Chamber of Rumors</td>
+              <td className='col-sm-2'>New</td>
+              <td className='col-sm-2'>Character Level 1-5</td>
+              <td className='col-sm-4'>2721 Transworld Dr Stockton CA 95026</td>
               <td>
                 <button
                   style={{
@@ -76,10 +115,26 @@ const handleButtonClick = () => {
                     padding: "10px 20px",
                     backgroundColor: "#4A423F",
                     color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   onClick={handleButtonClick}
                 >
-                  <Link to='/TavernBoardPost'>More Info</Link>
+                  <Link
+                    to='/TavernBoardPost'
+                    style={{
+                      display: "inline-block",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    More Info
+                  </Link>
                 </button>
               </td>
             </tr>
@@ -102,10 +157,26 @@ const handleButtonClick = () => {
                     padding: "10px 20px",
                     backgroundColor: "#4A423F",
                     color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   onClick={handleButtonClick}
                 >
-                  <Link to='/TavernBoardPost'>More Info</Link>
+                  <Link
+                    to='/TavernBoardPost'
+                    style={{
+                      display: "inline-block",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    More Info
+                  </Link>
                 </button>
               </td>
             </tr>
@@ -126,10 +197,26 @@ const handleButtonClick = () => {
                     padding: "10px 20px",
                     backgroundColor: "#4A423F",
                     color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   onClick={handleButtonClick}
                 >
-                  <Link to='/TavernBoardPost'>More Info</Link>
+                  <Link
+                    to='/TavernBoardPost'
+                    style={{
+                      display: "inline-block",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    More Info
+                  </Link>
                 </button>
               </td>
             </tr>
@@ -150,10 +237,26 @@ const handleButtonClick = () => {
                     padding: "10px 20px",
                     backgroundColor: "#4A423F",
                     color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   onClick={handleButtonClick}
                 >
-                  <Link to='/TavernBoardPost'>More Info</Link>
+                  <Link
+                    to='/TavernBoardPost'
+                    style={{
+                      display: "inline-block",
+                      maxWidth: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    More Info
+                  </Link>
                 </button>
               </td>
             </tr>

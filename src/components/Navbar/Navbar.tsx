@@ -60,7 +60,7 @@ export default function Navbar() {
                 <Link to='/FAQs' className='navItems'>
                   FAQs
                 </Link>
-                <Link to="https://dnd.wizards.com/" className='navItems'>
+                <Link to="" onClick={handleShow} className='navItems'>
                   D&D Website
                 </Link>
                 {
@@ -78,15 +78,15 @@ export default function Navbar() {
       </Row>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Whoa there</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>You're about to leave the site! Are you sure you want to go?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Stay
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" href="https://dnd.wizards.com/">
+            Leave Site
           </Button>
         </Modal.Footer>
       </Modal>
