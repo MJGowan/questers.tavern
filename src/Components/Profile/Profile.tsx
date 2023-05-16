@@ -1,32 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
+import { checkToken, loggedInData, GetLoggedInUserData } from '../../Services/DataService';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
   const addNew = require('../../Assets/R (1) 1.png');
 
-  const navigate = useNavigate()
+  let navigate = useNavigate();
+  const [Username, setUsername] = useState<string>('');
+  const [DateCreated, setDateCreated] = useState<string>('');
+  const [Dndexperience, setDndexperience] = useState<string>('');
+  const [UserImage, setUserImage] = useState<string>('');
+  let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
+  useEffect(() => {
+    
+    if(!checkToken){
+      navigate('/Login')
+    }else{
+      // Get users data
+
+      const getUserData = async () => {
+        userData = JSON.parse(sessionStorage.userData);
+        console.log(userData);
+        setUsername(userData.username!)
+        setDateCreated(userData.datecreated!)
+        setDndexperience(userData.dndexperience!)
+        setUserImage(userData.userImage!)
+      }
+     getUserData();
+    }
+  }, [])
 
   const heroImg = require('../../Assets/Rectangle 33.png');
-  const username = "Username";
-  const profilePic = require('../../Assets/Pic.png');
-  const creationDate = "X/XX/XXXX";
-  const location = "Tired, CA";
-  const exp = "New";
+  // const username = "Username";
+  // const profilePic = require('../../Assets/Pic.png');
+  // const creationDate = "X/XX/XXXX";
+  const location = "Stockton, CA";
+  // const exp = "New";
   const numFriends = 0;
 
-  // const [username, setUsername] = useState('');
-  // const [profilePic, setProfilePic] = useState('');
-  // const [creationDate, setCreationDate] = useState('');
-  // const [location, setLocation] = useState('');
-  // const [exp, setExp] = useState('');
-  // const [numFriends, setNumFriends] = useState('');
 
-  // const [myCampaigns, setMyCampaigns] = useState('');
-  // const [playing, setPlaying] = useState('');
+
+  
+  //const [location, setLocation] = useState('');
+  
+  //const [numFriends, setNumFriends] = useState('');
+
+  // const [myCampaigns, setMyCampaigns] = useState([]);
+  // const [playing, setPlaying] = useState(0);
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
 
   const [showProfile, setShowProfile] = useState(false);
@@ -43,6 +67,14 @@ export default function Profile() {
     setMode(prevMode => prevMode === "Adventurer" ? "Dungeon Master" : "Adventurer");
   }
 
+  // const handleImage = (event) => {
+  //   let file = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.onloadend = () => {
+  //     console.log(reader.result);
+  //     setProfilePic(reader.result);
+  //   }
+  // }
 
 
   return (
@@ -51,7 +83,7 @@ export default function Profile() {
         <img src={heroImg} className='heroImg'></img>
         <Col className='col-4 greeting'>
           <p className='doubleFont'>Welcome to the tavern,</p>
-          <p className='doubleFont userTxt'>{username}!</p>
+          <p className='doubleFont userTxt'>{Username}!</p>
         </Col>
         <Col>
           {
@@ -73,15 +105,15 @@ export default function Profile() {
         <Col className='col-3'>
           <div className='profileBox doubleFont'>
             <div>
-              <img src={profilePic} className='profilePic'></img>
+              <img src={UserImage} className='profilePic'></img>
             </div>
             <Container>
               <Row>
-                <p>Username: {username}</p>
+                <p>Username: {Username}</p>
               </Row>
               <Row>
                 <p>Account Created: </p>
-                <p>{creationDate}</p>
+                <p>{DateCreated}</p>
               </Row>
               <Row>
                 <p>Located in: </p>
@@ -89,7 +121,7 @@ export default function Profile() {
               </Row>
               <Row>
                 <p>D&D Experience: </p>
-                <p>{exp}</p>
+                <p>{Dndexperience}</p>
               </Row>
               <Row>
                 <p onClick={() => navigate('/FavoritesList')}>Friends List: {numFriends}</p>

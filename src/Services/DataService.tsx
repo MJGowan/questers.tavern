@@ -40,10 +40,24 @@ async function LoginBe(loginUser: object) {
 }
 
 async function GetLoggedInUserData(Username: string){
-    let result = await fetch(`https://questerstavernbackend.azurewebsites.net/GetUserByUsername/${Username}`);
+    let result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/userbyusername/${Username}`);
     let data = await result.json();
     userData = data;
     console.log(userData);
+    return userData;
+}
+
+function checkToken(){
+    let result = false;
+    let lsData = localStorage.GetItem('Token');
+    if(lsData != null){
+        result = true;
+    } 
+    return result;
+}
+
+function loggedInData(){
+    return userData;
 }
 
 async function CreateCharacter(newCharacter: object) {
@@ -83,4 +97,4 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 
-export { CreateAccountBe, LoginBe, GetLoggedInUserData, CreateCharacter, CreateCampaign}
+export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign}
