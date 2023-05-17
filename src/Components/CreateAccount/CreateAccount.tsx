@@ -5,22 +5,26 @@ import { useNavigate } from 'react-router-dom';
 import { CreateAccountBe } from '../../Services/DataService';
 
 
+
 export default function CreateAccount() {
+
     const bg = require('../../Assets/image 9.png');
     const parchment = require('../../Assets/image 7.png');
     const plus = require('../../Assets/R (1) 1.png');
     const logo = require('../../Assets/unnamed-removebg-preview.png');
     const navigate = useNavigate()
+    const profilepic = require("../../Assets/profilepic.png");
 
     const [Username, setUsername] = useState<string>('');
     const [Firstname, setFirstname] = useState<string>('');
     const [Lastname, setLastname] = useState<string>('');
     const [Datecreated, setDatecreated] = useState<string>('');
     const [Dndexperience, setDndexperience] = useState<string>('');
-    const [UserImage, setUserImage] = useState<string>('');
+    const [UserImage, setUserImage] = useState(profilepic);
     const [Password, setPassword] = useState<string>('');
 
     const handleSubmit = async () => {
+
         if (!Username || !Firstname || !Lastname || !Datecreated || !Dndexperience || !UserImage || !Password) {
             alert("Could not create account, missing information.");
         } else {
@@ -38,15 +42,32 @@ export default function CreateAccount() {
             let isAccountCreated = await CreateAccountBe(userData);
 
             if (isAccountCreated) {
-                
+
                 alert("Account was successfully created.");
             } else {
                 alert("Could not create account, missing information.");
             }
             console.log(userData);
-            
+
         }
     }
+
+    const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+        let reader = new FileReader();
+        const file = e.target.files?.[0];
+        if (file) {
+            reader.onloadend = (event) => {
+                console.log(reader.result);
+                setUserImage(event.target?.result);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+    const handlePicChange = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+      }
+
     return (
         <div className='doubleFont'>
             <img src={bg} style={{ backgroundSize: '100vh' }} />
@@ -126,9 +147,11 @@ export default function CreateAccount() {
                             <Button className='imageBtn'>Upload Profile Picture</Button> */}
                             <p className='ppTxt'>Profile Picture:</p>
                             <Col className='d-flex justify-content-center'>
+                                <Form onSubmit={handlePicChange}>
                                 <Form.Group controlId="formFile" className="mb-3">
-                                    <Form.Control type="file" onChange={({ target: { value } }) => setUserImage(value)} />
+                                    <Form.Control type= "file" accept='image/png, image/jpeg, image/jpg, image/jpe' onChange={handleImage} />
                                 </Form.Group>
+                                </Form>
                             </Col>
                         </Row>
                     </Col>
