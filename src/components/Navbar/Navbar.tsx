@@ -20,7 +20,6 @@ export default function Navbar() {
       setLoggedIn(true);
       const getUserData = async () => {
         // userData = JSON.parse(sessionStorage.userData);
-        console.log(userData);
         setUsername(userData.username!);
         setUserImage(userData.userImage!)
       }
