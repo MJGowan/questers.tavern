@@ -49,7 +49,7 @@ async function GetLoggedInUserData(Username: string){
 
 function checkToken(){
     let result = false;
-    let lsData = localStorage.GetItem('Token');
+    let lsData = localStorage.getItem('Token');
     if(lsData != null){
         result = true;
     } 

@@ -14,12 +14,12 @@ export default function Navbar() {
 
   useEffect(() => {
 
-    if(!checkToken){
+    if(!checkToken()){
       setLoggedIn(false);
     }else {
       setLoggedIn(true);
       const getUserData = async () => {
-        // userData = JSON.parse(sessionStorage.userData);
+        userData = JSON.parse(sessionStorage.userData);
         setUsername(userData.username!);
         setUserImage(userData.userImage!)
       }
@@ -86,12 +86,12 @@ export default function Navbar() {
                 </Link>
                 {
                   LoggedIn ? (
-                    <div>
-                      <img src={UserImage}/>
-                      <Link to='/Profile' className='navItems'>{Username}</Link>
+                    <div className='userInfo'>
+                      {/* <img src={UserImage}/> */}
+                      <Link to='/Profile' className='navItems userInfo'>{Username}</Link>
                     </div>
                   ) : (
-                    <Link to='/Login' className='navItems'>Sign Up/Login</Link>
+                    <Link to='/Login' className='navItems userInfo'>Sign Up/Login</Link>
                   )
                 }
                   </div>
