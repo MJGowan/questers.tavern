@@ -3,12 +3,34 @@ import './Navbar.css';
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { checkToken } from '../../Services/DataService';
 
 export default function Navbar() {
   const logo = require('../../Assets/logo.jpg');
-  const [username, setUsername] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [Username, setUsername] = useState<string>('');
+  const [UserImage, setUserImage] = useState<string>('');
+  const [LoggedIn, setLoggedIn] = useState<boolean>(false);
+  let userData: { username?: string, userImage?: string } = {};
+
+  useEffect(() => {
+
+    if(!checkToken){
+      setLoggedIn(false);
+    }else {
+      setLoggedIn(true);
+      const getUserData = async () => {
+        // userData = JSON.parse(sessionStorage.userData);
+        console.log(userData);
+        setUsername(userData.username!);
+        setUserImage(userData.userImage!)
+      }
+      getUserData();
+    }
+
+  }, [])
+
+
+
 
   const [isHamburger, setIsHamburger] = useState('');
   useEffect(() => {
@@ -64,8 +86,11 @@ export default function Navbar() {
                   D&D Website
                 </Link>
                 {
-                  loggedIn ? (
-                    <Link to='/Profile' className='navItems'>{username}</Link>
+                  LoggedIn ? (
+                    <div>
+                      <img src={UserImage}/>
+                      <Link to='/Profile' className='navItems'>{Username}</Link>
+                    </div>
                   ) : (
                     <Link to='/Login' className='navItems'>Sign Up/Login</Link>
                   )

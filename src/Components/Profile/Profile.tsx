@@ -21,10 +21,8 @@ export default function Profile() {
       navigate('/Login')
     }else{
       // Get users data
-
       const getUserData = async () => {
         userData = JSON.parse(sessionStorage.userData);
-        console.log(userData);
         setUsername(userData.username!)
         setDateCreated(userData.datecreated!)
         setDndexperience(userData.dndexperience!)
@@ -35,20 +33,12 @@ export default function Profile() {
   }, [])
 
   const heroImg = require('../../Assets/Rectangle 33.png');
-  // const username = "Username";
-  // const profilePic = require('../../Assets/Pic.png');
-  // const creationDate = "X/XX/XXXX";
   const location = "Stockton, CA";
-  // const exp = "New";
   const numFriends = 0;
-
-
 
   
   //const [location, setLocation] = useState('');
-  
   //const [numFriends, setNumFriends] = useState('');
-
   // const [myCampaigns, setMyCampaigns] = useState([]);
   // const [playing, setPlaying] = useState(0);
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
