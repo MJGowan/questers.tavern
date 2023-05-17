@@ -52,7 +52,7 @@ async function GetLoggedInUserData(Username: string){
 function checkToken(){
     let result = false;
     let lsData = localStorage.getItem('Token');
-    if(lsData != null){
+    if(lsData && lsData != null){
         result = true;
     } 
     return result;

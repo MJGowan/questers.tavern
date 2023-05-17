@@ -10,29 +10,23 @@ export default function Navbar() {
   const [Username, setUsername] = useState<string>('');
   const [UserImage, setUserImage] = useState<string>('');
   const [LoggedIn, setLoggedIn] = useState<boolean>(false);
-  let userData: { username?: string, userImage?: string } = {};
 
+  const [isHamburger, setIsHamburger] = useState('');
+
+  // let userData: { username?: string, userImage?: string } = {};
+  let userData: any = {};
   useEffect(() => {
 
     if(!checkToken()){
       setLoggedIn(false);
     }else {
+      userData = JSON.parse(sessionStorage.userData);
+      console.log(userData)
+      setUsername(userData.username!);
+      setUserImage(userData.userImage!);
       setLoggedIn(true);
-      const getUserData = async () => {
-        userData = JSON.parse(sessionStorage.userData);
-        setUsername(userData.username!);
-        setUserImage(userData.userImage!)
-      }
-      getUserData();
     }
 
-  }, [])
-
-
-
-
-  const [isHamburger, setIsHamburger] = useState('');
-  useEffect(() => {
     const handleChange = () => {
       if (window.innerWidth <= 1024) {
         setIsHamburger('hamburger')
@@ -43,12 +37,18 @@ export default function Navbar() {
     handleChange();
     window.addEventListener("resize", handleChange);
     return () => window.removeEventListener("resize", handleChange);
+
+
+
+
+
   }, [])
 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   // use props to display username and profile pic when people are logged in
   return (
@@ -87,7 +87,7 @@ export default function Navbar() {
                 {
                   LoggedIn ? (
                     <div className='userInfo'>
-                      {/* <img src={UserImage}/> */}
+                      <img src={UserImage} className='profPic'/>
                       <Link to='/Profile' className='navItems userInfo'>{Username}</Link>
                     </div>
                   ) : (
