@@ -13,7 +13,7 @@ export default function Profile() {
   const [Username, setUsername] = useState<string>('');
   const [DateCreated, setDateCreated] = useState<string>('');
   const [Dndexperience, setDndexperience] = useState<string>('');
-  const [UserImage, setUserImage] = useState<string>('');
+  const [UserImage, setUserImage] = useState('');
   let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
   useEffect(() => {
     
@@ -56,16 +56,6 @@ export default function Profile() {
   const changeMode = () => {
     setMode(prevMode => prevMode === "Adventurer" ? "Dungeon Master" : "Adventurer");
   }
-
-  // const handleImage = (event) => {
-  //   let file = event.target.files[0];
-  //   const reader = new FileReader();
-  //   reader.onloadend = () => {
-  //     console.log(reader.result);
-  //     setProfilePic(reader.result);
-  //   }
-  // }
-
 
   return (
     <div className='profile'>
