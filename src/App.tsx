@@ -15,12 +15,6 @@ import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import TavernBoardPost from "./Components/TavernPost/TavernBoardPost";
 
 function App() {
-
-  let loggedIn = false;
-
-  // use props to display username and profile pic when people are logged in
-
-
   return (
     <div>
       <BrowserRouter>
