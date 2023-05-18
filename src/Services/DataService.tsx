@@ -51,7 +51,6 @@ async function UpdateUser(){
     updateUserData = data;
     console.log(updateUserData);
     return updateUserData;
-
 }
 
 async function GetLoggedInUserData(Username: string){
@@ -116,7 +115,7 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 async function GetCampaigns(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetCampaignByUserId/');
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetAllCampaigns/');
     let data = await result.json();
     campaignData = data;
     console.log(campaignData);
