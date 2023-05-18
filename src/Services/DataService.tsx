@@ -77,7 +77,7 @@ function loggedInData(){
 
 // Character API Fetches
 
-async function CreateCharacter(newCharacter: object) {
+async function CreateCharacterBe(newCharacter: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
@@ -97,7 +97,7 @@ async function CreateCharacter(newCharacter: object) {
 
 // Campaign API Fetches
 
-async function CreateCampaign(newCampaign: object) {
+async function CreateCampaignBe(newCampaign: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
