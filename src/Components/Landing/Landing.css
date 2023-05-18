@@ -26,12 +26,12 @@
     }
     
     .tavernImg {
-        width: 555px;
-        margin-left: 6%;
+        width: 90%;
+        margin-left: 3%;
     }
     
     .tavernTxt{
-        margin-top: -350px;
+        margin-top: -58%;
         color: white;
         font-size: larger;
     
@@ -74,9 +74,9 @@
 /*  */
 /* LAPTOP */
 
-@media screen and (max-width: 1439px) and (min-width: 770px ) {
+@media screen and (max-width: 1439px) and (min-width: 769px ) {
     .heroTxt {
-        margin-top: -250px;
+        margin-top: -20%;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
@@ -90,36 +90,41 @@
     }
     
     .tavernImg {
-        width: 450px;
+        width: 420px;
         margin-left: 2.5%;
     }
     
     .tavernTxt{
-        margin-top: -290px;
+        margin-top: -65%;
         color: white;
         font-size: medium;
+        margin-bottom: -15px;
     }
     
     .tavernTitle{
-        font-size: x-large;
+        font-size: large;
         color: #cb8f16;
+        margin-bottom: -10px;
+        padding-top: 15px;
     }
     
     .tavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
-        font-size: small;
+        font-size: x-small;
+        margin-top: -20px;
         
     }
     
 
-
     .cardTitle{
         font-size: medium;
+        margin-top: -10px;
     }
 
     .cardTxt{
+        margin-top: -5px;
         font-size: small;
     }
     
@@ -149,14 +154,14 @@
 
 @media screen and (max-width: 768px) and (min-width: 430px) {
     .heroTxt {
-        margin-top: -180px;
+        margin-top: -23%;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
     
     #heroTxt{
         color:#cb8f16;
-        font-size: 20px;
+        font-size: 25px;
         text-shadow: -1px 1px 0 #4A423F,
                       1px 1px 0 #4A423F,
                      1px -1px 0 #4A423F;
@@ -188,7 +193,7 @@
     }
     
     .cardImg {
-        height: 150px;
+        height: 120px;
     }
 
     .cardTitle{
@@ -204,7 +209,7 @@
         background-color:#302C2B;
         color: white;
         border-color: white;
-        height: 350px;
+        height: 300px;
     }
     
     .cardTwo {
@@ -212,7 +217,7 @@
         background-color:#302C2B;
         color: white;
         border-color: white;
-        height: 350px;
+        height: 300px;
     }
 
     .cardRow{
@@ -244,7 +249,7 @@
     }
     
     .tavernTxt{
-        margin-top: -260px;
+        margin-top: -5%;
         color: white;
         font-size: small;
     }
@@ -252,42 +257,49 @@
     .tavernTitle{
         font-size: medium;
         color: #cb8f16;
+        margin-top: -60%;
     }
     
     .tavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
-        font-size: small;
+        font-size: x-small;
         
     }
     
     .cardImg {
-        height: 150px;
+        height: 120px;
     }
 
     .cardTitle{
-        font-size: medium;
+        font-size: small;
     }
 
     .cardTxt{
-        font-size: small;
+        font-size: x-small;
     }
     
     .cardOne {
-        margin-left: 10px;
+        margin-left: 15px !important;
         background-color:#302C2B;
         color: white;
         border-color: white;
-        height: 350px;
+        height: 80px;
     }
     
     .cardTwo {
-        margin-left: -10px;
+        margin-left: -5px !important;
         background-color:#302C2B;
         color: white;
-        border-color: white;
-        height: 350px;
+        border-color: rgb(255, 255, 255);
+        height: 100px;
+    }
+
+    .card{
+        height: 250px  !important;
+        border-color: white !important;
+        border-width: 1px !important;
     }
 }
 

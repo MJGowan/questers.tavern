@@ -58,6 +58,7 @@
 .profPic{
     border-radius: 50px;
     margin-top: -2vh;
-    padding-right: 15px;
-    width: 100px;
+    margin-right: 20px;
+    height: 90px;
+    width: 90px;
 }

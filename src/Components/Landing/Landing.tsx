@@ -6,9 +6,6 @@ import heroImg from '../../Assets/image 10.png';
 import tavernImg from '../../Assets/Lets get started (2).png';
 import cardOneImg from '../../Assets/Rectangle 6.png';
 import cardTwoImg from '../../Assets/Rectangle 7.png';
-import Navbar from '../Navbar/Navbar';
-import Login from '../Login/Login';
-
 
 export default function Landing() {
   const [screenSize, setScreenSize] = useState('');
@@ -48,15 +45,15 @@ export default function Landing() {
               <Row className='mt-5'>
                 <Col>
                   <img className='tavernImg mt-5' src={tavernImg} />
-                  <Container className='tavernTxt text-center dwFont' id='tavernTxt'>
+                  <Container className='text-center dwFont' id='tavernTxt'>
                     <p className='tavernTitle doubleFont mb-4'>Resources for New Players</p>
                     <Container>
                       <Row>
                         <Col className='col-1'></Col>
                         <Col>
-                          <p>To get started, below is a helpful guide on navigating Quester's Tavern.</p>
+                          <p className='tavernTxt'>To get started, below is a helpful guide on navigating Quester's Tavern.</p>
                           <hr />
-                          <p> Frequently Asked Questions and a link to the official Dungeons & Dragons website can be found at the top of the page.</p>
+                          <p className='tavernTxt'> Frequently Asked Questions and a link to the official Dungeons & Dragons website can be found at the top of the page.</p>
                         </Col>
                         <Col className='col-1'></Col>
                       </Row>
@@ -66,7 +63,7 @@ export default function Landing() {
                 </Col>
               </Row>
 
-              <Row className='d-flex justify-content-center mt-5'>
+              <Row className='d-flex justify-content-center mt-3'>
                 <Col>
                   <Card style={{ width: '12rem' }} className='cardOne'>
                     <Card.Img variant="top" src={cardOneImg} className='cardImg' />
@@ -122,7 +119,7 @@ export default function Landing() {
 
                 <Row className='cardRow'>
                   <Col className='d-flex justify-content-center'>
-                    <Card style={{ width: '35vw' }} className='cardOne'>
+                    <Card style={{ width: '30vw' }} className='cardOne'>
                       <Card.Img variant="top" src={cardOneImg} className='cardImg' />
                       <Card.Body>
                         <Card.Title className='cardTitle'>An easy way to connect locally with your fellow adventurers</Card.Title>
@@ -134,7 +131,7 @@ export default function Landing() {
                   </Col>
 
                   <Col className='d-flex justify-content-center'>
-                    <Card style={{ width: '35vw' }} className='cardTwo'>
+                    <Card style={{ width: '30vw' }} className='cardTwo'>
                       <Card.Img variant="top" src={cardTwoImg} className='cardImg' />
                       <Card.Body>
                         <Card.Title className='cardTitle'>Create the ultimate campaign and let the heroes find you!</Card.Title>
@@ -172,7 +169,7 @@ export default function Landing() {
                       </Container>
                     </Col>
                     <Col>
-                      <Card style={{ width: '15rem' }} className='cardOne'>
+                      <Card style={{ width: '14rem' }} className='cardOne'>
                         <Card.Img variant="top" src={cardOneImg} className='cardImg' />
                         <Card.Body>
                           <Card.Title className='cardTitle'>An easy way to connect locally with your fellow adventurers</Card.Title>
@@ -184,7 +181,7 @@ export default function Landing() {
                     </Col>
 
                     <Col>
-                      <Card style={{ width: '15rem' }} className='cardTwo'>
+                      <Card style={{ width: '14rem' }} className='cardTwo'>
                         <Card.Img variant="top" src={cardTwoImg} className='cardImg' />
                         <Card.Body>
                           <Card.Title className='cardTitle'>Create the ultimate campaign and let the heroes find you!</Card.Title>
