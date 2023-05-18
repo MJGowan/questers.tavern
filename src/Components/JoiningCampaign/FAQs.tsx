@@ -13,6 +13,8 @@ export default function FAQs(){
   const [plays, setPlays] = useState("content");
   const [fqs, setFqs] = useState("content");
 
+  
+
 
 
 
@@ -163,13 +165,10 @@ let navigate = useNavigate();
                  cursor: "pointer",
                }}
                onClick={() => {
-                 setJoin(`<ul>
-          <li>Beginner’s Campaign</li>
-          <li>Level 1-5 Campaign Level</li>
-          <li>5-10 Campaign Level</li>
-          <li>10-15 Campaign Level 15-20</li>
-          <li>Level 15-20</li>
-        </ul>`);
+                 setInfo("");
+                 setJoin("");
+                //  setPlays("");
+                 setJoin(`Beginner’s Campaign Level 1-5 Campaign Level 5-10 Campaign Level 10-15 Campaign Level 15-20 Level 15-20`);
          
                }}
              >
@@ -186,7 +185,7 @@ let navigate = useNavigate();
                }}
                onClick={() => {
                  setPlays(
-                   "Interested in playing? We've pulled together resources to get you started, create a D&D Beyond account to begin! Dungeons & Dragons takes you and your friends on epic journeys. Become characters you create, battle deadly foes, uncover secrets, find treasure, and make memories that last a lifetime."
+                   "Interested in playing? We've pulled together resources to get you started, create a D&D Beyond account to begin! Dungeons & Dragons takes you and your friends on epic journeys. Become characters you create, battle deadly foes, uncover secrets, find treasure."
                  );
           
                }}
