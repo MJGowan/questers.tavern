@@ -1,8 +1,12 @@
 // Backend API Fetches
 
 let userData = {};
+let updateUserData = {};
 let campaignData = {};
 let characterData = {};
+let favoritesData = {};
+
+// User API Fetches
 
 async function CreateAccountBe(createdUser: object) {
   const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser/`, {
@@ -41,6 +45,15 @@ async function LoginBe(loginUser: object) {
   return data;
 }
 
+async function UpdateUser(){
+    let result = await fetch('https://questerstavernbackend.azurewebsites.net/User/UpdateUser');
+    let data = await result.json();
+    updateUserData = data;
+    console.log(updateUserData);
+    return updateUserData;
+
+}
+
 async function GetLoggedInUserData(Username: string){
     let result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/userbyusername/${Username}`);
     let data = await result.json();
@@ -62,7 +75,9 @@ function loggedInData(){
     return userData;
 }
 
-async function CreateCharacterBe(newCharacter: object) {
+// Character API Fetches
+
+async function CreateCharacter(newCharacter: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
@@ -80,7 +95,9 @@ async function CreateCharacterBe(newCharacter: object) {
   return data;
 }
 
-async function CreateCampaignBe(newCampaign: object) {
+// Campaign API Fetches
+
+async function CreateCampaign(newCampaign: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
@@ -104,6 +121,16 @@ async function GetCampaigns(){
     campaignData = data;
     console.log(campaignData);
     return campaignData;
+}
+
+// Favorites API Fetches
+
+async function AddFavorites(){
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Favorites/AddFavorite/');
+    let data = await result.json();
+    favoritesData = data;
+    console.log(favoritesData);
+    return favoritesData;
 }
 
 async function CharacterInfo(Race: string, Class: string, Alignment: string){
@@ -150,4 +177,4 @@ async function CharacterInfo(Race: string, Class: string, Alignment: string){
 }
 
 
-export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CharacterInfo, CreateCharacterBe, CreateCampaignBe, GetCampaigns}
+export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterInfo, CreateCharacterBe, CreateCampaignBe, GetCampaigns, AddFavorites}
