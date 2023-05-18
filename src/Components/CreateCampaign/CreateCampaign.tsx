@@ -18,11 +18,10 @@ const [Campaigndate, setCampaigndate] = useState<string>("");
 const [Campaignlocation, setCampaignlocation] = useState<string>("");
 const [Campaigndescription, setCampaigndescription] = useState<string>("");
 const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
-const [Campaigntags, setCampaigntags] = useState<string>("");
 
 
 const handleSubmit = async () => {
- if (!Campaignname || !Campaignimage || !Campaignimagetwo || !Campaigndate || Campaignlocation || Campaigndescription || Campaigndifficulty || Campaigntags){
+ if (!Campaignname || !Campaignimage || !Campaignimagetwo || !Campaigndate || Campaignlocation || Campaigndescription || Campaigndifficulty){
   alert("Could not create campaign, missing information");
  } else{
   let campaignData: object = {
@@ -35,7 +34,6 @@ const handleSubmit = async () => {
    Campaignlocation, 
    Campaigndescription,
    Campaigndifficulty,
-   Campaigntags
   };
 
   let isCampaignCreated = await CreateCampaign(campaignData);
@@ -128,6 +126,9 @@ return (
         </Card>
         <h3 className='card-font-description'></h3>
         <Card>
+          <Card.Body className='card-description'>CAMPAIGN DATE</Card.Body>
+        </Card>
+        <Card>
           <Card.Body className='card-description'>CAMPAIGN LOCATION</Card.Body>
         </Card>
         <Card>
@@ -136,7 +137,9 @@ return (
           </Card.Body>
         </Card>
         <Card>
-          <Card.Body className='card-description'>Description</Card.Body>
+          <Card.Body className='card-description'>
+            CAMPAIGN DESCRIPTION
+          </Card.Body>
         </Card>
       </Col>
       <Col
@@ -148,6 +151,7 @@ return (
             <input
               onChange={({ target: { value } }) => setCampaignname(value)}
               type='text'
+              placeholder='Campaign name'
             />
           </Card.Body>
         </Card>
@@ -158,7 +162,6 @@ return (
                 onChange={handleImage}
                 type='file'
                 accept='image/png, image/jpeg, image/jpg, image/jpe'
-
               />
             </Form.Group>
           </Form>
@@ -179,6 +182,7 @@ return (
             <input
               onChange={({ target: { value } }) => setCampaigndate(value)}
               type='text'
+              placeholder='date'
             />
           </Card.Body>
         </Card>
@@ -187,6 +191,16 @@ return (
             <input
               onChange={({ target: { value } }) => setCampaignlocation(value)}
               type='text'
+              placeholder='location'
+            />
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <input
+              onChange={({ target: { value } }) => setCampaigndifficulty(value)}
+              type='text'
+              placeholder='difficulty'
             />
           </Card.Body>
         </Card>
@@ -197,14 +211,7 @@ return (
                 setCampaigndescription(value)
               }
               type='text'
-            />
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Body>
-            <input
-              onChange={({ target: { value } }) => setCampaigndifficulty(value)}
-              type='text'
+              placeholder='description'
             />
           </Card.Body>
         </Card>
@@ -213,7 +220,7 @@ return (
     <Row>
       <Row>
         <button
-         onClick={handleSubmit}
+          onClick={handleSubmit}
           className='cardbutton'
           style={{
             width: "55%",

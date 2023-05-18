@@ -76,8 +76,8 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "19rem",
-             height: "470px",
+             width: "23rem",
+             height: "600px",
              backgroundColor: "#302C2B",
              border: "2px solid #FFA825",
            }}
@@ -105,8 +105,8 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "20rem",
-             height: "470px",
+             width: "24rem",
+             height: "600px",
              backgroundColor: "#302C2B",
              borderRadius: "10px",
              border: "2px solid #FFA825",
@@ -124,7 +124,11 @@ let navigate = useNavigate();
                }}
                onClick={() => {
                  setInfo(
-                   "When joining a campaign, reflect on your experience and register accordingly. if you are new, perhaps you'd join the beginner's campaigns. If you've got some experience under your belt you might go for the level 1-5, or 5-10 campaigns. Ther are ordered as follow:"
+                   "Playing Dungeons & Dragons comes down to Actions. Dice Rolls and your character Stats. " +
+                     "1. Actions " +
+                     "During the duration of the game, the dungeon master will set the scene for your adventure. They may provide you NPCs (Non-Playable Characters) to interact with, or environment interaction such as locked doors or hidden panels. You often roll dice to see how well you fare. " +
+                     "2. Dice Rolls" +
+                     "With actions above or even attacks you roll dice to see how well you do. It may seem like how well you fare is up to chance but that is where your stats play into the equation."
                  );
                  // set other states to empty
                  setCharacter("");
@@ -145,7 +149,8 @@ let navigate = useNavigate();
                  cursor: "pointer",
                }}
                onClick={() => {
-                 setCharacter("CREATE CHARACTER");
+                 setCharacter(
+                  "When creating a character we take into consideration this characters upbringing, outlook on life and experience adventuring. All of this comes into play during your time playing Dungeons & Dragons.The Create A Character screen will provide drop downs with options for each aspect of your character such as level, race and class. You will learn more about how these have an effect on your gameplay in the how to play section.");
                  setInfo("");
                  setJoin("");
                  setPlays("");
@@ -165,11 +170,11 @@ let navigate = useNavigate();
                  cursor: "pointer",
                }}
                onClick={() => {
+                 setCharacter("");
                  setInfo("");
-                 setJoin("");
-                //  setPlays("");
-                 setJoin(`Beginner’s Campaign Level 1-5 Campaign Level 5-10 Campaign Level 10-15 Campaign Level 15-20 Level 15-20`);
-         
+                 setJoin("tested");
+                 setPlays("");
+                 setFqs("");
                }}
              >
                JOINING A CAMPAIGN
@@ -184,10 +189,11 @@ let navigate = useNavigate();
                  cursor: "pointer",
                }}
                onClick={() => {
-                 setPlays(
-                   "Interested in playing? We've pulled together resources to get you started, create a D&D Beyond account to begin! Dungeons & Dragons takes you and your friends on epic journeys. Become characters you create, battle deadly foes, uncover secrets, find treasure."
-                 );
-          
+                  setCharacter("");
+                  setInfo("");
+                  setJoin("");
+                  setPlays("plays");
+                  setFqs("");
                }}
              >
                REQUIREMENTS TO PLAY
@@ -204,6 +210,10 @@ let navigate = useNavigate();
                onClick={() => {
                  setFqs(
                    "Looking to spark your imagination while having fun with friends? Dungeons & Dragons is a collaborative roleplaying game for players of all ages. Gather your friends to vanquish mighty monsters, embark on epic quests, and tell legendary stories filled with fantasy and fun.");
+                   setCharacter("");
+                   setInfo("");
+                   setJoin("");
+                   setPlays("");
                }}
              >
                FURTHER QUESTIONS
@@ -214,8 +224,8 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "19rem",
-             height: "470px",
+             width: "22rem",
+             height: "600px",
              backgroundColor: "#302C2B",
              borderRadius: "10px",
              border: "2px solid #FFA825",
