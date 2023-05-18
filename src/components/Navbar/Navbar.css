@@ -28,7 +28,7 @@
     margin-top: 25%;
 }
 
-.logo {
+.navLogo {
     margin-left: -30px;
 }
 
@@ -39,23 +39,23 @@
     margin-top: -5vh;
 }
 
-.userInfo{
+.navUserInfo{
     padding-right: 20px;
     margin-top: -5vh;
 }
 
-.menuIcon{
+.navMenuIcon{
     color:rgb(51, 64, 42);
     margin-right: 5%;
     margin-top: -5vh;
 }
 
-.logoImg{
+.navLogoImg{
     margin-left: -5vw;
     max-width: 60vw !important;
 }
 
-.profPic{
+.navProfPic{
     border-radius: 50px;
     margin-top: -2vh;
     margin-right: 20px;

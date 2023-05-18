@@ -44,11 +44,11 @@ export default function CreateCharacter() {
         <Row>
           <Col>
             <img src={heroImg} style={{ width: '100vw' }}></img>
-            <p className='title doubleFont'>CHARACTER CREATOR</p>
+            <p className='landingTitle doubleFont'>CHARACTER CREATOR</p>
           </Col>
         </Row>
       </div>
-      <Container className='darkBox'>
+      <Container className='landingDarkBox'>
         
           <Row>
             <Col className='col-3'>
@@ -59,7 +59,7 @@ export default function CreateCharacter() {
             </Col>
             <Col className='col-3'>
               <p>Name:</p>
-              <input className='nameInput inputs mb-3'></input>
+              <input className='landingNameInput landingInputs mb-3'></input>
               
             </Col>
             <Col>
@@ -76,7 +76,7 @@ export default function CreateCharacter() {
                 <option value="8">Human</option>
                 <option value="9">Tiefling</option>
               </Form.Select>
-              <Container className='infoBoxes'>
+              <Container className='landingInfoBoxes'>
                 <Row>
                   <Col>
                   <p>{raceDesc}</p>
@@ -101,7 +101,7 @@ export default function CreateCharacter() {
                 <option value="11">Warlock</option>
                 <option value="12">Wizard</option>
               </Form.Select>
-              <Container className='infoBoxes'>
+              <Container className='landingInfoBoxes'>
                 <Row>
                   <Col>
                   <p>{classDesc}</p>
@@ -114,11 +114,11 @@ export default function CreateCharacter() {
             
             <Col className='col-3'>
               <p>Character Description:</p>
-              <input className='desc inputs'></input>
+              <input className='landingDesc landingInputs'></input>
             </Col>
             <Col className='col-3'>
             <p>Level:</p>
-              <input className='lvlInput inputs' placeholder='1-20'></input>
+              <input className='landingLvlInput landingInputs' placeholder='1-20'></input>
             </Col>
            
             <Col>
@@ -129,7 +129,7 @@ export default function CreateCharacter() {
                 {/* <option value="2">Two</option>
                 <option value="3">Three</option> */}
               </Form.Select>
-              <Container className='infoBoxes'>
+              <Container className='landingInfoBoxes'>
                 <Row>
                   <Col>
                   <p>{bgDesc}</p>
@@ -151,7 +151,7 @@ export default function CreateCharacter() {
                 <option value="2">Chaotic-Neutral</option>
                 <option value="3">Chaotic-Evil</option>
               </Form.Select>
-              <Container className='infoBoxes'>
+              <Container className='landingInfoBoxes'>
                 <Row>
                   <Col>
                   <p>{alignDesc}</p>
@@ -163,10 +163,10 @@ export default function CreateCharacter() {
           <Row>
             <Col className='col-9'></Col>
             <Col>
-              <Button className='contBtn btn'>Save</Button>
+              <Button className='landingContBtn landingBtn'>Save</Button>
             </Col>
             <Col>
-              <Button className='backBtn btn' onClick={() => navigate(-1)}>Back</Button>
+              <Button className='landingBackBtn landingBtn' onClick={() => navigate(-1)}>Back</Button>
             </Col>
           </Row>
         

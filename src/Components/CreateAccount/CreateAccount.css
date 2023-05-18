@@ -10,7 +10,7 @@
   font-family: 'IM Fell DW Pica', serif;
 }
 
-.box {
+.caBox {
   position: absolute;
   background-color: #272424d0;
   color: white;
@@ -32,18 +32,19 @@
                 1px 1px 0 #141514,
                  1px -1px 0 #141514;
 }
-.shortInput{
+.caShortInput{
   border-radius: 5px;
   height: 40px;
+  width: 105%
 }
-.longInput{
+.caLongInput{
   margin-left: 12px;
   width: 503px;
   height: 40px;
   border-radius: 5px;
 }
 
-.longInput2{
+.caLongInput2{
   margin-left: 12px;
   width: 503px;
   height: 40px;
@@ -55,18 +56,18 @@
   border-color: #141514;
 }
 
-.ppTxt{
+.caPpTxt{
   margin-left: 50px;
 }
 
-.plus {
+.caPlus {
   width: 100px;
   height: 100px;
   margin-left: -43%;
   margin-top: 30%;
 }
 
-.imageBtn{
+.caImageBtn{
   position: absolute;
   margin-top: 45%;
   margin-left: 20.5%;

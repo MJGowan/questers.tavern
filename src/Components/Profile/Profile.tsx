@@ -59,20 +59,20 @@ export default function Profile() {
   return (
     <div className='profile'>
       <Row>
-        <img src={heroImg} className='heroImg'></img>
-        <Col className='col-4 greeting'>
+        <img src={heroImg} className='profileHeroImg'></img>
+        <Col className='col-4 profileGreeting'>
           <p className='doubleFont'>Welcome to the tavern,</p>
-          <p className='doubleFont userTxt'>{Username}!</p>
+          <p className='doubleFont profileUserTxt'>{Username}!</p>
         </Col>
         <Col>
           {
             mode === 'Adventurer' ? (
               <div>
-                <p className='doubleFont mode'>Adventurer Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
+                <p className='doubleFont profileMode'>Adventurer Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
               </div>
             ) : (
               <div>
-                <p className='doubleFont mode'>Dungeon Master Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
+                <p className='doubleFont profileMode'>Dungeon Master Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
               </div>
             )
 
@@ -107,7 +107,7 @@ export default function Profile() {
               </Row>
               <hr />
               <Row>
-                <p className='editBtn' onClick={editProfile}>Edit Profile</p>
+                <p className='profileEditBtn' onClick={editProfile}>Edit Profile</p>
               </Row>
             </Container>
           </div>
@@ -128,8 +128,8 @@ export default function Profile() {
                       <Col>
                         <div onClick={() => navigate('/CreateCharacter')}>
                           <img src={parchment} />
-                          <img src={addNew} className='addNewImg' />
-                          <p className='darkTxt addNewTxt'>Add New</p>
+                          <img src={addNew} className='profileAddNewImg' />
+                          <p className='profileDarkTxt profileAddNewTxt'>Add New</p>
                         </div>
                       </Col>
                     </Row>
@@ -145,8 +145,8 @@ export default function Profile() {
                       <Col>
                         <div onClick={() => campaignCreator()}>
                           <img src={parchment} />
-                          <img src={addNew} className='addNewImg' />
-                          <p className='darkTxt addNewTxt'>Add New</p>
+                          <img src={addNew} className='profileAddNewImg' />
+                          <p className='profileDarkTxt profileAddNewTxt'>Add New</p>
                         </div>
                       </Col>
                     </Row>
@@ -168,8 +168,8 @@ export default function Profile() {
 
                   <div onClick={() => navigate('/TavernBoard')}>
                     <img src={parchment} />
-                    <p className='darkTxt partTxtOne'>Not participating in a campaign yet?</p>
-                    <p className='darkTxt partTxtTwo'> Maybe you can check the Campaigns page!</p>
+                    <p className='profileDarkTxt profilePartTxtOne'>Not participating in a campaign yet?</p>
+                    <p className='profileDarkTxt profilePartTxtTwo'> Maybe you can check the Campaigns page!</p>
                   </div>
 
                 </Col>

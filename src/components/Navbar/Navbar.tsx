@@ -56,10 +56,10 @@ export default function Navbar() {
           <div>
             
               <Col className='col-6'>
-                <img src={logo} className='logoImg'/>
+                <img src={logo} className='navLogoImg'/>
               </Col>
               <Col className='d-flex justify-content-end'>
-              <MenuIcon fontSize="large" className='menuIcon' />
+              <MenuIcon fontSize="large" className='navMenuIcon' />
 
               </Col>
             
@@ -82,12 +82,12 @@ export default function Navbar() {
                 </Link>
                 {
                   LoggedIn ? (
-                    <div className='userInfo'>
-                      <img src={UserImage} className='profPic'/>
-                      <Link to='/Profile' className='navItems userInfo'>{Username}</Link>
+                    <div className='navUserInfo'>
+                      <img src={UserImage} className='navProfPic'/>
+                      <Link to='/Profile' className='navItems navUserInfo'>{Username}</Link>
                     </div>
                   ) : (
-                    <Link to='/Login' className='navItems userInfo'>Sign Up/Login</Link>
+                    <Link to='/Login' className='navItems navUserInfo'>Sign Up/Login</Link>
                   )
                 }
                   </div>

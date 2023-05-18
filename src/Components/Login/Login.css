@@ -9,51 +9,52 @@
   font-family: 'IM Fell DW Pica', serif;
 }
 
-.bgImg{
+.loginBgImg{
     position: fixed;
     z-index: -2;
     width: 100vw;
     height: 100vh
 }
 
-.shadowBox{
+.loginShadowBox{
     background-color: #272424d0;
     height: 60vh;
     width: 45vw;
 }
 
-.white{
+.loginWhite{
     color: white;
 }
 
-.title{
+.loginTitle{
     text-align: center;
     padding-top: 5%;
 }
 
-.input{
+.loginInput{
     height: 150% !important;
     width: 30vw !important;
 }
 
-.inputTxt{
+.loginInputTxt{
     padding-left: 16%;
 }
 
-.logo{
-    width: 12vw;
-    padding-left: 30px;
-    margin-top: -10%;
+.loginLogo{
+    width: 10vw;
+    margin-top: -5%;
 }
 
-.btn{
+.loginBtn{
     height: 45px;
     margin-top: 1%;
+    background-color: #3b4732;
+    border-color: #3b4732;
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1025px) {
-    .title{
+    .loginTitle{
         font-size: 50px;
     }
 
@@ -61,7 +62,7 @@
 
 /* LAPTOP */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
-    .title{
+    .loginTitle{
         font-size: 40px;
     }
     
@@ -69,7 +70,7 @@
 
 /* TABLET */
 @media screen and (max-width: 768px) and (min-width: 426px) {
-    .title{
+    .loginTitle{
         font-size: xx-large;
     }
 
@@ -77,13 +78,13 @@
 
 /* MOBILE */
 @media screen and (max-width: 426px) {
-    .title{
+    .loginTitle{
         font-size: xx-large;
     }
-    .accountTxt{
+    .loginAccountTxt{
         font-size: small;
     }
-    .shadowBox{
+    .loginShadowBox{
         height: 60vh;
     }
 

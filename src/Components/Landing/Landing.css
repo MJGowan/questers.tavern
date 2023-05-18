@@ -11,13 +11,13 @@
 /* DESKTOP */
 @media screen and (min-width: 1440px ) {
     
-    .heroTxt {
+    .landingHeroTxt {
         margin-top: -20%;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
 
-    #heroTxt{
+    #landingHeroTxt{
         color:#cb8f16;
         font-size: 40px;
         text-shadow: -1px 1px 0 #4A423F,
@@ -25,25 +25,25 @@
                      1px -1px 0 #4A423F;
     }
     
-    .tavernImg {
+    .landingTavernImg {
         width: 90%;
         margin-left: 3%;
     }
     
-    .tavernTxt{
+    .landingTavernTxt{
         margin-top: -58%;
         color: white;
         font-size: larger;
     
     }
     
-    .tavernTitle{
+    .landingTavernTitle{
         font-size: xx-large;
         color: #cb8f16;
         margin-left: -50px;
     }
     
-    .tavernBtn{
+    .landingTavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
@@ -52,21 +52,21 @@
     }
     
     
-    .cardOne {
+    .landingCardOne {
         margin-right: -5px;
         background-color:#302C2B;
         color: white;
         border-color: white;
     }
     
-    .cardTwo {
+    .landingCardTwo {
 
         background-color:#302C2B;
         color: white;
         border-color: white;
     }
 
-    .desktopRow{
+    .landingDesktopRow{
         margin-top: 20%;
     }
 }
@@ -75,13 +75,13 @@
 /* LAPTOP */
 
 @media screen and (max-width: 1439px) and (min-width: 769px ) {
-    .heroTxt {
+    .landingHeroTxt {
         margin-top: -20%;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
     
-    #heroTxt{
+    #landingHeroTxt{
         color:#cb8f16;
         font-size: 30px;
         text-shadow: -1px 1px 0 #4A423F,
@@ -89,26 +89,26 @@
                      1px -1px 0 #4A423F;
     }
     
-    .tavernImg {
+    .landingTavernImg {
         width: 420px;
         margin-left: 2.5%;
     }
     
-    .tavernTxt{
+    .landingTavernTxt{
         margin-top: -65%;
         color: white;
         font-size: medium;
         margin-bottom: -15px;
     }
     
-    .tavernTitle{
+    .landingTavernTitle{
         font-size: large;
         color: #cb8f16;
         margin-bottom: -10px;
         padding-top: 15px;
     }
     
-    .tavernBtn{
+    .landingTavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
@@ -118,17 +118,17 @@
     }
     
 
-    .cardTitle{
+    .landingCardTitle{
         font-size: medium;
         margin-top: -10px;
     }
 
-    .cardTxt{
+    .landingCardTxt{
         margin-top: -5px;
         font-size: small;
     }
     
-    .cardOne {
+    .landingCardOne {
         margin-left: 20px;
         background-color:#302C2B;
         color: white;
@@ -136,7 +136,7 @@
         height: 310px;
     }
     
-    .cardTwo {
+    .landingCardTwo {
         margin-left: -10px;
         background-color:#302C2B;
         color: white;
@@ -144,7 +144,7 @@
         height: 310px;
     }
 
-    .laptopRow{
+    .landingLaptopRow{
         margin-top:23%;
     }
 }
@@ -153,13 +153,13 @@
 /* TABLET */
 
 @media screen and (max-width: 768px) and (min-width: 430px) {
-    .heroTxt {
+    .landingHeroTxt {
         margin-top: -23%;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
     
-    #heroTxt{
+    #landingHeroTxt{
         color:#cb8f16;
         font-size: 25px;
         text-shadow: -1px 1px 0 #4A423F,
@@ -167,24 +167,24 @@
                      1px -1px 0 #4A423F;
     }
     
-    .tavernImg {
+    .landingTavernImg {
         width: 500px;
         margin-left: 17%;
         margin-top: 21%;
     }
     
-    .tavernTxt{
+    .landingTavernTxt{
         margin-top: -280px;
         color: white;
         font-size: small;
     }
     
-    .tavernTitle{
+    .landingTavernTitle{
         font-size: medium;
         color: #cb8f16;
     }
     
-    .tavernBtn{
+    .landingTavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
@@ -192,19 +192,19 @@
         
     }
     
-    .cardImg {
+    .landingCardImg {
         height: 120px;
     }
 
-    .cardTitle{
+    .landingCardTitle{
         font-size: medium;
     }
 
-    .cardTxt{
+    .landingCardTxt{
         font-size: small;
     }
     
-    .cardOne {
+    .landingCardOne {
         margin-left: 50px;
         background-color:#302C2B;
         color: white;
@@ -212,7 +212,7 @@
         height: 300px;
     }
     
-    .cardTwo {
+    .landingCardTwo {
         margin-left: -50px;
         background-color:#302C2B;
         color: white;
@@ -220,7 +220,7 @@
         height: 300px;
     }
 
-    .cardRow{
+    .landingCardRow{
         margin-top: 12%;
     }
 }
@@ -229,13 +229,13 @@
 /* MOBILE */
 
 @media screen and (max-width: 426px) {
-    .heroTxt {
+    .landingHeroTxt {
         margin-top: -100px;
         font-family: 'IM Fell Double Pica SC', serif;
         text-align: center;
     }
     
-    #heroTxt{
+    #landingHeroTxt{
         color:#cb8f16;
         font-size: 20px;
         text-shadow: -1px 1px 0 #4A423F,
@@ -243,24 +243,24 @@
                      1px -1px 0 #4A423F;
     }
     
-    .tavernImg {
+    .landingTavernImg {
         width: 400px;
         margin-left: 2.5%;
     }
     
-    .tavernTxt{
+    .landingTavernTxt{
         margin-top: -5%;
         color: white;
         font-size: small;
     }
     
-    .tavernTitle{
+    .landingTavernTitle{
         font-size: medium;
         color: #cb8f16;
         margin-top: -60%;
     }
     
-    .tavernBtn{
+    .landingTavernBtn{
         background-color:#cb8f16;
         border-color: #4A423F;
         color:#4A423F;
@@ -268,19 +268,19 @@
         
     }
     
-    .cardImg {
+    .landingCardImg {
         height: 120px;
     }
 
-    .cardTitle{
+    .landingCardTitle{
         font-size: small;
     }
 
-    .cardTxt{
+    .landingCardTxt{
         font-size: x-small;
     }
     
-    .cardOne {
+    .landingCardOne {
         margin-left: 15px !important;
         background-color:#302C2B;
         color: white;
@@ -288,7 +288,7 @@
         height: 80px;
     }
     
-    .cardTwo {
+    .landingCardTwo {
         margin-left: -5px !important;
         background-color:#302C2B;
         color: white;
@@ -296,7 +296,7 @@
         height: 100px;
     }
 
-    .card{
+    .landingCard{
         height: 250px  !important;
         border-color: white !important;
         border-width: 1px !important;
@@ -304,7 +304,7 @@
 }
 
 
-#tavernTxt{
+#landingTavernTxt{
     text-shadow: -1px 1px 0 #4A423F,
                   1px 1px 0 #4A423F,
                  1px -1px 0 #4A423F;

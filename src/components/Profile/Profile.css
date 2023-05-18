@@ -14,7 +14,7 @@
     height: 100vh;
     color: white;
 }
-.heroImg{
+.profileHeroImg{
     width: 100%;
 }
 
@@ -29,37 +29,37 @@
     margin-bottom: 10px;
 }
 
-.greeting{
+.profileGreeting{
     margin-top: -7%;
     margin-left: 1%;
     font-size: x-large;
 }
 
-.darkTxt{
+.profileDarkTxt{
     color:#302C2B;
 }
 
-.addNewImg{
+.profileAddNewImg{
     margin-left: -23%;
 }
-.addNewTxt{
+.profileAddNewTxt{
     margin-top: -8%;
     margin-left: 14%;
 }
-.partTxtOne{
+.profilePartTxtOne{
     margin-top: -18%;
     margin-left: 6%;
 }
-.partTxtTwo{
+.profilePartTxtTwo{
     margin-left: 4%;
 }
-.editBtn{
+.profileEditBtn{
     text-align: right;
 }
-.userTxt{
+.profileUserTxt{
     margin-top: -4%;
 }
-.mode{
+.profileMode{
     font-size: x-large;
     margin-top: -6%;
     margin-bottom: 4%;
