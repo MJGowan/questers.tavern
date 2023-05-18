@@ -1,6 +1,8 @@
 // Backend API Fetches
 
 let userData = {};
+let campaignData = {};
+let characterData = {};
 
 async function CreateAccountBe(createdUser: object) {
   const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser/`, {
@@ -96,5 +98,13 @@ async function CreateCampaign(newCampaign: object) {
   return data;
 }
 
+async function GetCampaigns(){
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetCampaignByUserId/');
+    let data = await result.json();
+    campaignData = data;
+    console.log(campaignData);
+    return campaignData;
+}
 
-export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign}
+
+export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign, GetCampaigns}
