@@ -15,7 +15,8 @@
 
 .navbarBg {
     background-color: #f1f1f1;
-    height: 11vh;
+    height: 13vh;
+    z-index: 2;
 }
 
 .navMargin {
@@ -24,7 +25,7 @@
 
 .navText {
     color: #445435;
-    font-size: larger;
+    font-size: large;
     margin-top: 25%;
 }
 
@@ -34,7 +35,7 @@
 
 .navItems{
     color: rgb(51, 64, 42);
-    font-size: x-large;
+    font-size: larger;
     padding-right: 3%;
     margin-top: -5vh;
 }
@@ -47,18 +48,20 @@
 .navMenuIcon{
     color:rgb(51, 64, 42);
     margin-right: 5%;
-    margin-top: -5vh;
+    margin-top: -9vh;
 }
 
 .navLogoImg{
     margin-left: -5vw;
-    max-width: 60vw !important;
+    /* max-width: 50vw !important; */
+    height: 13vh;
 }
 
 .navProfPic{
     border-radius: 50px;
-    margin-top: -2vh;
+    margin-top: -3vh;
+    
     margin-right: 20px;
-    height: 90px;
-    width: 90px;
+    height: 60px;
+    width: 60px;
 }

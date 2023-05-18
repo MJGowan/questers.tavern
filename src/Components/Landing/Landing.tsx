@@ -219,7 +219,7 @@ export default function Landing() {
                     </Col>
 
                     <Col>
-                      <Card style={{ width: '18rem' }} className='landingCardOne'>
+                      <Card style={{ width: '18rem' }} className='landingCardOne dwFont'>
                         <Card.Img variant="top" src={cardOneImg} className='landingCardImg' />
                         <Card.Body>
                           <Card.Title>An easy way to connect locally with your fellow adventurers</Card.Title>
@@ -231,7 +231,7 @@ export default function Landing() {
                     </Col>
 
                     <Col>
-                      <Card style={{ width: '18rem' }} className='landingCardTwo'>
+                      <Card style={{ width: '18rem' }} className='landingCardTwo dwFont'>
                         <Card.Img variant="top" src={cardTwoImg} className='landingCardImg' />
                         <Card.Body>
                           <Card.Title>Create the ultimate campaign and let the heroes find you!</Card.Title>
