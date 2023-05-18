@@ -12,7 +12,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import TavernBoardPost from "./Components/TavernPost/TavernBoardPost";
-import CreateCampaign from "./Components/CreateCampaign/CreateCampaign";
+import CreateUserCampaign from "./Components/CreateCampaign/CreateCampaign";
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
           <Route path='/Profile' element={<Profile />} />
           <Route path='/TavernBoard' element={<TavernBoard />} />
           <Route path='/TavernBoardPost' element={<TavernBoardPost />} />
-          <Route path='/CreateCampaign' element={<CreateCampaign />} />
+          <Route path='/CreateCampaign' element={<CreateUserCampaign />} />
         </Routes>
       </BrowserRouter>
     </div>

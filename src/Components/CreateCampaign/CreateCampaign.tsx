@@ -1,14 +1,75 @@
-import React from 'react'
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import React, { useState } from 'react'
+import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import '../CreateCampaign/CreateCampaign.css'
+import { CreateCampaign } from '../../Services/DataService';
 
 
-export default function CreateCampaign() {
+export default function CreateUserCampaign() {
 
 const logo1 = require("../../Assets/tavernmen.jpg");
 const logo2 = require("../../Assets/hauntedHouse.png");
 const logo3 = require("../../Assets/image 7.png");
 const logo4 = require("../../Assets/image 17.png");
+
+const [Campaignname, setCampaignname] = useState<string>('') ; 
+const [Campaignimage, setCampaignimage] = useState(logo4);
+const [Campaignimagetwo, setCampaignimagetwo] = useState(logo2);
+const [Campaigndate, setCampaigndate] = useState<string>("");
+const [Campaignlocation, setCampaignlocation] = useState<string>("");
+const [Campaigndescription, setCampaigndescription] = useState<string>("");
+const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
+const [Campaigntags, setCampaigntags] = useState<string>("");
+
+
+const handleSubmit = async () => {
+ if (!Campaignname || !Campaignimage || !Campaignimagetwo || !Campaigndate || Campaignlocation || Campaigndescription || Campaigndifficulty || Campaigntags){
+  alert("Could not create campaign, missing information");
+ } else{
+  let campaignData: object = {
+   Id: 0, 
+   UserID: 0, 
+   Campaignname, 
+   Campaignimage,
+   Campaignimagetwo,
+   Campaigndate,
+   Campaignlocation, 
+   Campaigndescription,
+   Campaigndifficulty,
+   Campaigntags
+  };
+
+  let isCampaignCreated = await CreateCampaign(campaignData);
+
+  if (isCampaignCreated){
+   alert("Campaign was successfully created.");
+  }else {
+   alert("Could not create Campaign, missing information.");
+  }
+  console.log(campaignData);
+ }
+}
+
+const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+  let reader = new FileReader();
+  const file = e.target.files?.[0];
+  if (file) {
+    reader.onloadend = (event) => {
+      console.log(reader.result);
+      setCampaignimage(event.target?.result);
+      setCampaignimagetwo(event.target?.result);
+
+    };
+    reader.readAsDataURL(file);
+  }
+};
+
+const handlePicChange = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+};
+
+
+
+
 
 const handleButtonClick = () => {
   // Handle the button click event here
@@ -75,10 +136,7 @@ return (
           </Card.Body>
         </Card>
         <Card>
-         
-          <Card.Body className='card-description'>
-            Description
-          </Card.Body>
+          <Card.Body className='card-description'>Description</Card.Body>
         </Card>
       </Col>
       <Col
@@ -87,32 +145,67 @@ return (
       >
         <Card>
           <Card.Body>
-            <input type='text' />
+            <input
+              onChange={({ target: { value } }) => setCampaignname(value)}
+              type='text'
+            />
+          </Card.Body>
+        </Card>
+        <Card>
+          <Form onSubmit={handlePicChange}>
+            <Form.Group controlId='formFile' className='mb-3'>
+              <Form.Control
+                onChange={handleImage}
+                type='file'
+                accept='image/png, image/jpeg, image/jpg, image/jpe'
+
+              />
+            </Form.Group>
+          </Form>
+        </Card>
+        <Card>
+          <Form onSubmit={handlePicChange}>
+            <Form.Group controlId='formFile' className='mb-3'>
+              <Form.Control
+                onChange={handleImage}
+                type='file'
+                accept='image/png, image/jpeg, image/jpg, image/jpe'
+              />
+            </Form.Group>
+          </Form>
+        </Card>
+        <Card>
+          <Card.Body>
+            <input
+              onChange={({ target: { value } }) => setCampaigndate(value)}
+              type='text'
+            />
           </Card.Body>
         </Card>
         <Card>
           <Card.Body>
-            <input type='text' />
+            <input
+              onChange={({ target: { value } }) => setCampaignlocation(value)}
+              type='text'
+            />
           </Card.Body>
         </Card>
         <Card>
           <Card.Body>
-            <input type='text' />
+            <input
+              onChange={({ target: { value } }) =>
+                setCampaigndescription(value)
+              }
+              type='text'
+            />
           </Card.Body>
         </Card>
         <Card>
           <Card.Body>
-            <input type='text' />
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Body>
-            <input type='text' />
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Body>
-            <input type='text' />
+            <input
+              onChange={({ target: { value } }) => setCampaigndifficulty(value)}
+              type='text'
+            />
           </Card.Body>
         </Card>
       </Col>
@@ -120,6 +213,7 @@ return (
     <Row>
       <Row>
         <button
+         onClick={handleSubmit}
           className='cardbutton'
           style={{
             width: "55%",
