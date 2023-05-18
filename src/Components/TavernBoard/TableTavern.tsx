@@ -97,7 +97,7 @@ const handleButtonClick = () => {
                     onClick={handleButtonClick}
                   >
                     <Link
-                      to='/TavernBoardPost'
+                      to='/CreateCampaign'
                       style={{
                         display: "inline-block",
                         maxWidth: "100%",

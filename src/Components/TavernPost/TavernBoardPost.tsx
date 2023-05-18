@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import './TavernBoardPost.css';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function TavernBoardPost() {
@@ -83,7 +84,7 @@ export default function TavernBoardPost() {
                   color: "white",
                 }}
               >
-                Campaigns
+                 Create Campaigns
               </button>{" "}
             </Card.Body>
           </Card>

@@ -12,6 +12,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import TavernBoard from "./Components/TavernBoard/TavernBoard";
 import TavernBoardPost from "./Components/TavernPost/TavernBoardPost";
+import CreateUserCampaign from "./Components/CreateCampaign/CreateCampaign";
 
 
 function App() {
@@ -24,22 +25,22 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar/>
-      
+        <Navbar />
+
         <Routes>
           <Route path='/' element={<Landing />} />
 
-          <Route path='/CreateAccount' element={<CreateAccount />}/>
-          <Route path='/CreateCharacter' element={<CreateCharacter/>}/>
-          <Route path='/FavoritesList' element={<FavoritesList/>}/>
-          <Route path='/FAQs' element={<FAQs/>}/>
+          <Route path='/CreateAccount' element={<CreateAccount />} />
+          <Route path='/CreateCharacter' element={<CreateCharacter />} />
+          <Route path='/FavoritesList' element={<FavoritesList />} />
+          <Route path='/FAQs' element={<FAQs />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/TavernBoard' element={<TavernBoard />} />
-          <Route path='/TavernBoardPost' element={<TavernBoardPost/>}/>
+          <Route path='/TavernBoardPost' element={<TavernBoardPost />} />
+          <Route path='/CreateCampaign' element={<CreateUserCampaign />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 
