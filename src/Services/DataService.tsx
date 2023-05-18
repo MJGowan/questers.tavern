@@ -62,7 +62,7 @@ function loggedInData(){
     return userData;
 }
 
-async function CreateCharacter(newCharacter: object) {
+async function CreateCharacterBe(newCharacter: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
@@ -80,7 +80,7 @@ async function CreateCharacter(newCharacter: object) {
   return data;
 }
 
-async function CreateCampaign(newCampaign: object) {
+async function CreateCampaignBe(newCampaign: object) {
   const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
@@ -106,5 +106,48 @@ async function GetCampaigns(){
     return campaignData;
 }
 
+async function CharacterInfo(Race: string, Class: string, Alignment: string){
+    // Race
+    const raceResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/races/${Race}`)
+    let raceData = await raceResult.json();
+    console.log(raceData);
+    let align = raceData.alignment;
+    let age = raceData.age;
+    let sizeDesc = raceData.size_description;
+    let languages = raceData.language_desc;
+    let raceDesc = {align, age, sizeDesc, languages};
+    // 
 
-export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign, GetCampaigns}
+    // Class
+    const classResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/classes/${Class}`)
+    let classData = await classResult.json();
+    console.log(classData);
+    let hitDie = classData.hit_die;
+    let proficiences = classData.proficiency_choices.desc;
+    let savingThrows;
+    for(let i = 0; i < classData.saving_throws.length; i++){
+        savingThrows = classData.saving_throws[i].name;
+    }
+    let classDesc = {hitDie, proficiences, savingThrows};
+    // 
+
+    // Background
+    const bgResult = await fetch('https://www.dnd5eapi.co/docs/#get-/api/backgrounds/acolyte')
+    let bgData = await bgResult.json();
+    console.log(bgData);
+    let bgDesc = bgData.feature.desc;
+    // 
+
+    // Alignment
+    const alignResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/alignments/${Alignment}`)
+    let alignData = await alignResult.json();
+    console.log(alignData);
+    let alignDesc = alignData.desc;
+    //
+
+    let characterData = {raceDesc, classDesc, bgDesc, alignDesc}
+    return characterData;
+}
+
+
+export { CreateAccountBe, LoginBe, GetLoggedInUserData, checkToken, loggedInData, CharacterInfo, CreateCharacterBe, CreateCampaignBe, GetCampaigns}

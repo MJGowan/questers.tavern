@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreateCharacter.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { CharacterInfo } from '../../Services/DataService';
+import { CreateCharacterBe } from '../../Services/DataService';
 
 export default function CreateCharacter() {
+
+
   const heroImg = require('../../Assets/image 13.png');
   const [name, setName] = useState('');
   const [level, setLevel] = useState('');
@@ -13,8 +17,26 @@ export default function CreateCharacter() {
   const [charClass, setCharClass] = useState('');
   const [background, setBackground] = useState('');
   const [alignment, setAlignment] = useState('');
+  
+  const [raceDesc, setRaceDesc] = useState('');
+  const [classDesc, setClassDesc] = useState('');
+  const [bgDesc, setBgDesc] = useState('');
+  const [alignDesc, setAlignDesc] = useState('');
 
   let navigate = useNavigate();
+
+  let characterData: any = {};
+  useEffect(() => {
+    const getCharacterData = async () => {
+      // characterData = JSON.parse(sessionStorage.characterData);
+      setRaceDesc(characterData.raceDesc!);
+      setClassDesc(characterData.classDesc!);
+      setBgDesc(characterData.bgDesc!);
+      setAlignDesc(characterData.alignDesc!);
+    }
+    getCharacterData();
+  }, [])
+
 
   return (
     <div className='bg'>
@@ -44,19 +66,48 @@ export default function CreateCharacter() {
             <p>Race:</p>
               <Form.Select aria-label="Default select example">
                 <option>Race</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Dragonborn</option>
+                <option value="2">Dwarf</option>
+                <option value="3">Elf</option>
+                <option value="4">Gnome</option>
+                <option value="5">Half-Elf</option>
+                <option value="6">Half-Orc</option>
+                <option value="7">Halfling</option>
+                <option value="8">Human</option>
+                <option value="9">Tiefling</option>
               </Form.Select>
+              <Container className='infoBoxes'>
+                <Row>
+                  <Col>
+                  <p>{raceDesc}</p>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
             <Col>
             <p>Class:</p>
               <Form.Select aria-label="Default select example">
                 <option>Class</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Barbarian</option>
+                <option value="2">Bard</option>
+                <option value="3">Cleric</option>
+                <option value="4">Druid</option>
+                <option value="5">Fighter</option>
+                <option value="6">Monk</option>
+                <option value="7">Paladin</option>
+                <option value="8">Ranger</option>
+                <option value="9">Rogue</option>
+                <option value="10">Sorcerer</option>
+                <option value="11">Warlock</option>
+                <option value="12">Wizard</option>
               </Form.Select>
+              <Container className='infoBoxes'>
+                <Row>
+                  <Col>
+                  <p>{classDesc}</p>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
           </Row>
           <Row className='mt-5'>
@@ -74,19 +125,39 @@ export default function CreateCharacter() {
             <p>Background:</p>
               <Form.Select aria-label="Default select example">
                 <option>Background</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Acolyte</option>
+                {/* <option value="2">Two</option>
+                <option value="3">Three</option> */}
               </Form.Select>
+              <Container className='infoBoxes'>
+                <Row>
+                  <Col>
+                  <p>{bgDesc}</p>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
             <Col>
             <p>Alignment:</p>
               <Form.Select aria-label="Default select example">
                 <option>Alignment</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Lawful-Good</option>
+                <option value="2">Lawful-Neutral</option>
+                <option value="3">Lawful-Evil</option>
+                <option value="1">Neutral-Good</option>
+                <option value="2">Neutral</option>
+                <option value="3">Neutral-Evil</option>
+                <option value="1">Chaotic-Good</option>
+                <option value="2">Chaotic-Neutral</option>
+                <option value="3">Chaotic-Evil</option>
               </Form.Select>
+              <Container className='infoBoxes'>
+                <Row>
+                  <Col>
+                  <p>{alignDesc}</p>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
           </Row>
           <Row>

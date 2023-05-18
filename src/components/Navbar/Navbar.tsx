@@ -38,10 +38,6 @@ export default function Navbar() {
     window.addEventListener("resize", handleChange);
     return () => window.removeEventListener("resize", handleChange);
 
-
-
-
-
   }, [])
 
   const [show, setShow] = useState(false);

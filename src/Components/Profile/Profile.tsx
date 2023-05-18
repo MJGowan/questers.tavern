@@ -3,7 +3,7 @@ import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
-import { checkToken, loggedInData, GetLoggedInUserData } from '../../Services/DataService';
+import { checkToken } from '../../Services/DataService';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
@@ -16,7 +16,6 @@ export default function Profile() {
   const [UserImage, setUserImage] = useState('');
   let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
   useEffect(() => {
-    
     if(!checkToken){
       navigate('/Login')
     }else{
