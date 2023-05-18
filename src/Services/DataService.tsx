@@ -3,6 +3,7 @@
 let userData = {};
 let campaignData = {};
 let characterData = {};
+let favoritesData = {};
 
 async function CreateAccountBe(createdUser: object) {
   const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser/`, {
