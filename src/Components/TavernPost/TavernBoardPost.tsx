@@ -46,21 +46,21 @@ export default function TavernBoardPost() {
       // Get Campaign data
 
         const getCampaignData = async () => {
-        let campaignData = JSON.parse(sessionStorage.getItem('campaignData') || '{}');
-        console.log(campaignData);
-        setCampaignname(campaignData.Campaignname!);
-        setCampaigndate(campaignData.Campaigndate!);
-        setCampaignlocation(campaignData.Campaignlocation!);
-        setCampaignimage(campaignData.Campaignimage!)
-        setCampaignimagetwo(campaignData.Campaignimagetwo!);
-        // setId(campaignData.Id!);
-         setUserId(campaignData.UserId!);
-        setCampaigndescription(campaignData.Campaigndescription!);
-        setCampaigndifficulty(campaignData.Campaigndifficulty!);
+          let campaignData = JSON.parse(
+            sessionStorage.getItem("campaignData") || "{}"
+          );
+          console.log(campaignData);
 
-
-
-      }
+          setCampaignname(campaignData.Campaignname);
+          setCampaigndate(campaignData.Campaigndate);
+          setCampaignlocation(campaignData.Campaignlocation);
+          setCampaignimage(campaignData.Campaignimage);
+          setCampaignimagetwo(campaignData.Campaignimagetwo);
+          // setId(campaignData.Id!);
+          setUserId(campaignData.UserId);
+          setCampaigndescription(campaignData.Campaigndescription);
+          setCampaigndifficulty(campaignData.Campaigndifficulty);
+        }
      getCampaignData();
     }
   }, [])
@@ -149,7 +149,9 @@ export default function TavernBoardPost() {
           <Card>
             <Card.Body className='card-description'>DESCRIPTION</Card.Body>
           </Card>
-          <h3 className='card-font-description'>{Campaigndescription}</h3>
+          <h3 className='card-font-description'>
+            {Campaigndescription}
+          </h3>
           <Card>
             <Card.Body className='card-description'>DIFFICULTY</Card.Body>
           </Card>
