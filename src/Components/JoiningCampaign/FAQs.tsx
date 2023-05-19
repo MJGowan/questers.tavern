@@ -76,10 +76,11 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "350px",
+             width: "300px", // Adjust the width to your desired size
              height: "600px",
              backgroundColor: "#302C2B",
              border: "2px solid #FFA825",
+             margin: "10px", // Add margin to create some spacing between the cards
            }}
          >
            <Card.Body>
