@@ -26,17 +26,17 @@ export default function TavernBoardPost() {
   const [Campaigndescription, setCampaigndescription] = useState<string>("");
   const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
 
-  let campaignData: {
-    //  id?: number;
-     UserId?: number;
-    Campaignimage?: string;
-    Campaignimagetwo?: string;
-    Campaigndate?: string;
-    Campaignname?: string;
-    Campaignlocation?: string;
-    Campaigndescription?: string;
-    Campaigndifficulty?: string;
-  } = {};
+  // let campaignData: {
+  //   //  id?: number;
+  //    UserId?: number;
+  //   Campaignimage?: string;
+  //   Campaignimagetwo?: string;
+  //   Campaigndate?: string;
+  //   Campaignname?: string;
+  //   Campaignlocation?: string;
+  //   Campaigndescription?: string;
+  //   Campaigndifficulty?: string;
+  // } = {};
 
   useEffect(() => {
     
@@ -46,7 +46,7 @@ export default function TavernBoardPost() {
       // Get Campaign data
 
         const getCampaignData = async () => {
-        let campaignData = JSON.parse(sessionStorage.campaignData);
+        let campaignData = JSON.parse(sessionStorage.getItem('campaignData') || '{}');
         console.log(campaignData);
         setCampaignname(campaignData.Campaignname!);
         setCampaigndate(campaignData.Campaigndate!);

@@ -8,6 +8,7 @@ import { GetCampaignByUserId } from "../../Services/DataService";
 
 
 
+
 export default function TableTavern() {
   const topBanner = require("../../Assets/image 10.png");
 
@@ -17,7 +18,18 @@ export default function TableTavern() {
   const [Campaignlocation, setCampaignlocation] = useState<string>("");
   const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
 
+ const [campaignData, setCampaignData] = useState<any>([]);
+
+
   useEffect(() => {
+
+    async function GetCampaignsData (){
+      const data = await GetCampaigns()
+      console.log(data);
+      setCampaignData(data)
+    }
+    GetCampaignsData();
+
     function handleWindowResize() {
       setIsButtonVisible(window.innerWidth > 600);
     }
@@ -30,9 +42,12 @@ export default function TableTavern() {
     };
   }, []);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (campaign: any) => {
     // Button click logic
+    sessionStorage.setItem("campaignData", JSON.stringify(campaign));
   };
+
+
 
   return (
     <div
@@ -66,59 +81,64 @@ export default function TableTavern() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td style={{ color: "white" }} className='col-sm-1'>
-                1
-              </td>
-              <td style={{ color: "#D6BA73" }} className='col-sm-3'>
-                The Haunted SchoolHouse
-              </td>
-              <td style={{ color: "#D6BA73" }} className='col-sm-2'>
-                Awaiting Group
-              </td>
-              <td style={{ color: "#D6BA73" }} className='col-sm-2'>
-                Beginners Campaign
-              </td>
-              <td style={{ color: "#D6BA73" }} className='col-sm-4'>
-                2721 Transworld Dr Stockton CA 95026
-              </td>
-              <td className='col-sm-12'>
-                {isButtonVisible && (
-                  <button
-                    style={{
-                      width: "95%",
-                      marginLeft: "10px",
-                      marginRight: "10px",
-                      borderRadius: "10px",
-                      height: "50px",
-                      padding: "10px 20px",
-                      backgroundColor: "#4A423F",
-                      color: "white",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    onClick={handleButtonClick}
-                  >
-                    <Link
-                      to='/CreateCampaign'
-                      style={{
-                        display: "inline-block",
-                        maxWidth: "100%",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        textDecoration: "none",
-                        color: "#D6BA73",
-                      }}
-                    >
-                      More Info
-                    </Link>
-                  </button>
-                )}
-              </td>
-            </tr>
-            <tr>
+            
+            {campaignData.map((campaign: any, idx: number) => {
+              return (
+                <tr key={idx}>
+                  <td style={{ color: "white" }} className='col-sm-1'>
+                    1
+                  </td>
+                  <td style={{ color: "#D6BA73" }} className='col-sm-3'>
+                    {campaign.campaignname}
+                  </td>
+                  <td style={{ color: "#D6BA73" }} className='col-sm-2'>
+                    {campaign.campaigndate}
+                  </td>
+                  <td style={{ color: "#D6BA73" }} className='col-sm-2'>
+                    {campaign.campaigndifficulty}
+                  </td>
+                  <td style={{ color: "#D6BA73" }} className='col-sm-4'>
+                    {campaign.campaignlocation}
+                  </td>
+                  <td className='col-sm-12'>
+                    {isButtonVisible && (
+                      <button
+                        style={{
+                          width: "95%",
+                          marginLeft: "10px",
+                          marginRight: "10px",
+                          borderRadius: "10px",
+                          height: "50px",
+                          padding: "10px 20px",
+                          backgroundColor: "#4A423F",
+                          color: "white",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                        onClick={() =>  handleButtonClick(campaign)}
+                      >
+                        <Link
+                          to='/TavernBoardPost'
+                          style={{
+                            display: "inline-block",
+                            maxWidth: "100%",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textDecoration: "none",
+                            color: "#D6BA73",
+                          }}
+                        >
+                          More Info
+                        </Link>
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+            {/* <tr>
               <td style={{ color: "white" }} className='col-sm-1'>
                 2
               </td>
@@ -251,7 +271,7 @@ export default function TableTavern() {
                   </button>
                 )}
               </td>
-            </tr>
+            </tr> */}
           </tbody>
         </Table>
       </div>
