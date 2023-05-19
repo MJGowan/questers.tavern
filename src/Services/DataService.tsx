@@ -114,6 +114,14 @@ async function CreateCampaign(newCampaign: object) {
   return data;
 }
 
+async function GetCampaignByUserId(){
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign');
+    let data = await result.json();
+    campaignData = data;
+    console.log(campaignData);
+    return campaignData;
+}
+
 async function GetCampaigns(){
     const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetAllCampaigns');
     let data = await result.json();
@@ -133,4 +141,4 @@ async function AddFavorites(){
 }
 
 
-export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign, GetCampaigns, AddFavorites}
+export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign, GetCampaignByUserId, GetCampaigns, AddFavorites}
