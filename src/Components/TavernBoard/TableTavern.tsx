@@ -3,39 +3,36 @@ import { Table } from "react-bootstrap";
 import './Tavern.css';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import { GetCampaigns } from "../../Services/DataService";
-// import { GetCampaignByUserId } from "../../Services/DataService";
-
-// const [UserId, setUserId] = useState("");
-// const [Campaignname, setCampaignname] = useState<string>("");
-// const [Campaignlocation, setCampaignlocation] = useState<string>("");
-// const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
+import { GetCampaigns } from "../../Services/DataService";
+import { GetCampaignByUserId } from "../../Services/DataService";
 
 
 
 export default function TableTavern() {
-const topBanner = require("../../Assets/image 10.png")
+  const topBanner = require("../../Assets/image 10.png");
 
-const [isButtonVisible, setIsButtonVisible] = useState(true);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
+  const [UserId, setUserId] = useState("");
+  const [Campaignname, setCampaignname] = useState<string>("");
+  const [Campaignlocation, setCampaignlocation] = useState<string>("");
+  const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
 
-useEffect(() => {
-  function handleWindowResize() {
-    setIsButtonVisible(window.innerWidth > 600);
-  }
+  useEffect(() => {
+    function handleWindowResize() {
+      setIsButtonVisible(window.innerWidth > 600);
+    }
 
-  window.addEventListener("resize", handleWindowResize);
-  handleWindowResize(); // Call the function initially
+    window.addEventListener("resize", handleWindowResize);
+    handleWindowResize(); // Call the function initially
 
-  return () => {
-    window.removeEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  const handleButtonClick = () => {
+    // Button click logic
   };
-}, []);
-
-const handleButtonClick = () => {
-  // Button click logic
-};
-
-
 
   return (
     <div
