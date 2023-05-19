@@ -9,7 +9,7 @@ let favoritesData = {};
 // User API Fetches
 
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser/`, {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -28,7 +28,7 @@ async function CreateAccountBe(createdUser: object) {
 }
 
 async function LoginBe(loginUser: object) {
-  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login/`, {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -77,7 +77,7 @@ function loggedInData(){
 // Character API Fetches
 
 async function CreateCharacter(newCharacter: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -97,7 +97,7 @@ async function CreateCharacter(newCharacter: object) {
 // Campaign API Fetches
 
 async function CreateCampaign(newCampaign: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -115,7 +115,7 @@ async function CreateCampaign(newCampaign: object) {
 }
 
 async function GetCampaigns(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetAllCampaigns/');
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetAllCampaigns');
     let data = await result.json();
     campaignData = data;
     console.log(campaignData);
@@ -125,7 +125,7 @@ async function GetCampaigns(){
 // Favorites API Fetches
 
 async function AddFavorites(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Favorites/AddFavorite/');
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Favorites/AddFavorite');
     let data = await result.json();
     favoritesData = data;
     console.log(favoritesData);
