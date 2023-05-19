@@ -114,8 +114,8 @@ async function CreateCampaign(newCampaign: object) {
   return data;
 }
 
-async function GetCampaignByUserId(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign');
+async function GetCampaignByUserId(UserId: number){
+    const result = await fetch(`https://questerstavernbackend.azurewebsites.net/Campaign/${UserId}`);
     let data = await result.json();
     campaignData = data;
     console.log(campaignData);
