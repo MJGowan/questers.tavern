@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreateCharacter.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { CharacterInfo } from '../../Services/DataService';
+import { CharacterAlignment, CharacterBackground, CharacterClass, CharacterRace } from '../../Services/DataService';
 import { CreateCharacterBe } from '../../Services/DataService';
 
 export default function CreateCharacter() {

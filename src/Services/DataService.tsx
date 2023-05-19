@@ -140,8 +140,8 @@ async function AddFavorites(){
     return favoritesData;
 }
 
-async function CharacterInfo(Race: string, Class: string, Alignment: string){
-    // Race
+// Character API Fetches
+async function CharacterRace(Race: string){
     const raceResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/races/${Race}`)
     let raceData = await raceResult.json();
     console.log(raceData);
@@ -149,10 +149,9 @@ async function CharacterInfo(Race: string, Class: string, Alignment: string){
     let age = raceData.age;
     let sizeDesc = raceData.size_description;
     let languages = raceData.language_desc;
-    let raceDesc = {align, age, sizeDesc, languages};
-    // 
-
-    // Class
+    return {align, age, sizeDesc, languages};
+}
+async function CharacterClass(Class: string){
     const classResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/classes/${Class}`)
     let classData = await classResult.json();
     console.log(classData);
@@ -162,26 +161,22 @@ async function CharacterInfo(Race: string, Class: string, Alignment: string){
     for(let i = 0; i < classData.saving_throws.length; i++){
         savingThrows = classData.saving_throws[i].name;
     }
-    let classDesc = {hitDie, proficiences, savingThrows};
-    // 
-
-    // Background
+    return {hitDie, proficiences, savingThrows};
+}
+async function CharacterBackground(){
     const bgResult = await fetch('https://www.dnd5eapi.co/docs/#get-/api/backgrounds/acolyte')
     let bgData = await bgResult.json();
     console.log(bgData);
     let bgDesc = bgData.feature.desc;
-    // 
-
-    // Alignment
+    return bgDesc;
+}
+async function CharacterAlignment(Alignment: string){
     const alignResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/alignments/${Alignment}`)
     let alignData = await alignResult.json();
     console.log(alignData);
     let alignDesc = alignData.desc;
-    //
-
-    let characterData = {raceDesc, classDesc, bgDesc, alignDesc}
-    return characterData;
+    return alignDesc;
 }
 
 
-export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterInfo, CreateCharacterBe, CreateCampaignBe, GetCampaigns, AddFavorites}
+export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterRace, CharacterClass, CharacterBackground, CharacterAlignment, CreateCharacterBe, CreateCampaignBe, GetCampaigns, AddFavorites}
