@@ -3,6 +3,13 @@ import { Table } from "react-bootstrap";
 import './Tavern.css';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+// import { GetCampaigns } from "../../Services/DataService";
+// import { GetCampaignByUserId } from "../../Services/DataService";
+
+// const [UserId, setUserId] = useState("");
+// const [Campaignname, setCampaignname] = useState<string>("");
+// const [Campaignlocation, setCampaignlocation] = useState<string>("");
+// const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
 
 
 

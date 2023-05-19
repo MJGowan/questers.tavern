@@ -3,8 +3,7 @@ import { Container, Row, Col, Card} from "react-bootstrap";
 import './TavernBoardPost.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { GetCampaigns } from "../../Services/DataService";
-
+import { GetCampaignByUserId } from "../../Services/DataService";
 
 
 export default function TavernBoardPost() {
@@ -17,8 +16,8 @@ export default function TavernBoardPost() {
   const logo3 = require("../../Assets/image 7.png");
   const logo4 = require("../../Assets/image 17.png");
 
-  // const [Id, setId] = useState("");
-  // const [UserId, setUserId] = useState("");
+  //  const [Id, setId] = useState("");
+   const [UserId, setUserId] = useState("");
   const [Campaignname, setCampaignname] = useState<string>("");
   const [Campaignimage, setCampaignimage] = useState(logo4);
   const [Campaignimagetwo, setCampaignimagetwo] = useState(logo2);
@@ -28,8 +27,8 @@ export default function TavernBoardPost() {
   const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
 
   let campaignData: {
-    // id?: number;
-    // UserId?: number;
+    //  id?: number;
+     UserId?: number;
     Campaignimage?: string;
     Campaignimagetwo?: string;
     Campaigndate?: string;
@@ -41,7 +40,7 @@ export default function TavernBoardPost() {
 
   useEffect(() => {
     
-    if(!GetCampaigns){
+    if(!GetCampaignByUserId){
       navigate('/TavernBoard')
     }else{
       // Get Campaign data
@@ -55,7 +54,7 @@ export default function TavernBoardPost() {
         setCampaignimage(campaignData.Campaignimage!)
         setCampaignimagetwo(campaignData.Campaignimagetwo!);
         // setId(campaignData.Id!);
-        // setUserId(campaignData.UserId!);
+         setUserId(campaignData.UserId!);
         setCampaigndescription(campaignData.Campaigndescription!);
         setCampaigndifficulty(campaignData.Campaigndifficulty!);
 
