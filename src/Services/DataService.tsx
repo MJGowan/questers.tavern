@@ -9,7 +9,7 @@ let favoritesData = {};
 // User API Fetches
 
 async function CreateAccountBe(createdUser: object) {
-  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser/`, {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/AddUser`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -28,7 +28,7 @@ async function CreateAccountBe(createdUser: object) {
 }
 
 async function LoginBe(loginUser: object) {
-  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login/`, {
+  const result = await fetch(`https://questerstavernbackend.azurewebsites.net/User/Login`, {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -51,7 +51,6 @@ async function UpdateUser(){
     updateUserData = data;
     console.log(updateUserData);
     return updateUserData;
-
 }
 
 async function GetLoggedInUserData(Username: string){
@@ -115,8 +114,16 @@ async function CreateCampaignBe(newCampaign: object) {
   return data;
 }
 
+async function GetCampaignByUserId(UserId: number){
+    const result = await fetch(`https://questerstavernbackend.azurewebsites.net/Campaign/${UserId}`);
+    let data = await result.json();
+    campaignData = data;
+    console.log(campaignData);
+    return campaignData;
+}
+
 async function GetCampaigns(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetCampaignByUserId/');
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/GetAllCampaigns');
     let data = await result.json();
     campaignData = data;
     console.log(campaignData);
@@ -126,7 +133,7 @@ async function GetCampaigns(){
 // Favorites API Fetches
 
 async function AddFavorites(){
-    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Favorites/AddFavorite/');
+    const result = await fetch('https://questerstavernbackend.azurewebsites.net/Favorites/AddFavorite');
     let data = await result.json();
     favoritesData = data;
     console.log(favoritesData);
