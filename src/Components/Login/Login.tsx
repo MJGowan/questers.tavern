@@ -38,6 +38,8 @@ export default function Login() {
         <Col className='col-8 mt-5'>
 
           <Container className='loginShadowBox'>
+            <Form>
+
             <Row>
               <Col>
                 <div className='d-flex justify-content-center'>
@@ -71,7 +73,6 @@ export default function Login() {
                 <Row>
                   <Col></Col>
                   <Col className='d-flex justify-content-center'>
-                    {/* <input type='password' className='input' ></input> */}
                     <>
                     <Form.Label htmlFor="inputPassword"></Form.Label>
                     <Form.Control
@@ -97,6 +98,7 @@ export default function Login() {
                 <Button className='loginBtn' onClick={handleSubmit}>Sign In</Button>
               </Col>
             </Row>
+            </Form>
           </Container>
         </Col>
       </Row>

@@ -7,27 +7,72 @@ import { CreateCharacterBe } from '../../Services/DataService';
 
 export default function CreateCharacter() {
 
+  const characterPic = require('../../Assets/profilepic.png');
 
   const heroImg = require('../../Assets/image 13.png');
-  const [name, setName] = useState('');
-  const [level, setLevel] = useState('');
-  const [desc, setDesc] = useState('');
-  const [charImg, setCharImg] = useState('');
-  const [race, setRace] = useState('');
-  const [charClass, setCharClass] = useState('');
-  const [background, setBackground] = useState('');
-  const [alignment, setAlignment] = useState('');
+  const [name, setName] = useState<string>('');
+  const [level, setLevel] = useState<string>('');
+  const [desc, setDesc] = useState<string>('');
+  const [charImg, setCharImg] = useState(characterPic);
+  const [race, setRace] = useState<string>('');
+  const [charClass, setCharClass] = useState<string>('');
+  const [background, setBackground] = useState<string>('');
+  const [alignment, setAlignment] = useState<string>('');
   
-  const [raceDesc, setRaceDesc] = useState('');
-  const [classDesc, setClassDesc] = useState('');
-  const [bgDesc, setBgDesc] = useState('');
-  const [alignDesc, setAlignDesc] = useState('');
+  const [raceDesc, setRaceDesc] = useState<string>('');
+  const [classDesc, setClassDesc] = useState<string>('');
+  const [bgDesc, setBgDesc] = useState<string>('');
+  const [alignDesc, setAlignDesc] = useState<string>('');
 
   let navigate = useNavigate();
 
-  let characterData: any = {};
+  const handleSubmit = async () => {
+    if(!name || !level || !desc || !charImg || !race || !charClass || !background || !alignment){
+      alert("Could not create character, missing information.")
+    }else{
+      let charData: object = {
+        name,
+        level,
+        desc,
+        charImg,
+        race,
+        charClass,
+        background,
+        alignment
+      }
+      let isCharacterCreated = await CreateCharacterBe(charData);
+      if(isCharacterCreated){
+        alert('Character was successfully created.');
+        navigate('/Profile');
+      }else{
+        alert("Could not create character.");
+      }
+
+    }
+  }
+
+
+  const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let reader = new FileReader();
+    const file = e.target.files?.[0];
+    if (file) {
+        reader.onloadend = (event) => {
+            console.log(reader.result);
+            setCharImg(event.target?.result);
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
+const handlePicChange = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
+
+
+
+  // let characterData: any = {};
   
-  useEffect(() => {
+  // useEffect(() => {
     // const getCharacterData = async () => {
       // characterData = JSON.parse(sessionStorage.characterData);
       // setRaceDesc(characterData.raceDesc!);
@@ -36,7 +81,7 @@ export default function CreateCharacter() {
       // setAlignDesc(characterData.alignDesc!);
     // }
     // getCharacterData();
-  }, [])
+  // }, [])
 
   const raceChange = async () => {
 
@@ -173,7 +218,7 @@ export default function CreateCharacter() {
           <Row>
             <Col className='col-9'></Col>
             <Col>
-              <Button className='landingContBtn landingBtn'>Save</Button>
+              <Button className='landingContBtn landingBtn' onClick={() => handleSubmit()}>Save</Button>
             </Col>
             <Col>
               <Button className='landingBackBtn landingBtn' onClick={() => navigate(-1)}>Back</Button>

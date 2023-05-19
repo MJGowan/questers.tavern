@@ -65,6 +65,9 @@ export default function CreateAccount() {
             <img src={bg} style={{ backgroundSize: '100vh' }} />
             <Container className='caBox'>
                 <br />
+                <Form>
+                    
+                </Form>
                 <Row>
                     <Col>
                         <Row>
@@ -97,8 +100,8 @@ export default function CreateAccount() {
                         </Row>
 
                         <Row>
+                            <Form>
                             <p>Password:</p>
-                            <>
                                 <Form.Label htmlFor="inputPassword5"></Form.Label>
                                 <Form.Control
                                     className='caLongInput2'
@@ -107,7 +110,7 @@ export default function CreateAccount() {
                                     aria-describedby="passwordHelpBlock"
                                     onChange={({ target: { value } }) => setPassword(value)}
                                 />
-                            </>
+                            </Form>
                         </Row>
                         <br />
                         <Row>
