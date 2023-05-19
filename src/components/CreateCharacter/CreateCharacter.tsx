@@ -26,16 +26,30 @@ export default function CreateCharacter() {
   let navigate = useNavigate();
 
   let characterData: any = {};
+  
   useEffect(() => {
-    const getCharacterData = async () => {
+    // const getCharacterData = async () => {
       // characterData = JSON.parse(sessionStorage.characterData);
-      setRaceDesc(characterData.raceDesc!);
-      setClassDesc(characterData.classDesc!);
-      setBgDesc(characterData.bgDesc!);
-      setAlignDesc(characterData.alignDesc!);
-    }
-    getCharacterData();
+      // setRaceDesc(characterData.raceDesc!);
+      // setClassDesc(characterData.classDesc!);
+      // setBgDesc(characterData.bgDesc!);
+      // setAlignDesc(characterData.alignDesc!);
+    // }
+    // getCharacterData();
   }, [])
+
+  const raceChange = async () => {
+
+  }
+  const classChange = async () => {
+
+  }
+  const bgChange = async () => {
+
+  }
+  const alignChange = async () => {
+    
+  }
 
 
   return (
@@ -65,16 +79,15 @@ export default function CreateCharacter() {
             <Col>
             <p>Race:</p>
               <Form.Select aria-label="Default select example">
-                <option>Race</option>
-                <option value="1">Dragonborn</option>
-                <option value="2">Dwarf</option>
-                <option value="3">Elf</option>
-                <option value="4">Gnome</option>
-                <option value="5">Half-Elf</option>
-                <option value="6">Half-Orc</option>
-                <option value="7">Halfling</option>
-                <option value="8">Human</option>
-                <option value="9">Tiefling</option>
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="halfling">Halfling</option>
+                <option value="human">Human</option>
+                <option value="tiefling">Tiefling</option>
               </Form.Select>
               <Container className='landingInfoBoxes'>
                 <Row>
@@ -86,20 +99,19 @@ export default function CreateCharacter() {
             </Col>
             <Col>
             <p>Class:</p>
-              <Form.Select aria-label="Default select example">
-                <option>Class</option>
-                <option value="1">Barbarian</option>
-                <option value="2">Bard</option>
-                <option value="3">Cleric</option>
-                <option value="4">Druid</option>
-                <option value="5">Fighter</option>
-                <option value="6">Monk</option>
-                <option value="7">Paladin</option>
-                <option value="8">Ranger</option>
-                <option value="9">Rogue</option>
-                <option value="10">Sorcerer</option>
-                <option value="11">Warlock</option>
-                <option value="12">Wizard</option>
+              <Form.Select aria-label="Default select example" onChange={raceChange}>
+                <option value="barbarian">Barbarian</option>
+                <option value="bard">Bard</option>
+                <option value="cleric">Cleric</option>
+                <option value="druid">Druid</option>
+                <option value="fighter">Fighter</option>
+                <option value="monk">Monk</option>
+                <option value="paladin">Paladin</option>
+                <option value="ranger">Ranger</option>
+                <option value="rogue">Rogue</option>
+                <option value="sorcerer">Sorcerer</option>
+                <option value="warlock">Warlock</option>
+                <option value="wizard">Wizard</option>
               </Form.Select>
               <Container className='landingInfoBoxes'>
                 <Row>
@@ -124,8 +136,7 @@ export default function CreateCharacter() {
             <Col>
             <p>Background:</p>
               <Form.Select aria-label="Default select example">
-                <option>Background</option>
-                <option value="1">Acolyte</option>
+                <option value="acolyte">Acolyte</option>
                 {/* <option value="2">Two</option>
                 <option value="3">Three</option> */}
               </Form.Select>
@@ -140,16 +151,15 @@ export default function CreateCharacter() {
             <Col>
             <p>Alignment:</p>
               <Form.Select aria-label="Default select example">
-                <option>Alignment</option>
-                <option value="1">Lawful-Good</option>
-                <option value="2">Lawful-Neutral</option>
-                <option value="3">Lawful-Evil</option>
-                <option value="1">Neutral-Good</option>
-                <option value="2">Neutral</option>
-                <option value="3">Neutral-Evil</option>
-                <option value="1">Chaotic-Good</option>
-                <option value="2">Chaotic-Neutral</option>
-                <option value="3">Chaotic-Evil</option>
+                <option value="lawful-good">Lawful-Good</option>
+                <option value="lawful-neutral">Lawful-Neutral</option>
+                <option value="lawful-evil">Lawful-Evil</option>
+                <option value="neutral-good">Neutral-Good</option>
+                <option value="neutral">Neutral</option>
+                <option value="neutral-evil">Neutral-Evil</option>
+                <option value="chaotic-good">Chaotic-Good</option>
+                <option value="chaotic-neutral">Chaotic-Neutral</option>
+                <option value="chaotic-evil">Chaotic-Evil</option>
               </Form.Select>
               <Container className='landingInfoBoxes'>
                 <Row>

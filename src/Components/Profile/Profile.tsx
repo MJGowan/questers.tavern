@@ -39,7 +39,7 @@ export default function Profile() {
   //const [location, setLocation] = useState('');
   //const [numFriends, setNumFriends] = useState('');
   // const [myCampaigns, setMyCampaigns] = useState([]);
-  // const [playing, setPlaying] = useState(0);
+  // const [playing, setPlaying] = useState([]);
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
 
   const [showProfile, setShowProfile] = useState(false);

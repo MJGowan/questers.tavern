@@ -20,8 +20,7 @@ export default function Navbar() {
     if(!checkToken()){
       setLoggedIn(false);
     }else {
-      userData = JSON.parse(sessionStorage.userData);
-      console.log(userData)
+      // userData = JSON.parse(sessionStorage.userData);
       setUsername(userData.username!);
       setUserImage(userData.userImage!);
       setLoggedIn(true);
