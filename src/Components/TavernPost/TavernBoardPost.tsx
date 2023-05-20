@@ -1,15 +1,69 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card} from "react-bootstrap";
 import './TavernBoardPost.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { GetCampaignByUserId } from "../../Services/DataService";
+
 
 export default function TavernBoardPost() {
+
+  const navigate = useNavigate();
+  
+
   const logo1 = require("../../Assets/tavernmen.jpg");
   const logo2 = require("../../Assets/hauntedHouse.png");
   const logo3 = require("../../Assets/image 7.png");
   const logo4 = require("../../Assets/image 17.png");
 
+  //  const [Id, setId] = useState("");
+   const [UserId, setUserId] = useState("");
+  const [Campaignname, setCampaignname] = useState<string>("");
+  const [Campaignimage, setCampaignimage] = useState(logo4);
+  const [Campaignimagetwo, setCampaignimagetwo] = useState(logo2);
+  const [Campaigndate, setCampaigndate] = useState<string>("");
+  const [Campaignlocation, setCampaignlocation] = useState<string>("");
+  const [Campaigndescription, setCampaigndescription] = useState<string>("");
+  const [Campaigndifficulty, setCampaigndifficulty] = useState<string>("");
+
+  // let campaignData: {
+  //   //  id?: number;
+  //    UserId?: number;
+  //   Campaignimage?: string;
+  //   Campaignimagetwo?: string;
+  //   Campaigndate?: string;
+  //   Campaignname?: string;
+  //   Campaignlocation?: string;
+  //   Campaigndescription?: string;
+  //   Campaigndifficulty?: string;
+  // } = {};
+
+  useEffect(() => {
+    
+    if(!GetCampaignByUserId){
+      navigate('/TavernBoard')
+    }else{
+      // Get Campaign data
+
+        const getCampaignData = async () => {
+          let campaignData = JSON.parse(
+            sessionStorage.getItem("campaignData") || "{}"
+          );
+          console.log(campaignData);
+
+          setCampaignname(campaignData.Campaignname);
+          setCampaigndate(campaignData.Campaigndate);
+          setCampaignlocation(campaignData.Campaignlocation);
+          setCampaignimage(campaignData.Campaignimage);
+          setCampaignimagetwo(campaignData.Campaignimagetwo);
+          // setId(campaignData.Id!);
+          setUserId(campaignData.UserId);
+          setCampaigndescription(campaignData.Campaigndescription);
+          setCampaigndifficulty(campaignData.Campaigndifficulty);
+        }
+     getCampaignData();
+    }
+  }, [])
   let navigate = useNavigate();
 
   return (
@@ -59,7 +113,7 @@ export default function TavernBoardPost() {
               border: "2px solid #FFA825",
             }}
           >
-            <img src={logo2} alt='logo' className='logo-image' />
+            <img src={Campaignimagetwo} alt='logo' className='logo-image' />
             <Card.Body>
               <Card.Title></Card.Title>
               <Card.Text
@@ -69,7 +123,7 @@ export default function TavernBoardPost() {
                   textAlign: "center",
                 }}
               >
-                The Haunted School House
+                {Campaignname}
               </Card.Text>
               <button
                 className='cardbutton'
@@ -84,7 +138,7 @@ export default function TavernBoardPost() {
                   color: "white",
                 }}
               >
-                 Create Campaigns
+                Create Campaigns
               </button>{" "}
             </Card.Body>
           </Card>
@@ -96,17 +150,21 @@ export default function TavernBoardPost() {
           <Card>
             <Card.Body className='card-description'>DESCRIPTION</Card.Body>
           </Card>
-          <h3 className='card-font-description'></h3>
+          <h3 className='card-font-description'>
+            {Campaigndescription}
+          </h3>
           <Card>
             <Card.Body className='card-description'>DIFFICULTY</Card.Body>
           </Card>
-          <h3 className='card-font-description'>Beginners Campaign</h3>
+          <h3 className='card-font-description'>{Campaigndifficulty}</h3>
           <Card>
             <Card.Body className='card-description'>LOCATION</Card.Body>
           </Card>
-          <h3 className='card-font-description'>
-            2721 Transworld Dr, Stockton CA 95206
-          </h3>
+          <h3 className='card-font-description'>{Campaignlocation}</h3>
+          <Card>
+            <Card.Body className='card-description'>DATE</Card.Body>
+          </Card>
+          <h3 className='card-font-description'>{Campaigndate}</h3>
           <Card>
             <Card.Body className='card-description'>PLAYERS</Card.Body>
           </Card>
@@ -114,8 +172,7 @@ export default function TavernBoardPost() {
             <li>RIng Bear</li>
             <li>Lord of the Swords</li>
             <li>Tremble at My Presence</li>
-            <li>Tremble at My Presence</li>
-            <li>Tremble at My Presence</li>
+            <li>FREDSTER</li>
           </ul>
         </Col>
         <Col style={{ paddingTop: "40px" }}>
@@ -127,7 +184,7 @@ export default function TavernBoardPost() {
               style={{ width: "90%", height: "auto" }}
             />
             <img
-              src={logo4}
+              src={Campaignimage}
               alt='logo'
               className='logo-image'
               style={{

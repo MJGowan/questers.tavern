@@ -27,16 +27,16 @@ let navigate = useNavigate();
    <Container fluid mx-0>
      <Row>
        <Col>
-         <div className='title-container1'>
-           <div className='image-container1'>
-             <img src={campaign} alt='logo' className='campaign-logo-image' />
+         <div className='FAQS-title-container1'>
+           <div className='FAQS-image-container1'>
+             <img src={campaign} alt='logo' />
              <div className='text-overlay'>
                <h1 className='text text-center'>The Tavern Board</h1>
              </div>
              <div className='button-container d-none d-md-block'>
                <div className='d-flex ml-auto'>
                  <button
-                   className='cardbutton'
+                   className='FAQcardbutton'
                    style={{
                      width: "95%",
                      marginLeft: "10px",
@@ -76,10 +76,11 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "23rem",
+             width: "300px", // Adjust the width to your desired size
              height: "600px",
              backgroundColor: "#302C2B",
              border: "2px solid #FFA825",
+             margin: "10px", // Add margin to create some spacing between the cards
            }}
          >
            <Card.Body>
@@ -105,7 +106,7 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "24rem",
+             width: "350px",
              height: "600px",
              backgroundColor: "#302C2B",
              borderRadius: "10px",
@@ -150,7 +151,8 @@ let navigate = useNavigate();
                }}
                onClick={() => {
                  setCharacter(
-                  "When creating a character we take into consideration this characters upbringing, outlook on life and experience adventuring. All of this comes into play during your time playing Dungeons & Dragons.The Create A Character screen will provide drop downs with options for each aspect of your character such as level, race and class. You will learn more about how these have an effect on your gameplay in the how to play section.");
+                   "When creating a character we take into consideration this characters upbringing, outlook on life and experience adventuring. All of this comes into play during your time playing Dungeons & Dragons.The Create A Character screen will provide drop downs with options for each aspect of your character such as level, race and class. You will learn more about how these have an effect on your gameplay in the how to play section."
+                 );
                  setInfo("");
                  setJoin("");
                  setPlays("");
@@ -172,7 +174,9 @@ let navigate = useNavigate();
                onClick={() => {
                  setCharacter("");
                  setInfo("");
-                 setJoin("tested");
+                 setJoin(
+                   "When joining a campaign, reflect on your experience and register accordingly. If you are new, perhaps you’d join the Beginner’s Campaigns. If you’ve got some experience under your belt you might go for the level 1-5, or 5-10 campaigns. They are ordered as follows: Beginner's Campaign, Level 1-5, Level 5-10 Campaign, Level 10-15 Campaign, Level 15-20 Campaign. As you gain experience and level up your character, you may be open to trying increasingly difficult campaigns."
+                 );
                  setPlays("");
                  setFqs("");
                }}
@@ -189,15 +193,18 @@ let navigate = useNavigate();
                  cursor: "pointer",
                }}
                onClick={() => {
-                  setCharacter("");
-                  setInfo("");
-                  setJoin("");
-                  setPlays("plays");
-                  setFqs("");
+                 setCharacter("");
+                 setInfo("");
+                 setJoin("");
+                 setPlays(
+                   "When joining a campaign, some may specify a place to meet in person. The location will always be a public setting ranging anywhere from a park, Card Shops, Hobby Shops or Community Centers! This gives you a chance to get the in person table top roleplay game experience. You MUST NOT use a home, or private address to host campaigns by any means. The location must always be a public setting for your own safety and the safety of others. Otherwise the game shall be hosted online via video call services such as Zoom or Discord."
+                 );
+                 setFqs("");
                }}
              >
-               REQUIREMENTS TO PLAY
+               IN PERSON GAMES
              </Card.Title>
+
              <Card.Title
                style={{
                  color: "#D9D9D9",
@@ -209,11 +216,12 @@ let navigate = useNavigate();
                }}
                onClick={() => {
                  setFqs(
-                   "Looking to spark your imagination while having fun with friends? Dungeons & Dragons is a collaborative roleplaying game for players of all ages. Gather your friends to vanquish mighty monsters, embark on epic quests, and tell legendary stories filled with fantasy and fun.");
-                   setCharacter("");
-                   setInfo("");
-                   setJoin("");
-                   setPlays("");
+                   "If you have any further questions about using Quester’s Tavern, you can contact us as questerstavern@gmail.com."
+                 );
+                 setCharacter("");
+                 setInfo("");
+                 setJoin("");
+                 setPlays("");
                }}
              >
                FURTHER QUESTIONS
@@ -224,7 +232,7 @@ let navigate = useNavigate();
        <Col>
          <Card
            style={{
-             width: "22rem",
+             width: "350px",
              height: "600px",
              backgroundColor: "#302C2B",
              borderRadius: "10px",
