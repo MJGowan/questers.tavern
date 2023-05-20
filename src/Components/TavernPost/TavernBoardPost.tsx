@@ -1,15 +1,12 @@
 import React from "react";
-import { Container, Row, Col, Card} from "react-bootstrap";
-import './TavernBoardPost.css';
+import { Container, Row, Col, Card } from "react-bootstrap";
+import "./TavernBoardPost.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { GetCampaignByUserId } from "../../Services/DataService";
 
-
 export default function TavernBoardPost() {
-
   const navigate = useNavigate();
-  
 
   const logo1 = require("../../Assets/tavernmen.jpg");
   const logo2 = require("../../Assets/hauntedHouse.png");
@@ -17,7 +14,7 @@ export default function TavernBoardPost() {
   const logo4 = require("../../Assets/image 17.png");
 
   //  const [Id, setId] = useState("");
-   const [UserId, setUserId] = useState("");
+  const [UserId, setUserId] = useState("");
   const [Campaignname, setCampaignname] = useState<string>("");
   const [Campaignimage, setCampaignimage] = useState(logo4);
   const [Campaignimagetwo, setCampaignimagetwo] = useState(logo2);
@@ -39,33 +36,30 @@ export default function TavernBoardPost() {
   // } = {};
 
   useEffect(() => {
-    
-    if(!GetCampaignByUserId){
-      navigate('/TavernBoard')
-    }else{
+    if (!GetCampaignByUserId) {
+      navigate("/TavernBoard");
+    } else {
       // Get Campaign data
 
-        const getCampaignData = async () => {
-          let campaignData = JSON.parse(
-            sessionStorage.getItem("campaignData") || "{}"
-          );
-          console.log(campaignData);
+      const getCampaignData = async () => {
+        let campaignData: {campaignname?: string, campaigndate?: string, campaigndescription?: string,campaigndifficulty?: string, campaignimage?: string, campaignimagetwo?: string, campaignlocation?: string} = JSON.parse(
+          sessionStorage.getItem("campaignData") || "{}"
+        );
+        console.log(campaignData);
 
-          setCampaignname(campaignData.Campaignname);
-          setCampaigndate(campaignData.Campaigndate);
-          setCampaignlocation(campaignData.Campaignlocation);
-          setCampaignimage(campaignData.Campaignimage);
-          setCampaignimagetwo(campaignData.Campaignimagetwo);
-          // setId(campaignData.Id!);
-          setUserId(campaignData.UserId);
-          setCampaigndescription(campaignData.Campaigndescription);
-          setCampaigndifficulty(campaignData.Campaigndifficulty);
-        }
-     getCampaignData();
+        setCampaignname(campaignData.campaignname!);
+        setCampaigndate(campaignData.campaigndate!);
+        setCampaignlocation(campaignData.campaignlocation!);
+        setCampaignimage(campaignData.campaignimage!);
+        setCampaignimagetwo(campaignData.campaignimagetwo!);
+        // setUserId(campaignData.UserId);
+        setCampaigndescription(campaignData.campaigndescription!);
+        setCampaigndifficulty(campaignData.campaigndifficulty!);
+      };
+      getCampaignData();
     }
-  }, [])
+  }, []);
 
-  
   return (
     <Container fluid mx-0>
       <Row>
@@ -149,9 +143,7 @@ export default function TavernBoardPost() {
           <Card>
             <Card.Body className='card-description'>DESCRIPTION</Card.Body>
           </Card>
-          <h3 className='card-font-description'>
-            {Campaigndescription}
-          </h3>
+          <h3 className='card-font-description'>{Campaigndescription}</h3>
           <Card>
             <Card.Body className='card-description'>DIFFICULTY</Card.Body>
           </Card>
