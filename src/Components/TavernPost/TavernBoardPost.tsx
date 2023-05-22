@@ -156,7 +156,7 @@ export default function TavernBoardPost() {
             <Card.Body className='card-description'>DATE</Card.Body>
           </Card>
           <h3 className='card-font-description'>{Campaigndate}</h3>
-          <Card>
+          {/* <Card>
             <Card.Body className='card-description'>PLAYERS</Card.Body>
           </Card>
           <ul className='card-font-description'>
@@ -164,7 +164,7 @@ export default function TavernBoardPost() {
             <li>Lord of the Swords</li>
             <li>Tremble at My Presence</li>
             <li>FREDSTER</li>
-          </ul>
+          </ul> */}
         </Col>
         <Col style={{ paddingTop: "40px" }}>
           <div style={{ position: "relative" }}>
