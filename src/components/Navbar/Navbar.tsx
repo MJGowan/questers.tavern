@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Button, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { checkToken } from '../../Services/DataService';
@@ -17,9 +17,9 @@ export default function Navbar() {
   let userData: any = {};
   useEffect(() => {
 
-    if(!checkToken()){
+    if (!checkToken()) {
       setLoggedIn(false);
-    }else {
+    } else {
       userData = JSON.parse(sessionStorage.userData);
       setUsername(userData.username!);
       setUserImage(userData.userImage!);
@@ -40,60 +40,63 @@ export default function Navbar() {
   }, [])
 
   const [show, setShow] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleCloseOffcanvas = () => setShowOffcanvas(false);
+  const handleShowOffcanvas = () => setShowOffcanvas(true);
 
   // use props to display username and profile pic when people are logged in
   return (
     <Container fluid>
       <Row className='navbarBg'>
 
-      {
-        isHamburger === 'hamburger' ? (
-          <div>
-            
+        {
+          isHamburger === 'hamburger' ? (
+            <div>
+
               <Col className='col-6'>
-                <img src={logo} className='navLogoImg'/>
+                <img src={logo} className='navLogoImg' />
               </Col>
               <Col className='d-flex justify-content-end'>
-              <MenuIcon fontSize="large" className='navMenuIcon' />
+                <MenuIcon fontSize="large" className='navMenuIcon' onClick={handleShowOffcanvas} />
 
               </Col>
-            
-          </div>
-        ) : (
-          <div>
+
+            </div>
+          ) : (
+            <div>
               <Col>
                 <Link to="/">
                   <img src={logo} />
                 </Link>
-                  <div className='d-flex justify-content-end doubleFont'>
-                <Link to='/TavernBoard' className='navItems'>
-                  Campaigns
-                </Link>
-                <Link to='/FAQs' className='navItems'>
-                  FAQs
-                </Link>
-                <Link to="" onClick={handleShow} className='navItems'>
-                  D&D Website
-                </Link>
-                {
-                  LoggedIn ? (
-                    <div className='navUserInfo'>
-                      <img src={UserImage} className='navProfPic'/>
-                      <Link to='/Profile' className='navItems navUserInfo'>{Username}</Link>
-                    </div>
-                  ) : (
-                    <Link to='/Login' className='navItems navUserInfo'>Sign Up/Login</Link>
-                  )
-                }
-                  </div>
+                <div className='d-flex justify-content-end doubleFont'>
+                  <Link to='/TavernBoard' className='navItems'>
+                    Campaigns
+                  </Link>
+                  <Link to='/FAQs' className='navItems'>
+                    FAQs
+                  </Link>
+                  <Link to="" onClick={handleShow} className='navItems'>
+                    D&D Website
+                  </Link>
+                  {
+                    LoggedIn ? (
+                      <div className='navUserInfo'>
+                        <img src={UserImage} className='navProfPic' />
+                        <Link to='/Profile' className='navItems navUserInfo'>{Username}</Link>
+                      </div>
+                    ) : (
+                      <Link to='/Login' className='navItems navUserInfo'>Sign Up/Login</Link>
+                    )
+                  }
+                </div>
               </Col>
-          </div >
-        )
-      }
+            </div >
+          )
+        }
       </Row>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -109,6 +112,47 @@ export default function Navbar() {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Offcanvas show={showOffcanvas} onHide={handleCloseOffcanvas} placement='end'>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Container>
+            <Row>
+              <Col>
+                <Row className='mt-5 mb-5'>
+                  <Link to='/TavernBoard' className='navItems'>
+                    Campaigns
+                  </Link>
+                </Row>
+                <Row className='mb-5'>
+                  <Link to='/FAQs' className='navItems'>
+                    FAQs
+                  </Link>
+                </Row>
+                <Row className='mb-5'>
+                  <Link to="" onClick={handleShow} className='navItems'>
+                    D&D Website
+                  </Link>
+                </Row>
+                <Row className='mb-5'>
+                {
+                  LoggedIn ? (
+                    <div className='navUserInfo'>
+                      <img src={UserImage} className='navProfPic' />
+                      <Link to='/Profile' className='navItems navUserInfo'>{Username}</Link>
+                    </div>
+                  ) : (
+                    <Link to='/Login' className='navItems navUserInfo'>Sign Up/Login</Link>
+                  )
+                }
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </Offcanvas.Body>
+      </Offcanvas>
     </Container >
   )
 }
