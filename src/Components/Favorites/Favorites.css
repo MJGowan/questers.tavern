@@ -161,14 +161,14 @@ font-family: 'IM Fell DW Pica', serif;
 }
 /* ------------------Join Campaign css-------------------- */
 
-.title-container1{
+.favorties-title-container1{
   position: relative;
   width: 100%;
   height: 120px;
   overflow: hidden;
   padding-inline-end: 40px;
 }
-.image-container1{
+.favorties-image-container1{
   position: relative;
   width: 100%;
   height: 100%;
@@ -230,7 +230,7 @@ font-family: 'IM Fell DW Pica', serif;
 
 
 /* -----------FAVORITES BELOW--------------------- */
-.text-overlay1{
+.favorites-text-overlay1{
   position: absolute;
   top: 40%;
   left: 33%;

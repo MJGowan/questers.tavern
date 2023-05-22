@@ -27,10 +27,10 @@ export default function FavoritesList() {
     <Container fluid mx-0>
       <Row>
         <Col>
-          <div className='title-container1'>
-            <div className='image-container1'>
+          <div className='favorties-title-container1'>
+            <div className='favorties-image-container1'>
               <img src={tavernmen} alt='logo' className='logo-image' />
-              <div className='text-overlay1'>
+              <div className='favorites-text-overlay1'>
                 <h3 className='text text-right'>
                   Welcome To The Tavern, {username}!
                 </h3>
