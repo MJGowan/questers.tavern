@@ -58,7 +58,9 @@ export default function Navbar() {
             <div>
 
               <Col className='col-6'>
-                <img src={logo} className='navLogoImg' />
+              <Link to="/">
+                  <img src={logo} className='navLogoImg'/>
+                </Link>
               </Col>
               <Col className='d-flex justify-content-end'>
                 <MenuIcon fontSize="large" className='navMenuIcon' onClick={handleShowOffcanvas} />
@@ -115,7 +117,7 @@ export default function Navbar() {
 
       <Offcanvas show={showOffcanvas} onHide={handleCloseOffcanvas} placement='end'>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Container>
