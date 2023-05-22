@@ -17,7 +17,7 @@ export default function Navbar() {
   let userData: any = {};
   useEffect(() => {
 
-    if(checkToken()){
+    if(!checkToken()){
       setLoggedIn(false);
     }else {
       userData = JSON.parse(sessionStorage.userData);

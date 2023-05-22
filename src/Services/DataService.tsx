@@ -132,9 +132,6 @@ async function CharacterAlignment(Alignment: string){
 }
 
 
-export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterRace, CharacterClass, CharacterBackground, CharacterAlignment, CreateCharacterBe, CreateCampaignBe, GetCampaigns, GetCampaignByUserId, AddFavorites}
-
-
 // Campaign API Fetches
 
 async function CreateCampaignBe(newCampaign: object) {
@@ -144,11 +141,11 @@ async function CreateCampaignBe(newCampaign: object) {
           'Content-Type': "application/json"
       },
       body: JSON.stringify(newCampaign)
-  });
-  if (!result.ok) {
-      alert('Could not create campaign. Make sure all fields are completed')
-      const message = `An Error has Occured ${result.status}`;
-      throw new Error(message);
+    });
+    if (!result.ok) {
+        alert('Could not create campaign. Make sure all fields are completed')
+        const message = `An Error has Occured ${result.status}`;
+        throw new Error(message);
   }
   let data = await result.json();
   console.log(data);
@@ -181,3 +178,5 @@ async function AddFavorites(){
     return favoritesData;
 }
 
+
+export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterRace, CharacterClass, CharacterBackground, CharacterAlignment, CreateCharacterBe, CreateCampaignBe, GetCampaigns, GetCampaignByUserId, AddFavorites}
