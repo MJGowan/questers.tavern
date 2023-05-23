@@ -17,7 +17,7 @@ let navigate = useNavigate();
              {/*<img src={logo} alt='logo' className='logo-image' />*/}
              <div className='text-overlay'>
                <h1 className='text text-center'>
-                 <span className='title-text'>The Tavern Board</span>
+                 The Tavern Board
                </h1>
              </div>
              <div className='button-container d-none d-md-block'>
@@ -66,7 +66,7 @@ let navigate = useNavigate();
                      backgroundColor: "#4A423F",
                      color: "white",
                    }}
-                   onClick={() => navigate(-1)}
+                   onClick={() => navigate("/Profile")}
                  >
                    BACK
                  </button>

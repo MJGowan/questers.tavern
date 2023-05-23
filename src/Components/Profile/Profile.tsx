@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -35,6 +35,9 @@ export default function Profile() {
   const location = "Stockton, CA";
   const numFriends = 0;
 
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentState, setCurrentState] = useState('');
+
   
   //const [location, setLocation] = useState('');
   //const [numFriends, setNumFriends] = useState('');
@@ -55,6 +58,23 @@ export default function Profile() {
   const changeMode = () => {
     setMode(prevMode => prevMode === "Adventurer" ? "Dungeon Master" : "Adventurer");
   }
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setUsername(e.target.value);
+  }
+
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setUserImage(e.target.value);
+  }
+
+  const handleDndexperienceChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setDndexperience(e.target.value);
+  }
+
+
 
   return (
     <div className='profile'>
@@ -187,19 +207,19 @@ export default function Profile() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Edit Profile</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
           <Form>
             <Form.Group className="mb-3" controlId="changeUsername">
               <Form.Label>Username:</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" onChange={handleNameChange}></Form.Control>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="changePassword">
-              <Form.Label>Change Password:</Form.Label>
-              <Form.Control type="password" />
+            <Form.Group className="mb-3" controlId="changeImage">
+              <Form.Label>Change User Image:</Form.Label>
+              <Form.Control type="file" onChange={handleImageChange}></Form.Control>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="changeLocation">
@@ -208,14 +228,9 @@ export default function Profile() {
             </Form.Group>
           </Form>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" controlId='changeDndexperience'>
             <Form.Label>D&D Experience:</Form.Label>
-            <Form.Select>
-              <option>Has Not Played</option>
-              <option>New</option>
-              <option>Experienced</option>
-              <option>Grand Master</option>
-            </Form.Select>
+            <Form.Control type="text" onChange={handleDndexperienceChange}></Form.Control>
           </Form.Group>
 
         </Modal.Body>
@@ -239,33 +254,54 @@ export default function Profile() {
 
           <Form>
             <Form.Group className="mb-3" controlId="Title">
-              <Form.Label>Title:</Form.Label>
+              <Form.Label>Campaign Title:</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Campaign Status:</Form.Label>
+              <Form.Select>
+                <option>In Development</option>
+                <option>Accepting New Players</option>
+                <option>Full</option>
+                <option>Completed</option>
+              </Form.Select>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="Title">
+              <Form.Label>Campaign Date:</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="Location">
               <Form.Label>Location:</Form.Label>
-              <Form.Control type="password" />
+              <Form.Control type="text" />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>D&D Experience:</Form.Label>
+              <Form.Label>Campaign Difficulty:</Form.Label>
               <Form.Select>
-                <option>Beginner-Friendly</option>
-                <option>New Players</option>
-                <option>Experienced Players</option>
-                <option>Grand Masters Only</option>
+                <option>Beginner Campaign</option>
+                <option>Level 1-5</option>
+                <option>Level 5-10</option>
+                <option>Level 10-15</option>
+                <option>Level 15-20</option>
               </Form.Select>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="changeLocation">
-              <Form.Label>Description:</Form.Label>
+              <Form.Label>Campaign Description:</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
 
             {/* Add ability to see image later */}
             <Form.Group controlId="formFile" className="mb-3">
               <Form.Label>Campaign Image:</Form.Label>
+              <Form.Control type="file" />
+            </Form.Group>
+
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Campaign Image 2:</Form.Label>
               <Form.Control type="file" />
             </Form.Group>
           </Form>
