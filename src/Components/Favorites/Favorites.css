@@ -77,7 +77,7 @@ body {
   color: #D9D9D9;
   text-align: left;
 }
-.text1 {
+.favorites-text1 {
   font-family: 'IM Fell Double Pica SC', serif; 
   font-size: 20px;
   font-weight: bold;
@@ -270,5 +270,42 @@ font-family: 'IM Fell DW Pica', serif;
   border-radius: 60%
 }
 
+.favorites-cardbutton{
+  width: 95%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #4A423F;
+  color: white;
+}
+.favorites-cardButton1{
+  width: 100%;
+  margin: 1px;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #4A423F;
+  color: white;
+}
+.favorites-CenterMainCard{
+width: 39rem;
+height: 570px;
+margin-top: 30px;
+margin-right: 50px;
+margin-left: 30px;
+background-color: #4A423F;
+border: 2px solid #FFA825;
+}
+.favorites-SearchButton {
+width: 40%;
+margin-left: 10px;
+border-radius: 10px;
+height: 50px;
+padding: 10px 20px;
+background-color: #4A423F;
+color: white;
+}
 
 /* ------------------------------------------ */

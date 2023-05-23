@@ -34,22 +34,12 @@ export default function FavoritesList() {
                 <h3 className='text text-right'>
                   Welcome To The Tavern, {username}!
                 </h3>
-                <h4 className='text1'>Favorite List</h4>
+                <h4 className='favorites-text1'>Favorite List</h4>
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
                   <button
-                    className='cardbutton'
-                    style={{
-                      width: "95%",
-                      marginLeft: "10px",
-                      marginRight: "10px",
-                      borderRadius: "10px",
-                      height: "50px",
-                      padding: "10px 20px",
-                      backgroundColor: "#4A423F",
-                      color: "white",
-                    }}
+                    className='favorites-cardbutton'
                     onClick={() => navigate(-1)}
                   >
                     BACK
@@ -98,44 +88,14 @@ export default function FavoritesList() {
         </Col>
         <Col className='card-container' style={{ marginLeft: "-30px" }}>
           {" "}
-          {/* <Card>
-            <Card.Header as='h5'>
-              <input></input>
-              <button className='button33'>SEARCH</button>
-            </Card.Header>
-            <Card.Body></Card.Body>
-          </Card> */}
-          <Card
-            className='card'
-            style={{
-              width: "39rem",
-              height: "570px",
-              marginTop: "30px",
-              marginRight: "50px",
-              marginLeft: "30px",
-              backgroundColor: "#4A423F",
-              border: "2px solid #FFA825",
-            }}
-          >
+          <Card className='favorites-CenterMainCard'>
             <Card.Header>
               <input
                 type='text'
                 style={{ width: "50%", borderRadius: "10px", height: "50px" }}
                 placeholder='Search By UserName'
               ></input>
-              <button
-                style={{
-                  width: "40%",
-                  marginLeft: "10px",
-                  borderRadius: "10px",
-                  height: "50px",
-                  padding: "10px 20px",
-                  backgroundColor: "#4A423F",
-                  color: "white",
-                }}
-              >
-                Search
-              </button>
+              <button className='favorites-SearchButton'>Search</button>
             </Card.Header>
 
             <Card.Body>
@@ -179,35 +139,10 @@ export default function FavoritesList() {
                       <Card.Text>Campaigns:</Card.Text>
                     </Card.Title>
 
-                    <button
-                      className='cardButton'
-                      style={{
-                        width: "100%",
-                        margin: "1px",
-                        borderRadius: "10px",
-                        height: "50px",
-                        padding: "10px 20px",
-                        backgroundColor: "#4A423F",
-                        color: "white",
-                      }}
-                    >
+                    <button className='favorites-cardButton1'>
                       Add to Favorites
                     </button>
-                    <button
-                      className='cardButton'
-                      style={{
-                        width: "90%",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                        borderRadius: "10px",
-                        height: "50px",
-                        padding: "10px 20px",
-                        backgroundColor: "#4A423F",
-                        color: "white",
-                      }}
-                    >
-                      Remove
-                    </button>
+                    <button className='favorites-cardButton1'>Remove</button>
                   </Card.Body>
                 </Card>
               </div>

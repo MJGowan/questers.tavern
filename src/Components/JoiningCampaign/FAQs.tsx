@@ -35,20 +35,7 @@ let navigate = useNavigate();
              </div>
              <div className='button-container d-none d-md-block'>
                <div className='d-flex ml-auto'>
-                 <button
-                   className='FAQcardbutton'
-                   style={{
-                     width: "95%",
-                     marginLeft: "10px",
-                     marginRight: "10px",
-                     borderRadius: "10px",
-                     height: "50px",
-                     padding: "10px 20px",
-                     backgroundColor: "#4A423F",
-                     color: "white",
-                   }}
-                   onClick={() => navigate(-1)}
-                 >
+                 <button className='FAQcardbutton' onClick={() => navigate(-1)}>
                    BACK
                  </button>
                </div>
@@ -74,15 +61,7 @@ let navigate = useNavigate();
      </Row>
      <Row>
        <Col>
-         <Card
-           style={{
-             width: "300px", // Adjust the width to your desired size
-             height: "600px",
-             backgroundColor: "#302C2B",
-             border: "2px solid #FFA825",
-             margin: "10px", // Add margin to create some spacing between the cards
-           }}
-         >
+         <Card className='FAQleftCard'>
            <Card.Body>
              <Card.Title
                style={{ color: "#D6BA73", textAlign: "center" }}
@@ -104,25 +83,10 @@ let navigate = useNavigate();
          </Card>
        </Col>
        <Col>
-         <Card
-           style={{
-             width: "350px",
-             height: "600px",
-             backgroundColor: "#302C2B",
-             borderRadius: "10px",
-             border: "2px solid #FFA825",
-           }}
-         >
+         <Card className='FAQmiddleCard'>
            <Card.Body>
              <Card.Title
-               style={{
-                 color: "#D9D9D9",
-                 fontSize: "24px",
-                 border: "2px solid #FFA825",
-                 textAlign: "center",
-                 padding: "10px",
-                 cursor: "pointer",
-               }}
+               className='FAQmiddleCardFonts'
                onClick={() => {
                  setInfo(
                    "Playing Dungeons & Dragons comes down to Actions. Dice Rolls and your character Stats. " +
@@ -141,14 +105,7 @@ let navigate = useNavigate();
                HOW TO PLAY
              </Card.Title>
              <Card.Title
-               style={{
-                 color: "#D9D9D9",
-                 fontSize: "24px",
-                 border: "2px solid #FFA825",
-                 textAlign: "center",
-                 padding: "10px",
-                 cursor: "pointer",
-               }}
+               className='FAQmiddleCardFonts'
                onClick={() => {
                  setCharacter(
                    "When creating a character we take into consideration this characters upbringing, outlook on life and experience adventuring. All of this comes into play during your time playing Dungeons & Dragons.The Create A Character screen will provide drop downs with options for each aspect of your character such as level, race and class. You will learn more about how these have an effect on your gameplay in the how to play section."
@@ -163,14 +120,7 @@ let navigate = useNavigate();
              </Card.Title>
 
              <Card.Title
-               style={{
-                 color: "#D9D9D9",
-                 fontSize: "24px",
-                 border: "2px solid #FFA825",
-                 textAlign: "center",
-                 padding: "10px",
-                 cursor: "pointer",
-               }}
+               className='FAQmiddleCardFonts'
                onClick={() => {
                  setCharacter("");
                  setInfo("");
@@ -184,14 +134,7 @@ let navigate = useNavigate();
                JOINING A CAMPAIGN
              </Card.Title>
              <Card.Title
-               style={{
-                 color: "#D9D9D9",
-                 fontSize: "24px",
-                 border: "2px solid #FFA825",
-                 textAlign: "center",
-                 padding: "10px",
-                 cursor: "pointer",
-               }}
+               className='FAQmiddleCardFonts'
                onClick={() => {
                  setCharacter("");
                  setInfo("");
@@ -206,14 +149,7 @@ let navigate = useNavigate();
              </Card.Title>
 
              <Card.Title
-               style={{
-                 color: "#D9D9D9",
-                 fontSize: "24px",
-                 border: "2px solid #FFA825",
-                 textAlign: "center",
-                 padding: "10px",
-                 cursor: "pointer",
-               }}
+               className='FAQmiddleCardFonts'
                onClick={() => {
                  setFqs(
                    "If you have any further questions about using Quester’s Tavern, you can contact us as questerstavern@gmail.com."
@@ -230,16 +166,7 @@ let navigate = useNavigate();
          </Card>
        </Col>
        <Col>
-         <Card
-           style={{
-             width: "350px",
-             height: "600px",
-             backgroundColor: "#302C2B",
-             borderRadius: "10px",
-             border: "2px solid #FFA825",
-             cursor: "pointer",
-           }}
-         >
+         <Card className='FAQrightCard'>
            <Card.Body>
              <Card.Title style={{ color: "#D6BA73", textAlign: "center" }}>
                {info}
