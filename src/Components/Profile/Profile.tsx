@@ -35,9 +35,6 @@ export default function Profile() {
   const location = "Stockton, CA";
   const numFriends = 0;
 
-  const [isEditing, setIsEditing] = useState(false);
-  const [currentState, setCurrentState] = useState('');
-
   
   //const [location, setLocation] = useState('');
   //const [numFriends, setNumFriends] = useState('');
@@ -74,7 +71,10 @@ export default function Profile() {
     setDndexperience(e.target.value);
   }
 
-
+  const handleDateCreated = (e: ChangeEvent<HTMLInputElement>) =>
+  {
+    setDateCreated(e.target.value);
+  }
 
   return (
     <div className='profile'>
@@ -223,10 +223,16 @@ export default function Profile() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="changeLocation">
-              <Form.Label>Located In:</Form.Label>
-              <Form.Control type="text" />
+              <Form.Label>Date Created:</Form.Label>
+              <Form.Control type="text" onChange={handleDateCreated}></Form.Control>
             </Form.Group>
           </Form>
+
+          <Form.Group className="mb-3" controlId="changeLocation">
+              <Form.Label>Located In:</Form.Label>
+              <Form.Control type="text" onChange={handleDateCreated}></Form.Control>
+            </Form.Group>
+          
 
           <Form.Group className="mb-3" controlId='changeDndexperience'>
             <Form.Label>D&D Experience:</Form.Label>
@@ -235,7 +241,7 @@ export default function Profile() {
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary">Submit</Button>
+          <Button variant="primary">Update</Button>
         </Modal.Footer>
       </Modal>
 
