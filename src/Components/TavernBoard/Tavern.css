@@ -3,13 +3,23 @@ body {
     background-color: #4A423F !important;
   }
   
-  .title-container {
+  .TB-title-container {
     position: relative;
     width: 100%;
     height: 100px;
     overflow: hidden;
       margin-top: -10px;
 
+  }
+  .TB-3-Buttons {
+  width: 95%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #4A423F;
+  color: white;
   }
   
   .image-container1{
@@ -251,6 +261,28 @@ body {
   /* ----------------TABLE TAVERN BELOW-------------------- */
   /* ----------------TABLE TAVERN BELOW-------------------- */
 
+.tableButtonMoreInfo {
+  width: 95%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #4A423F;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tableButtonMoreInfo1 {
+display: inline-block;
+max-width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-decoration: none;
+color: #D6BA73;
+}
 
  .table-banner {
   position: relative;
@@ -259,9 +291,7 @@ body {
   overflow: hidden;
 }
 
-.image-banner {
 
-}
 
 .image-banner img {
   width: 127.5%;

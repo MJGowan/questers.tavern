@@ -29,3 +29,21 @@
   width: 100%;
   height: 100%;
 }
+.CreateCampaign-backButton {
+width: 95%;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 10px;
+height: 50px;
+padding: 10px 20px;
+background-color: #4A423F;
+color: white
+}
+.CampaignButton {
+width: 140px;
+border-radius: 10%; 
+height: 70px;
+background-color: #4A423F;
+color: white;
+font-size: 13px;  
+}

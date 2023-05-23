@@ -87,21 +87,7 @@ return (
             </div>
             <div className='button-container d-none d-md-block'>
               <div className='d-flex ml-auto'>
-                <button
-                  className='cardbutton'
-                  style={{
-                    width: "95%",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                    borderRadius: "10px",
-                    height: "50px",
-                    padding: "10px 20px",
-                    backgroundColor: "#4A423F",
-                    color: "white",
-                  }}
-                >
-                  BACK
-                </button>{" "}
+                <button className='CreateCampaign-backButton'>BACK</button>{" "}
               </div>
             </div>
           </div>
@@ -236,18 +222,7 @@ return (
           marginTop: "20px",
         }}
       >
-        <button
-          onClick={handleSubmit}
-          className='cardbutton'
-          style={{
-            width: "140px", // Adjust the width to your desired size
-            borderRadius: "10%", // Make the button round by setting border-radius to 50%
-            height: "70px", // Adjust the height to your desired size
-            backgroundColor: "#4A423F",
-            color: "white",
-            fontSize: "13px", // Adjust the font size to your desired size
-          }}
-        >
+        <button onClick={handleSubmit} className='CampaignButton'>
           CREATE CAMPAIGN
         </button>{" "}
       </Row>

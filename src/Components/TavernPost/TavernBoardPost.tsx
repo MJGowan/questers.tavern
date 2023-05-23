@@ -64,29 +64,15 @@ export default function TavernBoardPost() {
     <Container fluid mx-0>
       <Row>
         <Col>
-          <div className='title-container1'>
-            <div className='image-container1'>
+          <div className='TBP-title-container1'>
+            <div className='TBP-image-container1'>
               <img src={logo1} alt='logo' className='logo-image' />
               <div className='text-overlay'>
                 <h1 className='text text-center'>The Tavern Board</h1>
               </div>
               <div className='button-container d-none d-md-block'>
                 <div className='d-flex ml-auto'>
-                  <button
-                    className='cardbutton'
-                    style={{
-                      width: "95%",
-                      marginLeft: "10px",
-                      marginRight: "10px",
-                      borderRadius: "10px",
-                      height: "50px",
-                      padding: "10px 20px",
-                      backgroundColor: "#4A423F",
-                      color: "white",
-                    }}
-                  >
-                    BACK
-                  </button>{" "}
+                  <button className='TBP-back-button'>BACK</button>{" "}
                 </div>
               </div>
             </div>
@@ -95,17 +81,7 @@ export default function TavernBoardPost() {
       </Row>
       <Row>
         <Col className='card-container'>
-          <Card
-            className='card'
-            style={{
-              width: "18rem",
-              height: "530px",
-              marginTop: "40px",
-              marginLeft: "30px",
-              backgroundColor: "#4A423F",
-              border: "2px solid #FFA825",
-            }}
-          >
+          <Card className='TBP-cardLeft'>
             <img src={Campaignimagetwo} alt='logo' className='logo-image' />
             <Card.Body>
               <Card.Title></Card.Title>
@@ -118,21 +94,7 @@ export default function TavernBoardPost() {
               >
                 {Campaignname}
               </Card.Text>
-              <button
-                className='cardbutton'
-                style={{
-                  width: "75%",
-                  marginLeft: "40px",
-                  marginRight: "10px",
-                  borderRadius: "10px",
-                  height: "50px",
-                  padding: "10px 20px",
-                  backgroundColor: "#4A423F",
-                  color: "white",
-                }}
-              >
-                Create Campaigns
-              </button>{" "}
+              <button className='TBP-cardLeftButton'>Create Campaigns</button>{" "}
             </Card.Body>
           </Card>
         </Col>
@@ -174,19 +136,7 @@ export default function TavernBoardPost() {
               className='logo-image'
               style={{ width: "90%", height: "auto" }}
             />
-            <img
-              src={Campaignimage}
-              alt='logo'
-              className='logo-image'
-              style={{
-                width: "50%",
-                height: "auto",
-                position: "absolute",
-                top: "40%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-              }}
-            />
+            <img src={Campaignimage} alt='logo' className='TBP-scrollImage' />
           </div>
         </Col>
       </Row>

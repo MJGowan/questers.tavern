@@ -103,32 +103,12 @@ export default function TableTavern() {
                   <td className='col-sm-12'>
                     {isButtonVisible && (
                       <button
-                        style={{
-                          width: "95%",
-                          marginLeft: "10px",
-                          marginRight: "10px",
-                          borderRadius: "10px",
-                          height: "50px",
-                          padding: "10px 20px",
-                          backgroundColor: "#4A423F",
-                          color: "white",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                        onClick={() =>  handleButtonClick(campaign)}
+                        className='tableButtonMoreInfo'
+                        onClick={() => handleButtonClick(campaign)}
                       >
                         <Link
                           to='/TavernBoardPost'
-                          style={{
-                            display: "inline-block",
-                            maxWidth: "100%",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textDecoration: "none",
-                            color: "#D6BA73",
-                          }}
+                          className='tableButtonMoreInfo1'
                         >
                           More Info
                         </Link>
