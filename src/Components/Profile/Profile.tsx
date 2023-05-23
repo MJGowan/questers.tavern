@@ -4,6 +4,7 @@ import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
 import { checkToken } from '../../Services/DataService';
+import { UpdateUser } from '../../Services/DataService';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
@@ -30,6 +31,7 @@ export default function Profile() {
      getUserData();
     }
   }, [])
+
 
   const heroImg = require('../../Assets/Rectangle 33.png');
   const location = "Stockton, CA";
@@ -75,6 +77,28 @@ export default function Profile() {
   {
     setDateCreated(e.target.value);
   }
+
+  const handleSubmit = async () => {
+    if (!Username || !DateCreated || !Dndexperience || !UserImage) {
+        alert("Could not create account, missing information.");
+    } else {
+        let userData: object = {
+            Id: 0,
+            Username,
+            DateCreated,
+            Dndexperience,
+            UserImage
+        }
+        let updateUserData = await UpdateUser();
+        if (updateUserData) {
+            alert("Account was successfully updated.");
+        } else {
+            alert("Could not update account.");
+        }
+        console.log(userData);
+      }
+        
+      }
 
   return (
     <div className='profile'>
@@ -241,7 +265,7 @@ export default function Profile() {
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary">Update</Button>
+          <Button variant="primary" onClick={handleSubmit}>Update</Button>
         </Modal.Footer>
       </Modal>
 
