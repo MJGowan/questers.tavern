@@ -180,3 +180,4 @@ async function AddFavorites(){
 
 
 export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterRace, CharacterClass, CharacterBackground, CharacterAlignment, CreateCharacterBe, CreateCampaignBe, GetCampaigns, GetCampaignByUserId, AddFavorites}
+

@@ -7,11 +7,11 @@ import './FAQs.css';
 export default function FAQs(){
   //declaring a new state variable 
 
-  const [info, setInfo] = useState("Initial content");
-  const [character, setCharacter] = useState("content")
-  const [join, setJoin] = useState("content");
-  const [plays, setPlays] = useState("content");
-  const [fqs, setFqs] = useState("content");
+  const [info, setInfo] = useState("--");
+  const [character, setCharacter] = useState("--")
+  const [join, setJoin] = useState("--");
+  const [plays, setPlays] = useState("--");
+  const [fqs, setFqs] = useState("--");
 
   
 
@@ -64,7 +64,11 @@ let navigate = useNavigate();
          <Card className='FAQleftCard'>
            <Card.Body>
              <Card.Title
-               style={{ color: "#D6BA73", textAlign: "center" }}
+               style={{
+                 color: "#D6BA73",
+                 textAlign: "center",
+                 fontFamily: "IM Fell DW Pica",
+               }}
              ></Card.Title>
              <Card.Text style={{ color: "#D6BA73", textAlign: "center" }}>
                In the world of Dungeons & Dragons, you are an adventurer in an

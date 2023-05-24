@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Card} from "react-bootstrap";
 import './Favorites.css'
 import { padding } from '@mui/system';
+import { AddFavorites } from '../../Services/DataService';
 
 export default function FavoritesList() {
   let navigate = useNavigate();
@@ -104,13 +105,14 @@ export default function FavoritesList() {
                   display: "flex",
                   flexDirection: "row-reverse",
                   padding: "10px",
+                  justifyContent: "space-between",
                   margin: "10px 0",
                 }}
               >
                 <img
                   src={scroll}
                   alt=''
-                  style={{ width: "50%", height: "320px" }}
+                  style={{ width: "50%", height: "320px", marginRight: "10px" }}
                 />
 
                 <Card
