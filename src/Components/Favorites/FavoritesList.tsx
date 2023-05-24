@@ -9,12 +9,12 @@ export default function FavoritesList() {
   let navigate = useNavigate();
 
   const tavernmen = require("../../Assets/tavernmen.jpg");
-  const profilepic = require("../../Assets/profilepic.png")
-  const naruto = require("../../Assets/naruto.png")
-  const scroll = require("../../Assets/image 7.png")
+  const profilepic = require("../../Assets/profilepic.png");
+  const naruto = require("../../Assets/naruto.png");
+  const scroll = require("../../Assets/image 7.png");
 
   const username = "Username";
-  const profilePic = require('../../Assets/Pic.png');
+  const profilePic = require("../../Assets/Pic.png");
   const creationDate = "X/XX/XXXX";
   const location = "Tired, CA";
   const exp = "New";
@@ -23,6 +23,30 @@ export default function FavoritesList() {
   const [showProfile, setShowProfile] = useState(false);
   const closeProfile = () => setShowProfile(false);
   const editProfile = () => setShowProfile(true);
+
+  // const [FavoritesId, setFavoritesId] = useState<string>("");
+  // const [FavoritesUserId, setFavoritesUserId] = useState();
+  // const [FavoriteUserName, setFavoriteUserName] = useState();
+  // const [FavoriteImage, setFavoriteImage] = useState<string>("");
+  // const [FavoriteLocation, setFavoriteLocation] = useState<string>("");
+  // const [FavoriteDndExperience, setFavoriteDndExperience] = useState<string>("");
+  // const [FavoriteDate, setFavoriteDate] = useState<string>("");
+
+  // const handleSubmit = async () => {
+  //  if (!FavoritesId || !FavoritesUserId || !FavoriteUserName || !FavoriteImage || FavoriteLocation || FavoriteDndExperience || FavoriteDate){
+  //   alert("Could not create campaign, missing information");
+  //  } else{
+  //   let campaignData: object = {
+  //    Id: 0,
+  //    UserID: 0,
+  //    Campaignname,
+  //    Campaignimage,
+  //    Campaignimagetwo,
+  //    Campaigndate,
+  //    Campaignlocation,
+  //    Campaigndescription,
+  //    Campaigndifficulty,
+  //   };
 
   return (
     <Container fluid mx-0>
