@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import './Profile.css';
 import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
-import { checkToken, loggedInData, GetLoggedInUserData } from '../../Services/DataService';
+import { checkToken } from '../../Services/DataService';
+import { UpdateUser } from '../../Services/DataService';
 
 export default function Profile() {
   const parchment = require('../../Assets/image 7 (1).png');
@@ -16,15 +17,12 @@ export default function Profile() {
   const [UserImage, setUserImage] = useState('');
   let userData: { Id?: number, username?: string, userImage?: string, datecreated?: string, dndexperience?: string, location?: string, numfriends?: string } = {};
   useEffect(() => {
-    
     if(!checkToken){
       navigate('/Login')
     }else{
       // Get users data
-
       const getUserData = async () => {
         userData = JSON.parse(sessionStorage.userData);
-        console.log(userData);
         setUsername(userData.username!)
         setDateCreated(userData.datecreated!)
         setDndexperience(userData.dndexperience!)
@@ -34,23 +32,16 @@ export default function Profile() {
     }
   }, [])
 
+
   const heroImg = require('../../Assets/Rectangle 33.png');
-  // const username = "Username";
-  // const profilePic = require('../../Assets/Pic.png');
-  // const creationDate = "X/XX/XXXX";
   const location = "Stockton, CA";
-  // const exp = "New";
   const numFriends = 0;
-
-
 
   
   //const [location, setLocation] = useState('');
-  
   //const [numFriends, setNumFriends] = useState('');
-
   // const [myCampaigns, setMyCampaigns] = useState([]);
-  // const [playing, setPlaying] = useState(0);
+  // const [playing, setPlaying] = useState([]);
   // If there are campaigns, display them, else display "Not participating in a campaign yet? Maybe you can check the Campaigns page!"
 
   const [showProfile, setShowProfile] = useState(false);
@@ -67,23 +58,65 @@ export default function Profile() {
     setMode(prevMode => prevMode === "Adventurer" ? "Dungeon Master" : "Adventurer");
   }
 
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setUsername(e.target.value);
+  }
+
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setUserImage(e.target.value);
+  }
+
+  const handleDndexperienceChange = (e: ChangeEvent<HTMLInputElement>) => 
+  {
+    setDndexperience(e.target.value);
+  }
+
+  const handleDateCreated = (e: ChangeEvent<HTMLInputElement>) =>
+  {
+    setDateCreated(e.target.value);
+  }
+
+  const handleSubmit = async () => {
+    if (!Username || !DateCreated || !Dndexperience || !UserImage) {
+        alert("Could not create account, missing information.");
+    } else {
+        let userData: object = {
+            Id: 0,
+            Username,
+            DateCreated,
+            Dndexperience,
+            UserImage
+        }
+        let updateUserData = await UpdateUser();
+        if (updateUserData) {
+            alert("Account was successfully updated.");
+        } else {
+            alert("Could not update account.");
+        }
+        console.log(userData);
+      }
+        
+      }
+
   return (
     <div className='profile'>
       <Row>
-        <img src={heroImg} className='heroImg'></img>
-        <Col className='col-4 greeting'>
+        <img src={heroImg} className='profileHeroImg'></img>
+        <Col className='col-4 profileGreeting'>
           <p className='doubleFont'>Welcome to the tavern,</p>
-          <p className='doubleFont userTxt'>{Username}!</p>
+          <p className='doubleFont profileUserTxt'>{Username}!</p>
         </Col>
         <Col>
           {
             mode === 'Adventurer' ? (
               <div>
-                <p className='doubleFont mode'>Adventurer Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
+                <p className='doubleFont profileMode'>Adventurer Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
               </div>
             ) : (
               <div>
-                <p className='doubleFont mode'>Dungeon Master Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
+                <p className='doubleFont profileMode'>Dungeon Master Mode <ChangeCircleIcon onClick={() => changeMode()} /></p>
               </div>
             )
 
@@ -118,7 +151,7 @@ export default function Profile() {
               </Row>
               <hr />
               <Row>
-                <p className='editBtn' onClick={editProfile}>Edit Profile</p>
+                <p className='profileEditBtn' onClick={editProfile}>Edit Profile</p>
               </Row>
             </Container>
           </div>
@@ -139,8 +172,8 @@ export default function Profile() {
                       <Col>
                         <div onClick={() => navigate('/CreateCharacter')}>
                           <img src={parchment} />
-                          <img src={addNew} className='addNewImg' />
-                          <p className='darkTxt addNewTxt'>Add New</p>
+                          <img src={addNew} className='profileAddNewImg' />
+                          <p className='profileDarkTxt profileAddNewTxt'>Add New</p>
                         </div>
                       </Col>
                     </Row>
@@ -156,8 +189,8 @@ export default function Profile() {
                       <Col>
                         <div onClick={() => campaignCreator()}>
                           <img src={parchment} />
-                          <img src={addNew} className='addNewImg' />
-                          <p className='darkTxt addNewTxt'>Add New</p>
+                          <img src={addNew} className='profileAddNewImg' />
+                          <p className='profileDarkTxt profileAddNewTxt'>Add New</p>
                         </div>
                       </Col>
                     </Row>
@@ -179,8 +212,8 @@ export default function Profile() {
 
                   <div onClick={() => navigate('/TavernBoard')}>
                     <img src={parchment} />
-                    <p className='darkTxt partTxtOne'>Not participating in a campaign yet?</p>
-                    <p className='darkTxt partTxtTwo'> Maybe you can check the Campaigns page!</p>
+                    <p className='profileDarkTxt profilePartTxtOne'>Not participating in a campaign yet?</p>
+                    <p className='profileDarkTxt profilePartTxtTwo'> Maybe you can check the Campaigns page!</p>
                   </div>
 
                 </Col>
@@ -198,40 +231,41 @@ export default function Profile() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Edit Profile</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
           <Form>
             <Form.Group className="mb-3" controlId="changeUsername">
               <Form.Label>Username:</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" onChange={handleNameChange}></Form.Control>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="changePassword">
-              <Form.Label>Change Password:</Form.Label>
-              <Form.Control type="password" />
+            <Form.Group className="mb-3" controlId="changeImage">
+              <Form.Label>Change User Image:</Form.Label>
+              <Form.Control type="file" onChange={handleImageChange}></Form.Control>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="changeLocation">
-              <Form.Label>Located In:</Form.Label>
-              <Form.Control type="text" />
+              <Form.Label>Date Created:</Form.Label>
+              <Form.Control type="text" onChange={handleDateCreated}></Form.Control>
             </Form.Group>
           </Form>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3" controlId="changeLocation">
+              <Form.Label>Located In:</Form.Label>
+              <Form.Control type="text" onChange={handleDateCreated}></Form.Control>
+            </Form.Group>
+          
+
+          <Form.Group className="mb-3" controlId='changeDndexperience'>
             <Form.Label>D&D Experience:</Form.Label>
-            <Form.Select>
-              <option>Has Not Played</option>
-              <option>New</option>
-              <option>Experienced</option>
-              <option>Grand Master</option>
-            </Form.Select>
+            <Form.Control type="text" onChange={handleDndexperienceChange}></Form.Control>
           </Form.Group>
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary">Submit</Button>
+          <Button variant="primary" onClick={handleSubmit}>Update</Button>
         </Modal.Footer>
       </Modal>
 
@@ -250,33 +284,54 @@ export default function Profile() {
 
           <Form>
             <Form.Group className="mb-3" controlId="Title">
-              <Form.Label>Title:</Form.Label>
+              <Form.Label>Campaign Title:</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Campaign Status:</Form.Label>
+              <Form.Select>
+                <option>In Development</option>
+                <option>Accepting New Players</option>
+                <option>Full</option>
+                <option>Completed</option>
+              </Form.Select>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="Title">
+              <Form.Label>Campaign Date:</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="Location">
               <Form.Label>Location:</Form.Label>
-              <Form.Control type="password" />
+              <Form.Control type="text" />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>D&D Experience:</Form.Label>
+              <Form.Label>Campaign Difficulty:</Form.Label>
               <Form.Select>
-                <option>Beginner-Friendly</option>
-                <option>New Players</option>
-                <option>Experienced Players</option>
-                <option>Grand Masters Only</option>
+                <option>Beginner Campaign</option>
+                <option>Level 1-5</option>
+                <option>Level 5-10</option>
+                <option>Level 10-15</option>
+                <option>Level 15-20</option>
               </Form.Select>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="changeLocation">
-              <Form.Label>Description:</Form.Label>
+              <Form.Label>Campaign Description:</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
 
             {/* Add ability to see image later */}
             <Form.Group controlId="formFile" className="mb-3">
               <Form.Label>Campaign Image:</Form.Label>
+              <Form.Control type="file" />
+            </Form.Group>
+
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Campaign Image 2:</Form.Label>
               <Form.Control type="file" />
             </Form.Group>
           </Form>

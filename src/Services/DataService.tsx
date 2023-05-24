@@ -63,8 +63,8 @@ async function GetLoggedInUserData(Username: string){
 
 function checkToken(){
     let result = false;
-    let lsData = localStorage.GetItem('Token');
-    if(lsData != null){
+    let lsData = localStorage.getItem('Token');
+    if(lsData && lsData != null){
         result = true;
     } 
     return result;
@@ -76,8 +76,8 @@ function loggedInData(){
 
 // Character API Fetches
 
-async function CreateCharacter(newCharacter: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter', {
+async function CreateCharacterBe(newCharacter: object) {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Character/CreateCharacter/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
@@ -94,20 +94,58 @@ async function CreateCharacter(newCharacter: object) {
   return data;
 }
 
+async function CharacterRace(Race: string){
+    const raceResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/races/${Race}`)
+    let raceData = await raceResult.json();
+    console.log(raceData);
+    let align = raceData.alignment;
+    let age = raceData.age;
+    let sizeDesc = raceData.size_description;
+    let languages = raceData.language_desc;
+    return {align, age, sizeDesc, languages};
+}
+async function CharacterClass(Class: string){
+    const classResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/classes/${Class}`)
+    let classData = await classResult.json();
+    console.log(classData);
+    let hitDie = classData.hit_die;
+    let proficiences = classData.proficiency_choices.desc;
+    let savingThrows;
+    for(let i = 0; i < classData.saving_throws.length; i++){
+        savingThrows = classData.saving_throws[i].name;
+    }
+    return {hitDie, proficiences, savingThrows};
+}
+async function CharacterBackground(){
+    const bgResult = await fetch('https://www.dnd5eapi.co/docs/#get-/api/backgrounds/acolyte')
+    let bgData = await bgResult.json();
+    console.log(bgData);
+    let bgDesc = bgData.feature.desc;
+    return bgDesc;
+}
+async function CharacterAlignment(Alignment: string){
+    const alignResult = await fetch(`https://www.dnd5eapi.co/docs/#get-/api/alignments/${Alignment}`)
+    let alignData = await alignResult.json();
+    console.log(alignData);
+    let alignDesc = alignData.desc;
+    return alignDesc;
+}
+
+
 // Campaign API Fetches
 
-async function CreateCampaign(newCampaign: object) {
-  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign', {
+async function CreateCampaignBe(newCampaign: object) {
+  const result = await fetch('https://questerstavernbackend.azurewebsites.net/Campaign/CreateCampaign/', {
       method: "POST",
       headers: {
           'Content-Type': "application/json"
       },
       body: JSON.stringify(newCampaign)
-  });
-  if (!result.ok) {
-      alert('Could not create campaign. Make sure all fields are completed')
-      const message = `An Error has Occured ${result.status}`;
-      throw new Error(message);
+    });
+    if (!result.ok) {
+        alert('Could not create campaign. Make sure all fields are completed')
+        const message = `An Error has Occured ${result.status}`;
+        throw new Error(message);
   }
   let data = await result.json();
   console.log(data);
@@ -141,4 +179,4 @@ async function AddFavorites(){
 }
 
 
-export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CreateCharacter, CreateCampaign, GetCampaignByUserId, GetCampaigns, AddFavorites}
+export { CreateAccountBe, LoginBe, UpdateUser, GetLoggedInUserData, checkToken, loggedInData, CharacterRace, CharacterClass, CharacterBackground, CharacterAlignment, CreateCharacterBe, CreateCampaignBe, GetCampaigns, GetCampaignByUserId, AddFavorites}

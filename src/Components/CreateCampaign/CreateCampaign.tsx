@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import '../CreateCampaign/CreateCampaign.css'
-import { CreateCampaign } from '../../Services/DataService';
+import { CreateCampaignBe } from '../../Services/DataService';
 
 
 export default function CreateUserCampaign() {
@@ -36,7 +36,7 @@ const handleSubmit = async () => {
    Campaigndifficulty,
   };
 
-  let isCampaignCreated = await CreateCampaign(campaignData);
+  let isCampaignCreated = await CreateCampaignBe(campaignData);
 
   if (isCampaignCreated){
    alert("Campaign was successfully created.");

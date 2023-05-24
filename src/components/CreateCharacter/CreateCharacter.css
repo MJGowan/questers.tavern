@@ -16,13 +16,13 @@
     height: 100vh;
 }
 
-.title{
+.landingTitle{
     font-size: xx-large;
     text-align: center;
-    margin-top: -17%;
+    margin-top: -12%;
     padding-bottom: 8%;
 }
-.darkBox{
+.landingDarkBox{
     background-color: #302C2B;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -30,29 +30,34 @@
     margin-top: 2%;
 }
 
-.input{
+.landingInputs{
     border-radius: 5px;
     border-color: transparent;
     width: 100% !important;
+    height: 37px !important;
 }
 
-.nameInput{
+.landingNameInput{
     height:37px !important;
     width: 100% !important;
 }
 
-.lvlInput{
+.landingLvlInput{
     height:37px !important;
     width: 100% !important;
 }
 
-.btn{
+.landingBtn{
     background-color: #46413F;
     border-color: #46413F;
     margin-top: -25%;
 }
 
-.desc{
+.landingDesc{
     height:90px !important;
     width: 100% !important;
+}
+
+.landingInfoBoxes{
+    height: 150px;
 }

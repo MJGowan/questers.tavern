@@ -30,33 +30,35 @@ export default function Login() {
   }
 
   return (
-    <div className='doubleFont white'>
-      <img src={bg} className='bgImg' />
+    <div className='doubleFont loginWhite'>
+      <img src={bg} className='loginBgImg' />
       <Row>
 
         <Col className='col-2'></Col>
         <Col className='col-8 mt-5'>
 
-          <Container className='shadowBox'>
+          <Container className='loginShadowBox'>
+            <Form>
+
             <Row>
               <Col>
                 <div className='d-flex justify-content-center'>
-                  <p className='title mt-2'>Login</p>
+                  <p className='loginTitle mt-2'>Login</p>
                 </div>
                 <div className='d-flex justify-content-center'>
-                  <img src={logo} className='logo'></img>
+                  <img src={logo} className='loginLogo'></img>
                 </div>
               </Col>
             </Row>
             <Row className='mb-5'>
               <Col>
                 <Row>
-                  <p className='inputTxt'>Username:</p>
+                  <p className='loginInputTxt'>Username:</p>
                 </Row>
                 <Row>
                   <Col></Col>
                   <Col className='mb-1'>
-                    <input type='username' className='input' onChange={({ target: { value } }) => setUsername(value)}></input>
+                    <input type='username' className='loginInput' onChange={({ target: { value } }) => setUsername(value)}></input>
                   </Col>
                   <Col></Col>
                 </Row>
@@ -66,18 +68,17 @@ export default function Login() {
             <Row className='mb-5'>
               <Col>
                 <Row>
-                  <p className='inputTxt'>Password:</p>
+                  <p className='loginInputTxt'>Password:</p>
                 </Row>
                 <Row>
                   <Col></Col>
                   <Col className='d-flex justify-content-center'>
-                    {/* <input type='password' className='input' ></input> */}
                     <>
-                    <Form.Label htmlFor="inputPassword5"></Form.Label>
+                    <Form.Label htmlFor="inputPassword"></Form.Label>
                     <Form.Control
-                    className='input'
+                    className='loginInput'
                       type="password"
-                      id="inputPassword5"
+                      id="inputPassword"
                       aria-describedby="passwordHelpBlock"
                       onChange={({ target: { value } }) => setPassword(value)}
                     />
@@ -88,15 +89,16 @@ export default function Login() {
               </Col>
             </Row>
             <Row>
-              <Col className='d-flex justify-content-center text-align-center accountTxt mt-2'>
+              <Col className='d-flex justify-content-center text-align-center loginAccountTxt mt-2'>
                 <p onClick={() => navigate('/CreateAccount')}>Don't have an account? <span>Register here</span></p>
               </Col>
             </Row>
             <Row>
               <Col className='d-flex justify-content-center text-align-center'>
-                <Button className='btn' onClick={handleSubmit}>Sign In</Button>
+                <Button className='loginBtn' onClick={handleSubmit}>Sign In</Button>
               </Col>
             </Row>
+            </Form>
           </Container>
         </Col>
       </Row>

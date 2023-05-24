@@ -58,7 +58,8 @@ export default function TavernBoardPost() {
       };
       getCampaignData();
     }
-  }, []);
+  }, [])
+
 
   return (
     <Container fluid mx-0>
