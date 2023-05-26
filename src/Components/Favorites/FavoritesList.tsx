@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Card} from "react-bootstrap";
 import './Favorites.css'
-import { padding } from '@mui/system';
-import { AddFavorites } from '../../Services/DataService';
+// import { padding } from '@mui/system';
+// import { AddFavorites } from '../../Services/DataService';
 
 export default function FavoritesList() {
   let navigate = useNavigate();
